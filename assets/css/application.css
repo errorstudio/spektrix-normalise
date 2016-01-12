@@ -1,0 +1,591 @@
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+body {
+  margin: 0; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: .83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: .83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: .67em;
+  margin: 2.33em 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+p, pre {
+  margin: 1em 0; }
+
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  _font-family: 'courier new',monospace;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+dl, menu, ol, ul {
+  margin: 1em 0; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+menu, ol, ul {
+  padding: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+form {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Colors */
+/* $white: #ffffff;
+$black: #000000;
+$gray: #656565;
+$text-gray: #494949;
+
+$red: #e32f12;
+$yellow: #ffe400;
+$blue: #2d81ff;
+
+$green: #00b361;
+$purple: #6835ac;
+$pink: #eb43a2; */
+/* Mixins */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* Base */
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+* {
+  box-sizing: border-box; }
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+p:empty {
+  display: none; }
+
+div[class$="WikiText"]:empty,
+div[class$="WikiText"] > div:empty {
+  display: none; }
+
+h1 {
+  margin-top: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed #aaa; }
+
+.booking-for {
+  float: right;
+  font-size: 12px; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 5px 11px 4px;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  background-color: #0c6db0; }
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #0f8be0; }
+
+table th,
+table td {
+  padding: 6px; }
+
+.SpektrixPage {
+  padding: 40px; }
+
+.MonthList {
+  padding: 0;
+  list-style: none; }
+
+.MonthList li {
+  display: inline-block;
+  margin-right: 20px; }
+
+.SpektrixPage.EventsList .Event_Text {
+  overflow: hidden;
+  padding: 20px 0; }
+
+.SpektrixPage.EventsList .Event_Text > * {
+  float: left; }
+
+.SpektrixPage.EventsList .Event_Name {
+  width: 30%; }
+
+.SpektrixPage.EventsList .Event_Description {
+  width: 20%;
+  min-height: 1px; }
+
+.SpektrixPage.EventsList .Event_Dates {
+  width: 30%; }
+
+.SpektrixPage.EventsList .Event_Dates .Dates_Heading {
+  display: none; }
+
+.SpektrixPage.EventsList .More_Info {
+  width: 20%;
+  float: right; }
+
+/* Choose Seats */
+.SpektrixPage.ChooseSeats .InstanceCalendar {
+  display: none; }
+
+dd {
+  margin: 0; }
+
+.Items {
+  margin: 2em 0; }
+
+dd.Item,
+dd.Footer {
+  border-top: 1px solid #aaa; }
+
+dt.Header {
+  float: left;
+  width: 50%;
+  padding-bottom: 20px;
+  font-weight: bold; }
+
+dd.Header {
+  overflow: hidden;
+  padding-bottom: 20px;
+  font-weight: bold; }
+
+dd.Header .Breakdown {
+  float: left;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+dd.Header .Breakdown li {
+  float: left;
+  width: 50%;
+  margin: 0; }
+
+dt.Item {
+  float: left; }
+
+dd.Item {
+  overflow: hidden;
+  margin: 0;
+  padding: 20px 0; }
+
+dd.Item .ViewDetails {
+  display: none; }
+
+dd.Item .Details {
+  float: left;
+  width: 50%; }
+
+dd.Item .Breakdown {
+  float: left;
+  width: 25%; }
+
+dd.Item .Buttons {
+  float: left;
+  width: 25%; }
+
+dd.Item p {
+  margin: 0; }
+
+dd.Item .Details > * {
+  display: block; }
+
+dd.Item .Details > br {
+  display: none; }
+
+dd.Item .Details .ItemName {
+  font-weight: bold; }
+
+dd.Item .Breakdown {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+dd.Item .Breakdown .Label {
+  display: none; }
+
+dd.Item .Breakdown li {
+  float: left;
+  width: 50%; }
+
+dd.Item .Buttons {
+  text-align: right; }
+
+dd.Item .Buttons input {
+  display: inline-block; }
+
+dt.Footer {
+  float: left;
+  width: 62.5%;
+  padding: 20px 0;
+  font-weight: bold; }
+
+dd.Footer {
+  padding: 20px 0; }
+
+dd.Footer .Breakdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold; }
+
+dd.Footer .Breakdown .Label {
+  display: none; }
+
+.Savings {
+  padding: 20px;
+  background: #eee;
+  border-radius: 6px; }
+
+.Savings > h2 {
+  margin-top: 0; }
+
+.SpektrixPage.LoginLogout .OptionalMessage {
+  display: none; }
+
+.LoginForm > div {
+  margin-bottom: 20px; }
+
+.LoginForm label {
+  width: 200px;
+  display: inline-block; }
+
+.SpektrixPage.NewAccount .View label {
+  width: 200px;
+  display: inline-block; }
+
+.SpektrixPage.NewAccount .View .Container {
+  margin-bottom: 20px; }
+
+.SpektrixPage.NewAccount .View .Comment {
+  display: block; }
+
+.SpektrixPage.NewAccount .View .AddressOption label {
+  width: auto; }
+
+.SpektrixPage.NewAccount .View .Input_Checkbox label {
+  width: auto; }
