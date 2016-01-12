@@ -1,0 +1,7 @@
+
+/* Page - Choose Seats */
+
+// Hide the instance picker, we've already done that on the previous step.
+.SpektrixPage.ChooseSeats .InstanceCalendar {
+	display: none;
+}

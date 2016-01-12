@@ -26,6 +26,16 @@
 
 }
 
+//----------
+
+@mixin well {
+  padding: 20px;
+  background: #eee;
+  border-radius:6px;
+}
+
+//----------
+
 @mixin clearfix {
   &:before,
   &:after {

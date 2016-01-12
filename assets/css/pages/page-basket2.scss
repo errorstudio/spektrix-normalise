@@ -1,0 +1,145 @@
+
+/* Page - Basket2 */
+
+dd {
+	margin: 0;
+}
+
+.Items {
+  // This is the main basket table
+  margin: 2em 0;
+}
+
+dd.Item,
+dd.Footer {
+	border-top: 1px solid $divider-color;
+}
+
+dt.Header {
+	float: left;
+	width: 50%;
+	padding-bottom: $vertical-spacing;
+	font-weight: bold;
+}
+
+dd.Header {
+	overflow: hidden;
+	padding-bottom: $vertical-spacing;
+	font-weight: bold;
+}
+
+dd.Header .Breakdown {
+	float: left;
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+dd.Header .Breakdown li {
+	float: left;
+	width: 50%;
+	margin: 0;
+}
+
+dt.Item {
+  // The item name
+  float: left;
+}
+
+dd.Item {
+  //	Everything else about the item
+  overflow: hidden;
+  margin: 0;
+  padding: $vertical-spacing 0;
+}
+
+dd.Item .ViewDetails {
+  // This is a link which opens an inconsistently styled popover repeating the information on the page
+  display: none;
+}
+
+dd.Item .Details {
+	float: left;
+	width: 50%;
+}
+
+dd.Item .Breakdown {
+	float: left;
+	width: 25%;
+}
+
+dd.Item .Buttons {
+	float: left;
+	width: 25%;
+}
+
+dd.Item p {
+	margin: 0;
+}
+
+dd.Item .Details > * {
+	display: block;
+}
+
+dd.Item .Details > br {
+  // What's that doing there
+  display: none;
+}
+
+dd.Item .Details .ItemName {
+	font-weight: bold;
+}
+
+dd.Item .Breakdown {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+dd.Item .Breakdown .Label {
+	display: none;
+}
+
+dd.Item .Breakdown li {
+	float: left;
+	width: 50%;
+}
+
+dd.Item .Buttons {
+	text-align: right;
+}
+
+dd.Item .Buttons input {
+	display: inline-block;
+}
+
+dt.Footer {
+	float: left;
+	width: 62.5%;
+	padding: $vertical-spacing 0;
+	font-weight: bold;
+}
+
+dd.Footer {
+	padding: 20px 0;
+}
+
+dd.Footer .Breakdown {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: bold;
+}
+
+dd.Footer .Breakdown .Label {
+	display: none;
+}
+
+.Savings {
+	@include well;
+}
+
+.Savings > h2 {
+	margin-top: 0;
+}

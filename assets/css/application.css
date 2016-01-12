@@ -195,19 +195,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* Colors */
-/* $white: #ffffff;
-$black: #000000;
-$gray: #656565;
-$text-gray: #494949;
-
-$red: #e32f12;
-$yellow: #ffe400;
-$blue: #2d81ff;
-
-$green: #00b361;
-$purple: #6835ac;
-$pink: #eb43a2; */
+/* Variables */
 /* Mixins */
 .clearfix:after {
   content: "";
@@ -270,6 +258,43 @@ textarea {
    ========================================================================== */
 * {
   box-sizing: border-box; }
+
+.SpektrixPage {
+  padding: 40px; }
+
+p:empty,
+div[class$="WikiText"]:empty,
+div[class$="WikiText"] > div:empty {
+  display: none; }
+
+h1 {
+  margin-top: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed #aaa; }
+
+.booking-for {
+  float: right;
+  font-size: 12px; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 5px 11px 4px;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  background-color: #0c6db0; }
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #0f8be0; }
+
+table th,
+table td {
+  padding: 6px; }
 
 /* ==========================================================================
    Media Queries
@@ -377,45 +402,7 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-p:empty {
-  display: none; }
-
-div[class$="WikiText"]:empty,
-div[class$="WikiText"] > div:empty {
-  display: none; }
-
-h1 {
-  margin-top: 0;
-  padding-bottom: 14px;
-  border-bottom: 1px dashed #aaa; }
-
-.booking-for {
-  float: right;
-  font-size: 12px; }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  padding: 5px 11px 4px;
-  color: white;
-  border: 0;
-  border-radius: 3px;
-  background-color: #0c6db0; }
-
-button:hover,
-html input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-  background-color: #0f8be0; }
-
-table th,
-table td {
-  padding: 6px; }
-
-.SpektrixPage {
-  padding: 40px; }
-
+/* Monthlist */
 .MonthList {
   padding: 0;
   list-style: none; }
@@ -424,12 +411,17 @@ table td {
   display: inline-block;
   margin-right: 20px; }
 
+/* Page - EventsList */
+.SpektrixPage.EventsList .Events .Event {
+  border-bottom: 1px solid #aaa; }
+
 .SpektrixPage.EventsList .Event_Text {
   overflow: hidden;
   padding: 20px 0; }
 
 .SpektrixPage.EventsList .Event_Text > * {
-  float: left; }
+  float: left;
+  padding-right: 10px; }
 
 .SpektrixPage.EventsList .Event_Name {
   width: 30%; }
@@ -446,12 +438,25 @@ table td {
 
 .SpektrixPage.EventsList .More_Info {
   width: 20%;
-  float: right; }
+  float: right;
+  text-align: right; }
 
-/* Choose Seats */
+/* Page - Choose Seats */
 .SpektrixPage.ChooseSeats .InstanceCalendar {
   display: none; }
 
+/* Page - LoginLogout */
+.SpektrixPage.LoginLogout .OptionalMessage {
+  display: none; }
+
+.LoginForm > div {
+  margin-bottom: 20px; }
+
+.LoginForm label {
+  width: 200px;
+  display: inline-block; }
+
+/* Page - Basket2 */
 dd {
   margin: 0; }
 
@@ -564,16 +569,7 @@ dd.Footer .Breakdown .Label {
 .Savings > h2 {
   margin-top: 0; }
 
-.SpektrixPage.LoginLogout .OptionalMessage {
-  display: none; }
-
-.LoginForm > div {
-  margin-bottom: 20px; }
-
-.LoginForm label {
-  width: 200px;
-  display: inline-block; }
-
+/* Page - NewAccount */
 .SpektrixPage.NewAccount .View label {
   width: 200px;
   display: inline-block; }

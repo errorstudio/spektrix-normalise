@@ -67,10 +67,70 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-
 * {
     box-sizing:border-box;
+}
+
+
+// Wrapper for everything
+
+.SpektrixPage {
+    padding: 40px;
+}
+
+
+// Hide empty <p> and WikiText holders
+
+p:empty,
+div[class$="WikiText"]:empty,
+div[class$="WikiText"] > div:empty {
+    display: none;
+}
+
+
+// Page titles
+
+h1 {
+    margin-top:0;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed $divider-color;
+}
+
+
+// The 'which show you're booking for' reminder
+
+.booking-for {
+    float: right;
+    font-size: 12px;
+}
+
+
+// Default button styles
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    padding: 5px 11px 4px;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    background-color: $button-color;
+}
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+    background-color: lighten($button-color,10%);
+}
+
+
+// Default <table> styles
+
+table th,
+table td {
+    padding: 6px;
 }
 
 

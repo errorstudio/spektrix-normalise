@@ -1,0 +1,39 @@
+
+/* Page - EventsList */
+
+.SpektrixPage.EventsList .Events .Event {
+	border-bottom:1px solid $divider-color;
+} 
+
+.SpektrixPage.EventsList .Event_Text {
+	overflow:hidden;
+	padding:$vertical-spacing 0;
+} 
+
+.SpektrixPage.EventsList .Event_Text > * {
+	float:left;
+	padding-right: 10px;
+} 
+
+.SpektrixPage.EventsList .Event_Name {
+	width:30%;
+} 
+
+.SpektrixPage.EventsList .Event_Description {
+	width:20%;
+	min-height: 1px;
+} 
+
+.SpektrixPage.EventsList .Event_Dates {
+	width:30%;
+}
+
+.SpektrixPage.EventsList .Event_Dates .Dates_Heading {
+	display:none;
+} 
+
+.SpektrixPage.EventsList .More_Info {
+	width:20%;
+	float:right;
+	text-align: right;
+} 
