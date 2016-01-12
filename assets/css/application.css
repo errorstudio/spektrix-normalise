@@ -570,18 +570,101 @@ dd.Footer .Breakdown .Label {
   margin-top: 0; }
 
 /* Page - NewAccount */
-.SpektrixPage.NewAccount .View label {
-  width: 200px;
-  display: inline-block; }
+.SpektrixPage.NewAccount .View .Container.Email .ValidationError + span {
+  font-size: 0.8em; }
 
-.SpektrixPage.NewAccount .View .Container {
+.SpektrixPage.NewAccount .View .AddressOption {
   margin-bottom: 20px; }
 
-.SpektrixPage.NewAccount .View .Comment {
-  display: block; }
-
 .SpektrixPage.NewAccount .View .AddressOption label {
-  width: auto; }
+  width: auto;
+  float: none; }
 
-.SpektrixPage.NewAccount .View .Input_Checkbox label {
-  width: auto; }
+.SpektrixPage.NewAccount .View .AddressOption input {
+  margin-right: 10px; }
+
+/* Page - ChangePassword */
+.SpektrixPage.ChangePassword .Container.Password .ValidationError br {
+  display: none; }
+
+/* Page - MyAccount */
+h1 .Buttons {
+  font-size: 16px;
+  float: right; }
+
+a.ChangePassword {
+  padding: 5px 11px 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  text-decoration: none; }
+
+a.NewAddress {
+  padding: 5px 11px 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  text-decoration: none; }
+
+.Addresses .Container.Address a {
+  padding: 5px 11px 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  text-decoration: none;
+  font-size: 14px; }
+
+.Addresses span.AddressType {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 2px 6px;
+  float: right; }
+
+.Addresses .Account_Detail.Address {
+  margin-bottom: 10px; }
+
+.Addresses .Container.Address {
+  display: block;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 20px;
+  margin-bottom: 20px; }
+
+p.ErrorMessage {
+  padding: 20px;
+  background: #eee;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #ffdede; }
+
+p.ErrorMessage span {
+  color: #DB0303 !important; }
+
+.Container label {
+  width: 200px;
+  /* display: inline-block; */
+  float: left; }
+
+.Container label.right {
+  width: auto;
+  float: none;
+  margin-left: 10px;
+  font-size: .8em; }
+
+.Container {
+  margin-bottom: 20px; }
+
+.Container .ValidationError {
+  font-size: .8em;
+  color: #DB0303 !important; }
+
+.Container .Comment {
+  display: block;
+  font-size: .8em; }
+
+.Input_Checkbox label {
+  width: auto;
+  float: none; }
+
+.Input_Checkbox input {
+  margin-right: 10px; }

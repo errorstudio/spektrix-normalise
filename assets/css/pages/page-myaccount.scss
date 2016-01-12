@@ -1,0 +1,46 @@
+
+/* Page - MyAccount */
+
+// Logout button, which has been moved into the header by the JavaScript
+
+h1 .Buttons {
+	font-size: 16px;
+	float:right;
+}
+
+
+// Let's make these look more like buttons
+
+a.ChangePassword {
+	@include secondary-button;
+}
+
+a.NewAddress {
+	@include secondary-button;
+}
+
+.Addresses .Container.Address a {
+	@include mini-button;
+}
+
+.Addresses span.AddressType {
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 1px solid #333;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 2px 6px;
+	float: right;
+}
+
+.Addresses .Account_Detail.Address {
+	margin-bottom:10px;
+}
+
+.Addresses .Container.Address {
+	display:block;
+	border-bottom:1px solid $divider-color;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}

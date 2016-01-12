@@ -30,6 +30,18 @@
 		}
 
 
+		// Remove junk from p.ErrorMessage so we can hide it with css when :empty
+
+		$('p.ErrorMessage span:empty').remove();
+
+		$('p.ErrorMessage').each(function(){
+			if ($(this).text().trim().length < 1 && $(this).children().length < 1) {
+				$(this).html('');
+			}
+		});
+
+
+
 		// Specific pages ----------
 
 
@@ -93,6 +105,27 @@
 
 		}
 
+
+		// NewAccount
+
+		if ($('.SpektrixPage.NewAccount').exists()) {
+
+			// A curious div.errormessage containing inappropriate errors appears outside the normal page structure if you hit next without selecting an address
+			// I'm going to hide this once instance with JS for now
+			$('div.ErrorMessage').remove();
+
+		}
+
+		// MyAccount
+
+		
+
+		if ($('.SpektrixPage.MyAccount').exists()) {
+
+			// Move the logout button into the header
+			$('h1').prepend( $('.Button.Logout').parent());
+
+		}
 
 		// After
 

@@ -34,6 +34,21 @@
   border-radius:6px;
 }
 
+@mixin secondary-button {
+  padding: 5px 11px 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  text-decoration: none;
+}
+
+@mixin mini-button {
+  padding: 5px 11px 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  text-decoration: none;
+  font-size:14px;
+}
+
 //----------
 
 @mixin clearfix {

@@ -1,23 +1,19 @@
 
 /* Page - NewAccount */
 
-.SpektrixPage.NewAccount .View label {
-	width:200px;
-	display: inline-block;
+.SpektrixPage.NewAccount .View .Container.Email .ValidationError + span { // Target the email validation error, which has no classname
+	font-size: 0.8em;
 }
 
-.SpektrixPage.NewAccount .View .Container {
+.SpektrixPage.NewAccount .View .AddressOption {
 	margin-bottom:20px;
-}
-
-.SpektrixPage.NewAccount .View .Comment {
-	display:block;
 }
 
 .SpektrixPage.NewAccount .View .AddressOption label {
 	width:auto;
+	float:none;
 }
 
-.SpektrixPage.NewAccount .View .Input_Checkbox label {
-	width:auto;
+.SpektrixPage.NewAccount .View .AddressOption input {
+	margin-right: 10px;
 }

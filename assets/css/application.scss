@@ -17,3 +17,62 @@
 @import "pages/page-loginlogout";
 @import "pages/page-basket2";
 @import "pages/page-newaccount";
+@import "pages/page-changepassword";
+@import "pages/page-myaccount";
+
+
+// General form stuff
+
+
+p.ErrorMessage {
+	@include well;
+	padding: 10px 14px;
+	//color: $error-color !important; // To override inline color:red
+	background: lighten($error-color, 50%);
+}
+
+p.ErrorMessage span {
+	color: $error-color !important; // To override inline color:red
+}
+
+.Container label {
+	width:200px;
+	/* display: inline-block; */
+	float: left;
+}
+
+.Container label.right {
+	width:auto;
+	float: none;
+	margin-left:10px;
+	font-size:.8em;
+}
+
+.Container {
+  // Need to be sure this is only ever a wrapper for form-groups
+  margin-bottom: 20px;
+}
+
+.Container .ValidationError {
+	font-size: .8em;
+	color: $error-color !important; // To override inline color:red
+}
+
+.Container .Comment {
+	display: block;
+	font-size: .8em;
+}
+
+.Input_Checkbox label {
+	width:auto;
+	float:none
+}
+
+.Input_Checkbox input {
+	margin-right: 10px;
+}
+
+
+.Progress ol li span.Current {
+
+}
