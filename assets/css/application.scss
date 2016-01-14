@@ -19,7 +19,11 @@
 @import "pages/page-newaccount";
 @import "pages/page-changepassword";
 @import "pages/page-myaccount";
+@import "pages/page-donations";
 
+// Theme
+
+@import "theme";
 
 // General form stuff
 
@@ -37,14 +41,13 @@ p.ErrorMessage span {
 
 .Container label {
 	width:200px;
-	/* display: inline-block; */
-	float: left;
+	display: inline-block;
+	//float: left;
 }
 
 .Container label.right {
 	width:auto;
 	float: none;
-	margin-left:10px;
 	font-size:.8em;
 }
 
@@ -56,11 +59,21 @@ p.ErrorMessage span {
 .Container .ValidationError {
 	font-size: .8em;
 	color: $error-color !important; // To override inline color:red
+	margin: 13px 0 0 0;
+	display:block;
+}
+
+.Container .ValidationError br {
+	//Hide unnecessary <br>s
+	display:none;
 }
 
 .Container .Comment {
 	display: block;
 	font-size: .8em;
+	margin: 13px 0 0 204px;
+	width: 200px;
+	opacity: 0.7;
 }
 
 .Input_Checkbox label {
@@ -76,3 +89,11 @@ p.ErrorMessage span {
 .Progress ol li span.Current {
 
 }
+
+// Default <table> styles
+
+table th,
+table td {
+	padding: 10px 20px 10px 0;
+}
+

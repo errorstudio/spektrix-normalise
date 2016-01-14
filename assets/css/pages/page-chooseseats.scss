@@ -5,3 +5,90 @@
 .SpektrixPage.ChooseSeats .InstanceCalendar {
 	display: none;
 }
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading {
+	font-weight: normal;
+	vertical-align: bottom;
+	clear:both;
+	float:left;
+	margin:0 0 10px 0;
+	color:#999;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading > * {
+	//vertical-align: bottom;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading .SeatingAreaHeadingLabel {
+	color:#222;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading select {
+	-webkit-appearance: none;
+	padding: 10px 40px 5px 10px;
+	height: auto;
+	font-size:inherit;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaInstructions {
+	//float:left;
+}
+
+.SpektrixPage.ChooseSeats .BestAvailableLink {
+	float:right;
+}
+
+.SpektrixPage.ChooseSeats .BestAvailableLink a {
+	@include secondary-button;
+}
+
+// Remove more all caps optional text
+.SpektrixPage.ChooseSeats .SeatingAreaOptionalInstructions {
+	display: none;
+}
+
+.SpektrixPage.ChooseSeats .SeatingSelector {
+	border: 1px solid #ccc;
+	margin-bottom:2 * $vertical-spacing;
+	clear:both;
+}
+
+// Make PlanControls sit in a box, instead of the bar which often overlapped the seating and made it unclickable
+.SpektrixPage.ChooseSeats .SeatingArea .PlanControls {
+	right: 0;
+	left:auto;
+	width: 164px;
+	padding: 7px 12px;
+}
+
+// I don't think anyone needs a refresh button
+.SpektrixPage.ChooseSeats .RefreshButton {
+	display: none;
+}
+
+.SpektrixPage.ChooseSeats .UpdateButton {
+	float: right;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer {
+	@include well;
+	float:left;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer h3 {
+	margin-top:0;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer .ImageIcon {
+	padding: 10px 9px 10px 10px;
+	border-radius: 4px;
+	background: white;
+	border: 2px solid white;
+	background-position: 0px -1px;
+	float: left;
+	margin-right: 10px;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
+	margin-top:$vertical-spacing;
+}

@@ -1,0 +1,27 @@
+
+/* Page - Donations */
+
+input.ContinueButton {
+	float:right;
+}
+
+.SpektrixPage.Donations .FundContainer {
+	margin: 0;
+	padding: $vertical-spacing 0;
+	border-bottom: 1px solid $divider-color;
+	overflow:hidden;
+}
+
+.SpektrixPage.Donations .FundContainer .FundContainerTextContent {
+	float:left;
+	width:50%;
+}
+
+.SpektrixPage.Donations .FundContainer h3 {
+	margin-top: 0;
+}
+
+.DonationAmount {
+	float:right;
+	@include well;
+}

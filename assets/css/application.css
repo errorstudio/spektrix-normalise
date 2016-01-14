@@ -261,6 +261,20 @@ textarea {
 
 .SpektrixPage {
   padding: 40px; }
+  .SpektrixPage:before, .SpektrixPage:after {
+    content: " ";
+    display: table; }
+  .SpektrixPage:after {
+    clear: both; }
+
+.SpektrixFooter {
+  display: none; }
+
+h1 {
+  text-transform: lowercase; }
+
+h1:first-letter {
+  text-transform: uppercase; }
 
 p:empty,
 div[class$="WikiText"]:empty,
@@ -270,31 +284,47 @@ div[class$="WikiText"] > div:empty {
 h1 {
   margin-top: 0;
   padding-bottom: 14px;
-  border-bottom: 1px dashed #aaa; }
+  border-bottom: 1px dashed #eee; }
 
 .booking-for {
   float: right;
-  font-size: 12px; }
+  font-size: 12px;
+  text-transform: none; }
 
 button,
-html input[type="button"],
+input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  padding: 5px 11px 4px;
+  padding: 5px 20px 4px;
   color: white;
   border: 0;
   border-radius: 3px;
-  background-color: #0c6db0; }
+  background-color: #0c6db0;
+  height: 44px;
+  margin-right: 10px; }
 
 button:hover,
-html input[type="button"]:hover,
+input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   background-color: #0f8be0; }
 
-table th,
-table td {
-  padding: 6px; }
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  display: inline-block;
+  height: 44px;
+  padding: 4px 12px 0;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-transition: border-color ease-in-out 0.15s;
+  -moz-transition: border-color ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s;
+  margin-right: 10px; }
 
 /* ==========================================================================
    Media Queries
@@ -413,7 +443,7 @@ table td {
 
 /* Page - EventsList */
 .SpektrixPage.EventsList .Events .Event {
-  border-bottom: 1px solid #aaa; }
+  border-bottom: 1px solid #eee; }
 
 .SpektrixPage.EventsList .Event_Text {
   overflow: hidden;
@@ -445,17 +475,85 @@ table td {
 .SpektrixPage.ChooseSeats .InstanceCalendar {
   display: none; }
 
+.SpektrixPage.ChooseSeats .SeatingAreaHeading {
+  font-weight: normal;
+  vertical-align: bottom;
+  clear: both;
+  float: left;
+  margin: 0 0 10px 0;
+  color: #999; }
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading .SeatingAreaHeadingLabel {
+  color: #222; }
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading select {
+  -webkit-appearance: none;
+  padding: 10px 40px 5px 10px;
+  height: auto;
+  font-size: inherit; }
+
+.SpektrixPage.ChooseSeats .BestAvailableLink {
+  float: right; }
+
+.SpektrixPage.ChooseSeats .BestAvailableLink a {
+  padding: 5px 11px 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  text-decoration: none; }
+
+.SpektrixPage.ChooseSeats .SeatingAreaOptionalInstructions {
+  display: none; }
+
+.SpektrixPage.ChooseSeats .SeatingSelector {
+  border: 1px solid #ccc;
+  margin-bottom: 40px;
+  clear: both; }
+
+.SpektrixPage.ChooseSeats .SeatingArea .PlanControls {
+  right: 0;
+  left: auto;
+  width: 164px;
+  padding: 7px 12px; }
+
+.SpektrixPage.ChooseSeats .RefreshButton {
+  display: none; }
+
+.SpektrixPage.ChooseSeats .UpdateButton {
+  float: right; }
+
+.SpektrixPage.ChooseSeats .PricesContainer {
+  padding: 20px;
+  background: #eee;
+  border-radius: 6px;
+  float: left; }
+
+.SpektrixPage.ChooseSeats .PricesContainer h3 {
+  margin-top: 0; }
+
+.SpektrixPage.ChooseSeats .PricesContainer .ImageIcon {
+  padding: 10px 9px 10px 10px;
+  border-radius: 4px;
+  background: white;
+  border: 2px solid white;
+  background-position: 0px -1px;
+  float: left;
+  margin-right: 10px; }
+
+.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
+  margin-top: 20px; }
+
 /* Page - LoginLogout */
 .SpektrixPage.LoginLogout .OptionalMessage {
   display: none; }
 
+/* 
 .LoginForm > div {
-  margin-bottom: 20px; }
-
-.LoginForm label {
-  width: 200px;
-  display: inline-block; }
-
+	margin-bottom:20px;
+} */
+/* .LoginForm label {
+	width:200px;
+	display: inline-block;
+} */
 /* Page - Basket2 */
 dd {
   margin: 0; }
@@ -465,7 +563,7 @@ dd {
 
 dd.Item,
 dd.Footer {
-  border-top: 1px solid #aaa; }
+  border-top: 1px solid #eee; }
 
 dt.Header {
   float: left;
@@ -537,6 +635,12 @@ dd.Item .Breakdown li {
   float: left;
   width: 50%; }
 
+dd.Item .Breakdown li.Total {
+  margin-left: 50%; }
+
+dd.Item .Breakdown li.Quantity + li.Total {
+  margin-left: 0; }
+
 dd.Item .Buttons {
   text-align: right; }
 
@@ -564,12 +668,68 @@ dd.Footer .Breakdown .Label {
 .Savings {
   padding: 20px;
   background: #eee;
-  border-radius: 6px; }
+  border-radius: 6px;
+  width: 50%;
+  float: left; }
 
 .Savings > h2 {
   margin-top: 0; }
 
+a.CheckoutLink {
+  float: right; }
+
+.PromoCode label {
+  float: none;
+  display: block;
+  width: auto;
+  margin-bottom: 22px; }
+
 /* Page - NewAccount */
+.SpektrixPage.NewAccount .Progress ol {
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  border: 1px solid #DFDFDF;
+  display: inline-block;
+  margin: 0 0 20px 0; }
+
+.SpektrixPage.NewAccount .Progress ol li {
+  float: left;
+  padding: 15px; }
+
+.SpektrixPage.NewAccount .Progress ol li span.Current b {
+  font-weight: normal; }
+
+.SpektrixPage.NewAccount .Progress ol li span:before {
+  background: #eee;
+  border-radius: 100px;
+  display: inline-block;
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: -6px; }
+
+.SpektrixPage.NewAccount .Progress ol li span.Current:before {
+  content: "\0020";
+  border: 3px solid #333;
+  margin-top: -3px;
+  margin-bottom: -9px; }
+
+.SpektrixPage.NewAccount .Progress ol li span.NotDone:before {
+  content: "\0020"; }
+
+.SpektrixPage.NewAccount .Progress ol li span.Done:before {
+  content: "\2714\0020"; }
+
+.SpektrixPage.NewAccount .Progress ol li span span {
+  display: inline-block;
+  text-transform: lowercase; }
+
+.SpektrixPage.NewAccount .Progress ol li span span:first-letter {
+  text-transform: uppercase; }
+
 .SpektrixPage.NewAccount .View .Container.Email .ValidationError + span {
   font-size: 0.8em; }
 
@@ -582,6 +742,22 @@ dd.Footer .Breakdown .Label {
 
 .SpektrixPage.NewAccount .View .AddressOption input {
   margin-right: 10px; }
+
+.SpektrixPage.NewAccount .View .Container.DateOfBirth input {
+  width: 90px !important;
+  position: relative;
+  top: 2px; }
+
+.SpektrixPage.NewAccount .View .Container.DateOfBirth input,
+.SpektrixPage.NewAccount .View .Container.DateOfBirth select {
+  margin-right: 10px; }
+
+.SpektrixPage.NewAccount .View p.YourDetailsMessage,
+.SpektrixPage.NewAccount .View p.AddressMessage {
+  display: none; }
+
+.SpektrixPage.NewAccount .View h3.AccountPreferencesHeading {
+  display: none; }
 
 /* Page - ChangePassword */
 .SpektrixPage.ChangePassword .Container.Password .ValidationError br {
@@ -626,10 +802,251 @@ a.NewAddress {
 
 .Addresses .Container.Address {
   display: block;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
   padding-bottom: 20px;
   margin-bottom: 20px; }
 
+/* Page - Donations */
+input.ContinueButton {
+  float: right; }
+
+.SpektrixPage.Donations .FundContainer {
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  overflow: hidden; }
+
+.SpektrixPage.Donations .FundContainer .FundContainerTextContent {
+  float: left;
+  width: 50%; }
+
+.SpektrixPage.Donations .FundContainer h3 {
+  margin-top: 0; }
+
+.DonationAmount {
+  float: right;
+  padding: 20px;
+  background: #eee;
+  border-radius: 6px; }
+
+/* Theme */
+/* 
+font-family: 'Radikal Light';
+font-family: 'Radikal Medium';
+font-family: 'Radikal Bold';
+font-family: 'Radikal';
+*/
+/*
+font-family: 'Clarendon Light';
+font-family: 'Clarendon';
+font-family: 'Clarendon Bold';
+*/
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Radikal';
+  font-size: 16.1px; }
+
+body {
+  font-family: 'Radikal';
+  font-size: 16.1px; }
+
+a {
+  color: red; }
+
+a:hover {
+  color: #3300FF; }
+
+#mfPreviewBar {
+  display: none; }
+
+.SpektrixPage {
+  padding: 38px 40px 8px; }
+
+h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+  border: 0;
+  padding: 0; }
+
+h2 {
+  font-weight: normal; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  /*     padding: 5px 11px 4px;
+      color: white;
+      border: 0;
+      border-radius: 3px;
+      background-color: $button-color;
+      */
+  height: 44px; }
+
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  /*     background-color: lighten($button-color,10%); */ }
+
+.booking-for {
+  font-size: 0.45em; }
+
+.booking-for b {
+  font-family: "Clarendon";
+  font-weight: normal;
+  font-size: 1.1em;
+  color: #822d8a; }
+
+dt.Header,
+dd.Header {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ef192d;
+  font-size: 16px;
+  font-weight: normal; }
+
+.Savings {
+  background: #C2F6FF;
+  border-radius: 0; }
+
+a.CheckoutLink {
+  font-size: 28px;
+  color: #ef192d;
+  background: #ffe000;
+  text-decoration: none;
+  padding: 20px 27px 16px;
+  display: inline-block;
+  height: auto;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  a.CheckoutLink:hover {
+    background: #ef192d;
+    color: #ffe000; }
+
+dd.Item .Details {
+  line-height: 1.7; }
+
+.SpektrixPage.ChooseSeats .ChooseSeatsHeading + .Event {
+  display: none; }
+
+.SpektrixPage.ChooseSeats .UpdateButton {
+  font-size: 28px;
+  color: #ef192d;
+  background: #ffe000;
+  text-decoration: none;
+  padding: 20px 27px 16px;
+  display: inline-block;
+  height: auto;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-family: 'Radikal';
+  border-radius: 0; }
+  .SpektrixPage.ChooseSeats .UpdateButton:hover {
+    background: #ef192d;
+    color: #ffe000; }
+
+.SpektrixPage.ChooseSeats .PricesContainer {
+  background: #C2F6FF;
+  border-radius: 0; }
+
+.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
+  padding-left: 0; }
+
+.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer .Asterix {
+  display: none; }
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading span,
+.SpektrixPage.ChooseSeats .SeatingAreaHeading select {
+  color: #4729A5; }
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeadingLabel {
+  color: #222; }
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading {
+  color: #4729A5; }
+
+input.ContinueButton {
+  font-size: 28px;
+  color: #ef192d;
+  background: #ffe000;
+  text-decoration: none;
+  padding: 20px 27px 16px;
+  display: inline-block;
+  height: auto;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  input.ContinueButton:hover {
+    background: #ef192d;
+    color: #ffe000; }
+
+.SpektrixPage.Donations .DonationAmount {
+  background: #C2F6FF;
+  border-radius: 0; }
+
+.SpektrixPage.LoginLogout .Button.Login {
+  font-size: 28px;
+  color: #ef192d;
+  background: #ffe000;
+  text-decoration: none;
+  padding: 20px 27px 16px;
+  display: inline-block;
+  height: auto;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .SpektrixPage.LoginLogout .Button.Login:hover {
+    background: #ef192d;
+    color: #ffe000; }
+
+.SpektrixPage.ForgotPassword .ResetPasswordButton {
+  font-size: 28px;
+  color: #ef192d;
+  background: #ffe000;
+  text-decoration: none;
+  padding: 20px 27px 16px;
+  display: inline-block;
+  height: auto;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .SpektrixPage.ForgotPassword .ResetPasswordButton:hover {
+    background: #ef192d;
+    color: #ffe000; }
+
+.SpektrixPage.NewAccount .Progress ol {
+  background: #C2F6FF;
+  border: 0; }
+
+.SpektrixPage.NewAccount .Progress ol {
+  background: #C2F6FF;
+  border: 0; }
+
+.SpektrixPage.NewAccount .Progress ol li span:before {
+  background: #fff; }
+
+.SpektrixPage.NewAccount .Progress ol li span.Current:before {
+  border: 3px solid #3B1F60;
+  background: #ffe000; }
+
+/* .SpektrixPage.NewAccount .Progress ol li span.NotDone:before {
+	content:"\0020";
+}
+
+.SpektrixPage.NewAccount .Progress ol li span.Done:before {
+	content:"\2714\0020";
+} */
 p.ErrorMessage {
   padding: 20px;
   background: #eee;
@@ -642,13 +1059,11 @@ p.ErrorMessage span {
 
 .Container label {
   width: 200px;
-  /* display: inline-block; */
-  float: left; }
+  display: inline-block; }
 
 .Container label.right {
   width: auto;
   float: none;
-  margin-left: 10px;
   font-size: .8em; }
 
 .Container {
@@ -656,11 +1071,19 @@ p.ErrorMessage span {
 
 .Container .ValidationError {
   font-size: .8em;
-  color: #DB0303 !important; }
+  color: #DB0303 !important;
+  margin: 13px 0 0 0;
+  display: block; }
+
+.Container .ValidationError br {
+  display: none; }
 
 .Container .Comment {
   display: block;
-  font-size: .8em; }
+  font-size: .8em;
+  margin: 13px 0 0 204px;
+  width: 200px;
+  opacity: 0.7; }
 
 .Input_Checkbox label {
   width: auto;
@@ -668,3 +1091,7 @@ p.ErrorMessage span {
 
 .Input_Checkbox input {
   margin-right: 10px; }
+
+table th,
+table td {
+  padding: 10px 20px 10px 0; }

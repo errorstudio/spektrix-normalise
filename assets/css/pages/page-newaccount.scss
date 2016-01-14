@@ -1,12 +1,70 @@
 
 /* Page - NewAccount */
 
-.SpektrixPage.NewAccount .View .Container.Email .ValidationError + span { // Target the email validation error, which has no classname
+// Default styling for progress indicator MIGHT BE TOO MUCH FOR DUST OFF
+.SpektrixPage.NewAccount .Progress ol {
+	overflow:hidden;
+	list-style:none;
+	padding:0;
+	border: 1px solid #DFDFDF;
+	display: inline-block;
+	margin: 0 0 $vertical-spacing 0;
+}
+
+.SpektrixPage.NewAccount .Progress ol li {
+	float:left;
+	padding: 15px;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span.Current b {
+	font-weight:normal;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span:before {
+	background: #eee;
+	border-radius: 100px;
+	display: inline-block;
+	padding: 3px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	margin-right: 10px;
+	margin-bottom: -6px;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span.Current:before {
+	content:"\0020";
+	border:3px solid #333;
+	margin-top:-3px;
+	margin-bottom: -9px;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span.NotDone:before {
+	content:"\0020";
+}
+
+.SpektrixPage.NewAccount .Progress ol li span.Done:before {
+	content:"\2714\0020";
+}
+
+// Sentence case all progress indicator headings
+.SpektrixPage.NewAccount .Progress ol li span span {
+	display:inline-block; // Needs to be block for :first-letter to work
+	text-transform: lowercase;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span span:first-letter {
+	text-transform: uppercase;
+}
+
+// Target the email validation error, which has no classname
+.SpektrixPage.NewAccount .View .Container.Email .ValidationError + span {
 	font-size: 0.8em;
 }
 
+// Address options don't use .Containers, so let's specify a bottom margin for them
 .SpektrixPage.NewAccount .View .AddressOption {
-	margin-bottom:20px;
+	margin-bottom:$vertical-spacing;
 }
 
 .SpektrixPage.NewAccount .View .AddressOption label {
@@ -16,4 +74,29 @@
 
 .SpektrixPage.NewAccount .View .AddressOption input {
 	margin-right: 10px;
+}
+
+.SpektrixPage.NewAccount .View .Container.DateOfBirth input {
+	width: 90px !important;
+	position: relative;
+	top: 2px;
+}
+
+.SpektrixPage.NewAccount .View .Container.DateOfBirth input,
+.SpektrixPage.NewAccount .View .Container.DateOfBirth select {
+	margin-right:10px;
+}
+
+// Hide inconsistent, lightly confusing, instructive text
+// Reads 'Please enter your personal details below:' on NewAccount > Your details
+// Reads 'Please check your address and make any changes as necessary.' on NewAccount > Your address
+.SpektrixPage.NewAccount .View p.YourDetailsMessage,
+.SpektrixPage.NewAccount .View p.AddressMessage {
+	display:none;
+}
+
+// Hide 'Account preferences' subtitle
+// Inception levels of titling on this page: New account > Your Preferences > Your Preferences > Account Preferences
+.SpektrixPage.NewAccount .View h3.AccountPreferencesHeading {
+	display:none;
 }
