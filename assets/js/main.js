@@ -39,9 +39,9 @@
 
 		// Remove junk from p.ErrorMessage so we can hide it with css when :empty
 
-		$('p.ErrorMessage span:empty').remove();
+		$('p.ErrorMessage span:empty, div.ErrorMessage span:empty').remove();
 
-		$('p.ErrorMessage').each(function(){
+		$('p.ErrorMessage, div.ErrorMessage, div.InfoMessage').each(function(){
 			if ($(this).text().trim().length < 1 && $(this).children().length < 1) {
 				$(this).html('');
 			}
@@ -101,6 +101,32 @@
 			$('h1.EditTicketsHeading').replaceWith('<h1 class="EditTicketsHeading">Choose ticket type</h1>');
 			$('h1.EditTicketsHeading').append('<span class="booking-for">Booking tickets for: <b>' + eventName + '</b></span>');
 
+			// Targeting - Link is not reliably targetable, let's give it a classname
+			$('a[href*="ChooseSeats"]').addClass('ChangeMySeatsLink');
+
+			// Rename 'Delete' to 'Remove'
+			$('th.Delete').text('Remove');
+			
+		}
+
+
+		// EditAddress
+
+		if ($('.SpektrixPage.EditAddress').exists()) {
+
+			// 'Address edit' renamed to 'Edit address' inline with copy standards
+			$('h1.AddressEditHeading').replaceWith('<h1 class="AddressEditHeading">Edit address</h1>');
+			
+			// Remove superfluous instructive text
+			$('.AddressEditInstructions').remove();
+
+			// Make whitespace consistent between form field elements
+			$('.SpektrixPage.EditAddress .Container').cleanWhitespace();
+
+			// A curious div.errormessage containing inappropriate errors appears outside the normal page structure if you hit next without selecting an address
+			// I'm going to hide this once instance with JS for now
+			$('div.ErrorMessage').remove();
+			
 		}
 
 
@@ -140,6 +166,7 @@
 
 		}
 
+
 		// EventsList
 
 		if ($('.SpektrixPage.EventsList').exists()) {
@@ -158,6 +185,7 @@
 			// I'm going to hide this once instance with JS for now
 			$('div.ErrorMessage').remove();
 
+
 			// Make whitespace consistent between form field elements
 			$('.SpektrixPage.NewAccount .Container').cleanWhitespace();
 
@@ -168,10 +196,7 @@
 
 			$('.SpektrixPage.NewAccount .View p.SelectMessage').text('We found these addresses, please choose one.');
 
-			
-
 		}
-
 
 
 		// MyAccount
@@ -180,6 +205,13 @@
 
 			// Move the logout button into the header
 			$('h1').prepend( $('.Button.Logout').parent());
+
+			// 'Your' is better than 'My'
+			$('.MyAccountHeading span, .MyDetailsHeading span, .MyAddressesHeading span, .MyPreferencesHeading span, .MyOffersHeading span, .Options a').each(function(){
+				var value = $(this).text()
+				value = value.replace("My", "Your");
+				$(this).text(value)
+			});
 
 		}
 
@@ -196,6 +228,38 @@
 
 		}
 
+
+		// Change password
+
+		if ($('.SpektrixPage.ChangePassword').exists()) {
+
+			// Make whitespace consistent between form field elements
+			$('.SpektrixPage.ChangePassword .Container').cleanWhitespace();
+
+		}
+
+
+		// Error
+
+		if ($('.SpektrixPage.Error').exists()) {
+
+			// The heading is in a <h2>, let's make it into a <h1> to be consistent with other pages
+			$('.SpektrixPage.Error h2').replaceWith('<h1 class="ErrorHeading">Oops, something went wrong.</h1>');
+
+		}
+
+
+		// SupplementaryEventsPage
+
+		if ($('.SpektrixPage.SupplementaryEventsPage').exists()) {
+
+			$('.SpektrixPage.SupplementaryEventsPage .Event_Text').each(function(){
+				var amountBox = $(this).find('#SimpleSeatingDiv').detach();
+				$(this).wrapInner( "<div class='SupplementaryEventDivTextContent'></div>");
+				$(this).append(amountBox);
+			});
+
+		}
 
 
 		// After

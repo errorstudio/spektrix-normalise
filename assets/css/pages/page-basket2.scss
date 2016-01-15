@@ -157,13 +157,18 @@ dd.Footer .Breakdown .Label {
 	margin-top: 0;
 }
 
+.Savings label {
+	display:block;
+	width:auto;
+}
+
 a.CheckoutLink {
+	@include large-button;
 	float: right;
 }
 
 .PromoCode label {
-	float: none;
 	display: block;
 	width: auto;
-	margin-bottom: 22px;
+	margin-bottom: $vertical-spacing;
 }

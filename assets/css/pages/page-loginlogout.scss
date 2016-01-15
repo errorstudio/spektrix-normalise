@@ -4,12 +4,15 @@
 .SpektrixPage.LoginLogout .OptionalMessage {
 	display: none;
 }
-/* 
-.LoginForm > div {
-	margin-bottom:20px;
-} */
 
-/* .LoginForm label {
-	width:200px;
-	display: inline-block;
-} */
+.SpektrixPage.LoginLogout .Buttons {
+	margin-left:$form-label-width;
+}
+
+.SpektrixPage.LoginLogout .Account_Link {
+	margin-left:$form-label-width;
+}
+
+.SpektrixPage.LoginLogout .Button.Login {
+	@include large-button;
+}

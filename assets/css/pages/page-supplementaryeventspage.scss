@@ -1,0 +1,65 @@
+
+/* Pages - SupplementaryEventsPage */
+
+
+.SpektrixPage.SupplementaryEventsPage .Event_Text {
+	margin: 0;
+	padding: $vertical-spacing 0;
+	border-top: 1px solid $divider-color;
+	overflow:hidden;
+	clear: both;
+}
+
+.SpektrixPage.SupplementaryEventsPage .Event_Text:last-child {
+	border-bottom: 1px solid $divider-color;
+}
+
+
+.SpektrixPage.SupplementaryEventsPage #SimpleSeatingDiv {
+	float:right;
+	@include well;
+}
+
+.SpektrixPage.SupplementaryEventsPage > div > div[id*="WikiText"] {
+	margin-bottom:$vertical-spacing;
+}
+
+
+.SpektrixPage.SupplementaryEventsPage .SupplementaryEventDivTextContent {
+	float:left;
+	width:50%;
+}
+
+.SpektrixPage.SupplementaryEventsPage .Event_Text > *:first-child {
+	margin-top:0;
+}
+
+// Make whatever title used in the WikiText look like a <h3>
+.SpektrixPage.SupplementaryEventsPage .Event_Text div[id*="WikiText"] > h1:first-child,
+.SpektrixPage.SupplementaryEventsPage .Event_Text div[id*="WikiText"] > h2:first-child {
+	font-size: 1.17em;
+	margin: 0 0 1em 0;
+	font-weight:bold;
+}
+
+.SpektrixPage.SupplementaryEventsPage .Event_Text .Event_Dates {
+	font-weight:bold;
+}
+
+// The submit button on this page doesn't have a #Buttons container
+.SpektrixPage.SupplementaryEventsPage > div > input[type="submit"] {
+	@include large-button;
+	margin-top:$vertical-spacing;
+	float:right;
+}
+
+
+// Curious little success message
+.SpektrixPage.SupplementaryEventsPage span.InfoMessage {
+	@include well;
+	padding: 10px 14px;
+	display:block;
+  //color: $error-color !important; // To override inline color:red
+  background: lighten($success-color, 30%);
+  margin: $vertical-spacing 0;
+}

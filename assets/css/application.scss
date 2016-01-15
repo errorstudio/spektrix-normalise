@@ -2,6 +2,7 @@
 @import "normalize.min";
 @import "variables";
 @import "mixins";
+//@import "theme/theme-mixins";
 @import "base";
 
 
@@ -20,71 +21,15 @@
 @import "pages/page-changepassword";
 @import "pages/page-myaccount";
 @import "pages/page-donations";
+@import "pages/page-cookies";
+@import "pages/page-supplementaryeventspage";
+@import "pages/page-edittickets";
+@import "pages/page-forgotpassword";
+@import "pages/page-editaddress";
 
 // Theme
 
-@import "theme";
-
-// General form stuff
-
-
-p.ErrorMessage {
-	@include well;
-	padding: 10px 14px;
-	//color: $error-color !important; // To override inline color:red
-	background: lighten($error-color, 50%);
-}
-
-p.ErrorMessage span {
-	color: $error-color !important; // To override inline color:red
-}
-
-.Container label {
-	width:200px;
-	display: inline-block;
-	//float: left;
-}
-
-.Container label.right {
-	width:auto;
-	float: none;
-	font-size:.8em;
-}
-
-.Container {
-  // Need to be sure this is only ever a wrapper for form-groups
-  margin-bottom: 20px;
-}
-
-.Container .ValidationError {
-	font-size: .8em;
-	color: $error-color !important; // To override inline color:red
-	margin: 13px 0 0 0;
-	display:block;
-}
-
-.Container .ValidationError br {
-	//Hide unnecessary <br>s
-	display:none;
-}
-
-.Container .Comment {
-	display: block;
-	font-size: .8em;
-	margin: 13px 0 0 204px;
-	width: 200px;
-	opacity: 0.7;
-}
-
-.Input_Checkbox label {
-	width:auto;
-	float:none
-}
-
-.Input_Checkbox input {
-	margin-right: 10px;
-}
-
+//@import "theme/theme-tweaks";
 
 .Progress ol li span.Current {
 
@@ -94,6 +39,6 @@ p.ErrorMessage span {
 
 table th,
 table td {
-	padding: 10px 20px 10px 0;
+	padding: 20px 20px 20px 0;
 }
 

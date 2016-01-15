@@ -83,21 +83,19 @@ textarea {
     display:none;
 }
 
-// Properly capitalise all headings
+// Properly capitalise all main headings
 h1 {
-    text-transform: lowercase;
+    @include sentence-case;
 }
 
-h1:first-letter {
-    text-transform: uppercase;
-}
-
-// Hide empty <p> and WikiText holders
+// Hide empty <p>'s, <span>'s and WikiText holders
 
 p:empty,
+span:empty,
+div:empty,
 div[class$="WikiText"]:empty,
 div[class$="WikiText"] > div:empty {
-    display: none;
+    display: none !important;
 }
 
 
@@ -114,8 +112,9 @@ h1 {
 
 .booking-for {
     float: right;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: none;
+    font-weight: normal;
 }
 
 
@@ -125,20 +124,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    padding: 5px 20px 4px;
-    color: white;
-    border: 0;
-    border-radius: 3px;
-    background-color: $button-color;
-    height:44px;
-    margin-right: 10px;
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-    background-color: lighten($button-color,10%);
+    @include normal-button;
 }
 
 
@@ -164,6 +150,76 @@ select {
     @include transition(border-color ease-in-out .15s);
     margin-right:10px;
 }
+
+
+
+
+
+// General form stuff
+
+
+p.ErrorMessage,
+div.ErrorMessage {
+    @include well;
+    padding: 10px 14px;
+    //color: $error-color !important; // To override inline color:red
+    background: lighten($error-color, 50%);
+    margin: $vertical-spacing 0;
+}
+
+p.ErrorMessage span,
+div.ErrorMessage span {
+    color: $error-color !important; // To override inline color:red
+}
+
+.Container label {
+    width:$form-label-width;
+    display: inline-block;
+    //float: left;
+}
+
+.Container label.right {
+    width:auto;
+    float: none;
+    font-size:.8em;
+}
+
+.Container {
+  // Need to be sure this is only ever a wrapper for form-groups
+  margin-bottom: 20px;
+}
+
+.Container .ValidationError {
+    font-size: .8em;
+    color: $error-color !important; // To override inline color:red
+    margin: 13px 0 0 0;
+    display:block;
+    margin-left:$form-label-width;
+}
+
+.Container .ValidationError br {
+    //Hide unnecessary <br>s
+    display:none;
+}
+
+.Container .Comment {
+    display: block;
+    font-size: .8em;
+    margin: 13px 0 0 204px;
+    width: 200px;
+    opacity: 0.7;
+}
+
+.Input_Checkbox label {
+    width:auto;
+    float:none
+}
+
+.Input_Checkbox input {
+    margin-right: 10px;
+}
+
+
 
 
 /* ==========================================================================

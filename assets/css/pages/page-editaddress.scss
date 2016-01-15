@@ -1,0 +1,33 @@
+
+/* Page - EditAddress */
+
+.SpektrixPage.EditAddress .Buttons {
+	margin-left:$form-label-width;
+}
+
+.SpektrixPage.EditAddress .AddressOptions .Option {
+	margin-left:$form-label-width;
+	margin-bottom:$vertical-spacing;
+}
+
+.SpektrixPage.EditAddress .AddressOptions .Option {
+	margin-left:$form-label-width;
+	margin-bottom:$vertical-spacing;
+}
+
+.SpektrixPage.EditAddress .AddressOptions .Option input {
+	margin-right:10px;
+}
+
+// Address options don't use .Containers, so let's specify a bottom margin for them
+.SpektrixPage.EditAddress .Addresses .AddressOption {
+	margin-bottom:$vertical-spacing;
+}
+
+.SpektrixPage.EditAddress .Addresses .AddressOption label {
+	width:auto;
+}
+
+.SpektrixPage.EditAddress .Addresses .AddressOption input {
+	margin-right: 10px;
+}

@@ -23,39 +23,80 @@
       @content;
     }
   }
-
 }
 
 //----------
 
 @mixin well {
   padding: 20px;
+  border-radius: 6px;
   background: #eee;
-  border-radius:6px;
 }
 
-@mixin secondary-button {
-  padding: 5px 11px 4px;
+@mixin normal-button {
+  height: 44px;
+  line-height: 2.2;
+  margin-right: 10px;
+  padding: 5px 20px 4px;
+  color: white;
+  border: 0;
   border-radius: 3px;
-  background-color: #eee;
+  background-color: $button-color;
   text-decoration: none;
+  display: inline-block;
+  &:hover {
+    background-color: lighten($button-color,10%);
+  }
+}
+
+
+
+
+
+@mixin large-button {
+  @include normal-button;
+  height: 60px;
+  line-height: 1.1;
+  padding: 14px 25px 16px;
+  font-size: 28px;
+}
+
+@mixin small-button {
+  @include normal-button;
+  height: auto;
+  line-height: 1.4;
+  padding: 5px 11px 4px;
+  font-size: 14px;
 }
 
 @mixin mini-button {
+  @include normal-button;
+  height: auto;
+  line-height: 1.2;
   padding: 5px 11px 4px;
-  border-radius: 3px;
-  background-color: #eee;
-  text-decoration: none;
-  font-size:14px;
+  font-size: 12px;
 }
+
+@mixin quiet-button {
+  color:$button-color;
+  background:lighten($button-color, 50%);
+}
+
+@mixin sentence-case {
+  text-transform: lowercase;
+  &:first-letter {
+    text-transform: uppercase;
+  }
+}
+
 
 //----------
 
 @mixin clearfix {
   &:before,
   &:after {
-    content: " ";
     display: table;
+    content: " ";
   }
   &:after {
     clear: both;
@@ -64,39 +105,40 @@
 
 .clearfix {
   &:after {
-    content: "";
     display: table;
     clear: both;
+    content: "";
   }
 }
 
 @mixin kellum() {
-  text-indent: 100%;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
 }
 
 @mixin border-radius($radius) {
-  border-radius: $radius;
-  -webkit-border-radius: $radius;
-  behavior: url('/PIE.htc');
   position: relative;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+
+  behavior: url("/PIE.htc");
 }
 
-@mixin transform($string){
+@mixin transform($string) {
   -webkit-transform: $string;
-  -moz-transform:    $string;
-  -ms-transform:     $string;
-  -o-transform:      $string;
-  transform:      $string;
+  -moz-transform: $string;
+  -ms-transform: $string;
+  -o-transform: $string;
+  transform: $string;
 }
 
 @mixin scale ($factor) {
   -webkit-transform: scale($factor);
-  -moz-transform:    scale($factor);
-  -ms-transform:     scale($factor);
-  -o-transform:      scale($factor);
-  transform:      scale($factor);
+  -moz-transform: scale($factor);
+  -ms-transform: scale($factor);
+  -o-transform: scale($factor);
+  transform: scale($factor);
 }
 
 @mixin transition($arguments...) {
@@ -107,22 +149,22 @@
 }
 
 @mixin transition-delay($delay...) {
-  -moz-transition-delay:    $delay;
-  -o-transition-delay:      $delay;
   -webkit-transition-delay: $delay;
-  transition-delay:         $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
 }
 
-@mixin translate ($x, $y:0) {
-  -webkit-transform:       translate($x, $y);
-  -moz-transform:    translate($x, $y);
-  -ms-transform:     translate($x, $y);
-  -o-transform:      translate($x, $y);
-  transform:      translate($x, $y);
+@mixin translate ($x, $y: 0) {
+  -webkit-transform: translate($x, $y);
+  -moz-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  -o-transform: translate($x, $y);
+  transform: translate($x, $y);
 }
 
 @mixin box-shadow ($string) {
   -webkit-box-shadow: $string;
-  -moz-box-shadow:    $string;
-  box-shadow:         $string;
+  -moz-box-shadow: $string;
+  box-shadow: $string;
 }

@@ -2,28 +2,59 @@
 /* Page - MyAccount */
 
 // Logout button, which has been moved into the header by the JavaScript
-
 h1 .Buttons {
 	font-size: 16px;
 	float:right;
 }
 
+//Subnav
+
+.SpektrixPage.MyAccount .Options ul {
+	overflow:hidden;
+	padding:0;
+	list-style: none;
+}
+
+.SpektrixPage.MyAccount .Options li {
+	float:left;
+}
+
+.SpektrixPage.MyAccount .Options li a {
+	display: inline-block;
+	padding: 10px 16px;
+	background:#eee;
+	@include sentence-case;
+}
+
+.SpektrixPage.MyAccount .Options li a.Selected {
+	color:white;
+	background:#333;
+}
+
+// Hide 'Account preferences' subtitle
+// Inception levels of titling on this page: New account > Your Preferences > Your Preferences > Account Preferences
+.SpektrixPage.MyAccount h3.AccountPreferencesHeading {
+	display:none;
+}
 
 // Let's make these look more like buttons
 
-a.ChangePassword {
-	@include secondary-button;
+.SpektrixPage.MyAccount a.ChangePassword {
+	@include small-button;
+	@include quiet-button;
+	margin-left:$form-label-width;
+	margin-bottom:$vertical-spacing;
 }
 
-a.NewAddress {
-	@include secondary-button;
+.SpektrixPage.MyAccount a.NewAddress {
+	@include small-button;
 }
 
-.Addresses .Container.Address a {
+.SpektrixPage.MyAccount .Addresses .Container.Address a {
 	@include mini-button;
 }
 
-.Addresses span.AddressType {
+.SpektrixPage.MyAccount .Addresses span.AddressType {
 	font-weight: bold;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -34,13 +65,42 @@ a.NewAddress {
 	float: right;
 }
 
-.Addresses .Account_Detail.Address {
-	margin-bottom:10px;
+.SpektrixPage.MyAccount .Addresses .Account_Detail.Address {
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
-.Addresses .Container.Address {
+.SpektrixPage.MyAccount .Addresses .Container.Address {
 	display:block;
 	border-bottom:1px solid $divider-color;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
 }
+
+// Tidy up DOB inputs
+.SpektrixPage.MyAccount .Container.DateOfBirth input {
+	width: 90px !important;
+	position: relative;
+	top: 2px;
+}
+
+.SpektrixPage.MyAccount .Container.DateOfBirth input,
+.SpektrixPage.MyAccount .Container.DateOfBirth select {
+	margin-right:10px;
+}
+
+.SpektrixPage.MyAccount .Buttons {
+	margin-left:$form-label-width;
+}
+
+.SpektrixPage.MyAccount .Preferences + .Buttons {
+	margin-left:0;
+}
+
+.SpektrixPage.MyAccount .MyDetailsHeading, 
+.SpektrixPage.MyAccount .MyAddressesHeading, 
+.SpektrixPage.MyAccount .MyPreferencesHeading, 
+.SpektrixPage.MyAccount .MyOffersHeading {
+	@include sentence-case;
+}
+

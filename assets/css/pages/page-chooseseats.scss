@@ -36,10 +36,12 @@
 
 .SpektrixPage.ChooseSeats .BestAvailableLink {
 	float:right;
+	margin:0;
 }
 
 .SpektrixPage.ChooseSeats .BestAvailableLink a {
-	@include secondary-button;
+	@include normal-button;
+	margin-right:0;
 }
 
 // Remove more all caps optional text
@@ -61,13 +63,19 @@
 	padding: 7px 12px;
 }
 
-// I don't think anyone needs a refresh button
+// Refresh button feels superfluous
 .SpektrixPage.ChooseSeats .RefreshButton {
-	display: none;
+	//display: none;
+	@include large-button;
+	@include quiet-button;
+}
+
+.SpektrixPage.ChooseSeats .Buttons {
+	float:right;
 }
 
 .SpektrixPage.ChooseSeats .UpdateButton {
-	float: right;
+	@include large-button;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer {
@@ -77,6 +85,11 @@
 
 .SpektrixPage.ChooseSeats .PricesContainer h3 {
 	margin-top:0;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer td,
+.SpektrixPage.ChooseSeats .PricesContainer th {
+	padding: 10px 20px 10px 0;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer .ImageIcon {

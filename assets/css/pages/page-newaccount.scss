@@ -49,17 +49,16 @@
 
 // Sentence case all progress indicator headings
 .SpektrixPage.NewAccount .Progress ol li span span {
-	display:inline-block; // Needs to be block for :first-letter to work
-	text-transform: lowercase;
+	display:inline-block; // Needs to be block for sentence-case mixin to work
+	@include sentence-case;
 }
 
-.SpektrixPage.NewAccount .Progress ol li span span:first-letter {
-	text-transform: uppercase;
-}
-
-// Target the email validation error, which has no classname
+// Target the email validation error, which has is missing a class name, and therefore the default error styles
 .SpektrixPage.NewAccount .View .Container.Email .ValidationError + span {
 	font-size: 0.8em;
+	color: $error-color !important;
+	margin-left:$form-label-width;
+	display:block;
 }
 
 // Address options don't use .Containers, so let's specify a bottom margin for them
@@ -99,4 +98,14 @@
 // Inception levels of titling on this page: New account > Your Preferences > Your Preferences > Account Preferences
 .SpektrixPage.NewAccount .View h3.AccountPreferencesHeading {
 	display:none;
+}
+
+
+
+.SpektrixPage.NewAccount .Buttons {
+	margin-left:$form-label-width;
+}
+
+.SpektrixPage.NewAccount .GeneralPreferences + .Buttons {
+	margin-left:0;
 }
