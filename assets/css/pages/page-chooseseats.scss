@@ -7,41 +7,41 @@
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaHeading {
+	float: left;
+	clear: both;
+	margin: 0 0 10px 0;
 	font-weight: normal;
 	vertical-align: bottom;
-	clear:both;
-	float:left;
-	margin:0 0 10px 0;
-	color:#999;
+	color: #999;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaHeading > * {
-	//vertical-align: bottom;
+  //vertical-align: bottom;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaHeading .SeatingAreaHeadingLabel {
-	color:#222;
+	color: #222;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaHeading select {
-	-webkit-appearance: none;
-	padding: 10px 40px 5px 10px;
 	height: auto;
-	font-size:inherit;
+	padding: 10px 40px 5px 10px;
+	font-size: inherit;
+	-webkit-appearance: none;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaInstructions {
-	//float:left;
+  //float:left;
 }
 
 .SpektrixPage.ChooseSeats .BestAvailableLink {
-	float:right;
-	margin:0;
+	float: right;
+	margin: 0;
 }
 
 .SpektrixPage.ChooseSeats .BestAvailableLink a {
+	margin-right: 0;
 	@include normal-button;
-	margin-right:0;
 }
 
 // Remove more all caps optional text
@@ -50,28 +50,29 @@
 }
 
 .SpektrixPage.ChooseSeats .SeatingSelector {
+	clear: both;
+	margin-bottom: 2 * $vertical-spacing;
 	border: 1px solid #ccc;
-	margin-bottom:2 * $vertical-spacing;
-	clear:both;
 }
 
 // Make PlanControls sit in a box, instead of the bar which often overlapped the seating and made it unclickable
 .SpektrixPage.ChooseSeats .SeatingArea .PlanControls {
 	right: 0;
-	left:auto;
+	left: auto;
 	width: 164px;
 	padding: 7px 12px;
 }
 
 // Refresh button feels superfluous
 .SpektrixPage.ChooseSeats .RefreshButton {
-	//display: none;
-	@include large-button;
-	@include quiet-button;
+  //display: none;
+  @include large-button;
+  @include quiet-button;
 }
 
 .SpektrixPage.ChooseSeats .Buttons {
-	float:right;
+	float: right;
+	margin-right:0;
 }
 
 .SpektrixPage.ChooseSeats .UpdateButton {
@@ -79,12 +80,12 @@
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer {
+	float: left;
 	@include well;
-	float:left;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer h3 {
-	margin-top:0;
+	margin-top: 0;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer td,
@@ -93,15 +94,78 @@
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer .ImageIcon {
-	padding: 10px 9px 10px 10px;
-	border-radius: 4px;
-	background: white;
-	border: 2px solid white;
-	background-position: 0px -1px;
 	float: left;
 	margin-right: 10px;
+	padding: 10px 9px 10px 10px;
+	border: 2px solid white;
+	border-radius: 4px;
+	background: white;
+	background-position: 0 -1px;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
-	margin-top:$vertical-spacing;
+	margin-top: $vertical-spacing;
+}
+
+
+// Find best available
+
+// Back to select button
+.SpektrixPage.ChooseSeats .SelectSeatsLink a {
+	@include small-button;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable td.TableDataTitle {
+	display: block;
+	width: 100%;
+	padding-bottom:0;
+	border-top: 1px solid $divider-color;
+	font-weight:bold;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable td.TableDataContent {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	padding-left:0;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable tr.BestSeatsRow.BestSeatsBands td.TableDataContent {
+	border-bottom: 1px solid $divider-color;
+	margin-bottom: $vertical-spacing;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailableSeatingAreaTable,
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailablePriceBandTable {
+	width: 100%;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailableSeatingAreaTable tr,
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailablePriceBandTable tr {
+	display:inline-block;
+	vertical-align: top;
+	width: 33%;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailableSeatingAreaTable td,
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailablePriceBandTable td {
+	width:100%;
+	display: block;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestSeatsBands input,
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestSeatsAreas input {
+/* 	display:inline-block;
+	margin:3px 10px 0 0;
+	vertical-align: top; */
+	float:left;
+	margin:3px 10px 0 0;
+}
+
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestSeatsBands label,
+.SpektrixPage.ChooseSeats .BestSeatsTable .BestSeatsAreas label {
+	/* display: inline-block; */
+	max-width: 82%;
+	/* vertical-align: top; */
+	float:left;
 }

@@ -1,0 +1,24 @@
+
+/* Page - GiftAidDeclarationForm */
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormField {
+	padding-left:25px;
+	margin: $vertical-spacing 0 !important; //!important to override inline styles
+}
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormField input {
+	margin-left:-25px;
+	float:left;
+}
+
+.SpektrixPage.GiftAidDeclarationForm .SaveDeclaration {
+	@include large-button;
+	float:right;
+	margin-right:0;
+}
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidTerms {
+	clear:both;
+	padding-top:$vertical-spacing;
+}
+

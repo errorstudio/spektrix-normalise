@@ -1,0 +1,161 @@
+
+/* Page - Checkout */
+
+.SpektrixPage.Checkout h2,
+.SpektrixPage.Checkout h3d {
+	@include sentence-case;
+}
+
+.SpektrixPage.Checkout .Buttons .ContinueButton {
+	float:right;
+	margin-right:0;
+	@include large-button;
+}
+
+// Delivery options
+
+.SpektrixPage.Checkout .DeliveryOptions {
+	//overflow: hidden;
+}
+
+.SpektrixPage.Checkout .DeliveryOptions .DeliveryOption {
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: $vertical-spacing;
+	padding-left:25px;
+}
+
+.SpektrixPage.Checkout .DeliveryOptions .DeliveryOption input {
+	float:left;
+	margin-left:-25px;
+}
+
+// Billing address
+
+.AddressPicker {
+	margin:0 !important;
+}
+
+.AddressList {
+	padding:0;
+	list-style: none;
+}
+
+.AddressList li {
+	width: 33%;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: $vertical-spacing;
+	padding-left:25px;
+}
+
+.AddressList li.label {
+	margin-bottom:10px;
+}
+
+.AddressList li input[type="radio"] {
+	float:left;
+	margin-left:-25px;
+}
+
+
+.AddressList li input[type="submit"] {
+	@include mini-button;
+}
+
+// Summary 
+
+.SummaryView {
+	position:relative;
+}
+
+.SummaryView > .Buttons {
+	position:absolute;
+	top: 74px; //A bit of a flimsy way of achieving this
+	right:0;
+}
+
+.SummaryView .Button {
+	@include small-button;
+}
+
+.SummarySection {
+	position:relative;
+	padding:$vertical-spacing 0;
+	border-top:1px solid $divider-color;
+}
+
+.SummarySection:last-child {
+	border-bottom:1px solid $divider-color;
+}
+
+// These summary sections grouped with basket stuff, so don't need a divider
+.SummarySection.Merchandise,
+.SummarySection.Memberships,
+.SummarySection.Donations {
+	border-top:0;
+	padding-top:0;
+}
+
+.SummarySection p {
+	margin-bottom:0;
+}
+
+.SummarySection.Merchandise p,
+.SummarySection.Memberships p,
+.SummarySection.Donations p {
+	margin:0;
+}
+
+.SummarySection h3 {
+	margin-top:0;
+	font-size:14px;
+	text-transform:uppercase;
+}
+
+.SummarySection .Buttons {
+	position:absolute;
+	top:20px;
+	right:0;
+}
+
+.Event_Summary {
+	font-weight:bold;
+	margin-bottom:0;
+}
+
+.Ticket_Summary {
+	margin:0;
+}
+
+.MerchandiseItem_Summary {
+	font-weight:bold;
+}
+
+.Membership_Name {
+	font-weight:bold;	
+}
+
+.DonationsList {
+	overflow:hidden;	
+}
+
+.DonationsList p {
+	float:left;
+	margin-right:10px;
+}
+
+.SummarySection.Donations .DonationsList .Fund_Name {
+	font-weight:bold;
+	clear:left;
+	margin-right:10px;
+}
+
+.SummarySection.Summary table td {
+	padding:0 10px 0 0;
+}
+
+.Grand_Total {
+	font-weight:bold;
+}

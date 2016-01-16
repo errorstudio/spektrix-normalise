@@ -17,7 +17,7 @@
 
 		// Clean up empty <p>s by removing whitespace, so :empty can then target and hide them.
 
-		if ($('.SpektrixPage p').exists) {
+		if ($('.SpektrixPage p').exists()) {
 			$('.SpektrixPage p').each(function(){
 				if ($(this).text().trim().length < 1 && $(this).children().length < 1) {
 					$(this).html('');
@@ -28,7 +28,7 @@
 
 		// …and WikiText holders while we're at it. NOT QUITE WORKING
 
-		if ($('.SpektrixPage div[class$="WikiText"], .SpektrixPage div[class$="WikiText"] > div')) {
+		if ($('.SpektrixPage div[class$="WikiText"], .SpektrixPage div[class$="WikiText"] > div').exists()) {
 			$('.SpektrixPage div[class$="WikiText"], .SpektrixPage div[class$="WikiText"] > div').each(function(){
 				if ($(this).text().trim().length < 1 && $(this).children().length < 1) {
 					$(this).html('');
@@ -87,7 +87,11 @@
 			// Improve the instruction wording, was 'Please select your seats (maximum 10 for this event per order)'
 			$('.SpektrixPage.ChooseSeats .SeatingAreaInstructions').text('You can pick up to 10 seats per order, for this event.');
 
-
+			// The error message on Best Available is uniquely called .ErrorPanel instead of .ErrorMessage, let's swap it back
+			// It is also formatted differently to other errors, so we'll fix that too
+			var errorText = $('.ErrorPanel li').text();
+			$('.ErrorPanel').html('<span>' + errorText + '</span>');
+			$('.ErrorPanel').addClass('ErrorMessage').removeClass('ErrorPanel');
 
 		}
 
@@ -126,7 +130,7 @@
 			// A curious div.errormessage containing inappropriate errors appears outside the normal page structure if you hit next without selecting an address
 			// I'm going to hide this once instance with JS for now
 			$('div.ErrorMessage').remove();
-			
+
 		}
 
 
@@ -134,8 +138,8 @@
 
 		if ($('.SpektrixPage.Basket2').exists()) {
 			
-			// Put the item name in the <dd> so at least everything is in the same container
-			if ($('dt.Item.Instance')) {
+			// Put the .Instance item name in the <dd> so everything is in the same container
+			if ($('dt.Item.Instance').exists()) {
 				$('dt.Item.Instance').each(function(){
 					$(this).find('span').addClass('ItemName');
 					var itemName = $(this).html();
@@ -144,26 +148,59 @@
 				});
 			}
 
-			// Remove the dt for donations to be consistent
-			if ($('dt.Item.Donation')) {
-				$('dt.Item.Donation').each(function(){
+			// …and do the same with .Merchandise (structure is slightly different)
+			if ($('dt.Item.Merchandise').exists()) {
+				$('dt.Item.Merchandise').each(function(){
+					$(this).find('span').addClass('ItemName');
+					var itemName = $(this).html();
+					$(this).next('dd').prepend('<p class="Details">' + itemName + '</p>');
 					$(this).remove();
 				});
 			}
 
-			// Put the correct class name on the name so it's consistent with other non donation items
-			if ($('dd.Item.Donation')) {
+			// Add missing class to Merchandise > Quantity error field 
+			if ($('dd.Item.Merchandise .Quantity input').exists()) {
+				$('dd.Item.Merchandise .Quantity input + span').addClass('ValidationError');
+			}
+			
+			// Remove the dt for donations to be consistent
+			if ($('dt.Item.Donation').exists()) {
+				$('dt.Item.Donation').remove();
+			}
+
+			// Add missing class and span to membership details
+			if ($('dd.Item.Membership').exists()) {
+				$('dd.Item.Membership > p:first-child').addClass('Details').wrapInner('<span class="ItemName">');
+			}
+
+			// Remove the dt for membership to be consistent
+			if ($('dt.Item.Membership').exists()) {
+				$('dt.Item.Membership').remove();
+			}
+
+			// Put the correct class name on the name so it's consistent with other non-donation items
+			if ($('dd.Item.Donation').exists()) {
 				$('dd.Item.Donation > p:first-child').addClass('Details').prepend('<span class="ItemName">Donation</span>');
 			}
 
 			// Put the promo code box after the basket
-			if ($('.SpektrixPage.Basket2 .Savings')) {
+			if ($('.SpektrixPage.Basket2 .Savings').exists()) {
 				$('.SpektrixPage.Basket2 .Savings').insertAfter($('.SpektrixPage.Basket2 .Savings').next());
 			}
 
-			// Hide an all caps optional message (?!?!)
+			// Hide an all caps optional message
 			$('.SpektrixPage.Basket2 .OptionalMessage').remove();
 
+			// The 'You may also be interested in' box appears in the middle of the basket after plays, but before donations and membership.
+			// Let's take it out and give it it's own space.
+			// The title reads 'You may also be interested in the following:', let's make it snappier.
+			if ($('dt.Promo').exists()) {
+				console.log('there it is');
+				//var titleText = $('dt.Promo').text();
+				var promoContent = $('dd.Promo').html();
+				$('.Items').after('<div class="Promo"><h3>You may like to add…</h3>' + promoContent + '</div>' );
+				$('dd.Promo, dt.Promo').remove();
+			}
 		}
 
 
@@ -226,7 +263,55 @@
 				$(this).append(amountBox);
 			});
 
+			// Add missing class to Amount field error message 
+			if ($('.SpektrixPage.Donations .DonationAmount input').exists()) {
+				$('.SpektrixPage.Donations .DonationAmount input + span').addClass('ValidationError');
+			}
+
+			// 'Donations' sounds very inward-facing, let's replace it with 'Would you like to make a donation?' 
+			$('.DonationsBlurb h1').replaceWith('<h1>Would you like to make a donation?</h1>');
+
 		}
+
+
+		// Memberships
+
+		if ($('.SpektrixPage.Memberships').exists()) {
+
+			// Change <h1>'s and <h2>'s in WikiText to <h3's>
+			$('.SpektrixPage.Memberships .Membership .WikiText h1, .SpektrixPage.Memberships .Membership .WikiText h2').each(function(){
+				var txt = $(this).text();
+				$(this).after('<h3>' + txt + '</h3>');
+				$(this).remove();
+			});
+
+		}
+
+		// GiftAidDeclarationForm
+
+		if ($('.SpektrixPage.GiftAidDeclarationForm').exists()) {
+
+			// Neither inputs, nor labels, nor field containers have class names - and the nearest parent with a class name is the page, let's fix that.
+			$('.SpektrixPage.GiftAidDeclarationForm input[type="radio"]').parent().addClass('GiftAidDeclarationFormField');
+
+			// Add missing class to Merchandise > Quantity error field 
+			if ($('dd.Item.Merchandise .Quantity input').exists()) {
+				$('dd.Item.Merchandise .Quantity input + span').addClass('ValidationError');
+			}
+
+			// The error message on GiftAidDeclarationForm is rendered outside the normal .SpectrixPage container, let's swap it back
+			// It is also formatted differently to other errors, so we'll fix that too
+			var errorText = $('.ErrorMessage li').text();
+			$('.ErrorMessage').html('<span>' + errorText + '</span>');
+			$('.ErrorMessage').insertAfter('.GiftAidDeclarationFormHeading');
+
+		}
+
+
+
+
+
+
 
 
 		// Change password

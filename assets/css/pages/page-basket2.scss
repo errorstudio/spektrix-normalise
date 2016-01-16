@@ -7,7 +7,7 @@ dd {
 
 .Items {
   // This is the main basket table
-  margin: 2em 0;
+  margin: $vertical-spacing * 2 0;
 }
 
 dd.Item,
@@ -172,3 +172,49 @@ a.CheckoutLink {
 	width: auto;
 	margin-bottom: $vertical-spacing;
 }
+
+
+// Merchandise items
+
+dd.Item.Merchandise .Quantity input {
+	width:70px;
+}
+
+dd.Item.Merchandise .Quantity .ValidationError {
+	font-size: .8em;
+  color: $error-color !important; // To override inline color:red
+  display:inline-block;
+}
+
+
+// Promo area
+
+.Promo {
+	@include well;
+	margin-bottom: $vertical-spacing * 2;
+}
+
+.Promo h3 {
+	margin-top:0;
+}
+
+.PromoItems {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.PromoItems li {
+	padding:10px 0;
+	overflow:hidden;
+}
+
+.PromoItems li > span:first-child {
+	margin-top:11px;
+}
+
+.PromoItems li .AddButton {
+	float:right;
+}
+
+

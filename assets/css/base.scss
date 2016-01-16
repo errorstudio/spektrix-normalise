@@ -165,6 +165,7 @@ div.ErrorMessage {
     //color: $error-color !important; // To override inline color:red
     background: lighten($error-color, 50%);
     margin: $vertical-spacing 0;
+    color: $error-color; // There isn't always a span so we need this here too
 }
 
 p.ErrorMessage span,
@@ -186,7 +187,7 @@ div.ErrorMessage span {
 
 .Container {
   // Need to be sure this is only ever a wrapper for form-groups
-  margin-bottom: 20px;
+  margin-bottom: $vertical-spacing;
 }
 
 .Container .ValidationError {

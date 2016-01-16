@@ -1,0 +1,53 @@
+
+/* Progress indicator */
+
+// Default styling for progress indicator MIGHT BE TOO MUCH FOR DUST OFF
+.Progress ol {
+	list-style:none;
+	padding:0;
+	border: 1px solid #DFDFDF;
+	display: inline-block;
+	margin: 0 0 $vertical-spacing 0;
+}
+
+.Progress ol li {
+	display: inline-block;
+	padding: 15px;
+}
+
+.Progress ol li span.Current b {
+	font-weight:normal;
+}
+
+.Progress ol li span:before {
+	background: #eee;
+	border-radius: 100px;
+	display: inline-block;
+	padding: 3px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	margin-right: 10px;
+	margin-bottom: -6px;
+}
+
+.Progress ol li span.Current:before {
+	content:"\0020";
+	border:3px solid #333;
+	margin-top:-3px;
+	margin-bottom: -9px;
+}
+
+.Progress ol li span.NotDone:before {
+	content:"\0020";
+}
+
+.Progress ol li span.Done:before {
+	content:"\2714\0020";
+}
+
+// Sentence case all progress indicator headings
+.Progress ol li span span {
+	display:inline-block; // Needs to be block for sentence-case mixin to work
+	@include sentence-case;
+}

@@ -1,0 +1,61 @@
+
+/* Page - Memberships */
+
+.SpektrixPage.Memberships .LoginForRenewalMessage {
+	margin: 1em 0;
+}
+
+.SpektrixPage.Memberships .Membership {
+	margin: 0;
+	padding: $vertical-spacing 0;
+	border-bottom: 1px solid $divider-color;
+	overflow:hidden;
+}
+
+// Apply a border-top to all .Memberships
+.SpektrixPage.Memberships > .Membership {
+	border-top: 1px solid $divider-color;
+}
+
+// …then remove it from all but the first
+.SpektrixPage.Memberships > .Membership ~ .Membership {
+	border-top: 0;
+}
+
+.SpektrixPage.Memberships .Membership .WikiText {
+	float:left;
+	width:50%;
+}
+
+.SpektrixPage.Memberships .Membership .WikiText img {
+	margin-bottom: 10px;
+}
+
+.SpektrixPage.Memberships .Membership .Details {
+	float:right;
+	@include well;
+	text-align:center;
+}
+
+.SpektrixPage.Memberships .Membership .Details ul {
+	padding:0;
+	list-style:none
+}
+
+.SpektrixPage.Memberships .Membership .Details ul li {
+	margin-bottom:.5em;
+}
+
+.SpektrixPage.Memberships .Membership .Details ul li .Label {
+	font-size:14px;
+	display:block;
+}
+
+.SpektrixPage.Memberships .Membership .Details ul li .Value {
+	font-size: 2.5em;
+}
+
+.SpektrixPage.Memberships .Membership .Details .AutoRenew input {
+	margin-right:10px;
+}
+
