@@ -1,11 +1,6 @@
 
 /* Page - Donations */
 
-.SpektrixPage.Donations input.ContinueButton {
-	@include large-button;
-	float:right;
-}
-
 .SpektrixPage.Donations .FundContainer {
 	margin: 0;
 	padding: $vertical-spacing 0;
@@ -25,4 +20,8 @@
 .SpektrixPage.Donations .DonationAmount {
 	float:right;
 	@include well;
+}
+
+.SpektrixPage.Donations .Buttons .ContinueButton {
+	@include large-button;
 }

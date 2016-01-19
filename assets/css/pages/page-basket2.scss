@@ -8,6 +8,9 @@ dd {
 .Items {
   // This is the main basket table
   margin: $vertical-spacing * 2 0;
+  @include mq(smartphone) {
+  	margin: $vertical-spacing 0;	
+  }
 }
 
 dd.Item,
@@ -17,20 +20,26 @@ dd.Footer {
 
 dt.Header {
 	float: left;
-	width: 50%;
+	width: 45%;
 	padding-bottom: $vertical-spacing;
 	font-weight: bold;
+	@include mq(smartphone) {
+		display:none;	
+	}
 }
 
 dd.Header {
 	overflow: hidden;
 	padding-bottom: $vertical-spacing;
 	font-weight: bold;
+	@include mq(smartphone) {
+		display:none;	
+	}
 }
 
 dd.Header .Breakdown {
 	float: left;
-	width: 50%;
+	width: 55%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -40,6 +49,10 @@ dd.Header .Breakdown li {
 	float: left;
 	width: 50%;
 	margin: 0;
+}
+
+.ItemsWithCommission dd.Header .Breakdown li {
+	width: 33.333333%;
 }
 
 dt.Item {
@@ -61,17 +74,11 @@ dd.Item .ViewDetails {
 
 dd.Item .Details {
 	float: left;
-	width: 50%;
-}
-
-dd.Item .Breakdown {
-	float: left;
-	width: 25%;
-}
-
-dd.Item .Buttons {
-	float: left;
-	width: 25%;
+	width: 45%;
+	@include mq(smartphone) {
+		width:auto;
+		margin-bottom:10px;
+	}
 }
 
 dd.Item p {
@@ -91,38 +98,115 @@ dd.Item .Details .ItemName {
 	font-weight: bold;
 }
 
+dd.Item .Details .InstanceDate,
+dd.Item .Details .InstanceTicketsSummary {
+	@include mq(smartphone) {
+		font-size:12px;
+		display: inline;
+	}
+}
+
+dd.Item .Details .InstanceTicketsSummary {
+	@include mq(smartphone) {
+		opacity:0.6;
+	}
+}
+
+
 dd.Item .Breakdown {
+	float: left;
+	width: 30%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	@include mq(smartphone) {
+		width: auto;
+		float:right;
+		text-align:right;
+		margin:0 0 10px;
+	}
 }
+
 
 dd.Item .Breakdown .Label {
 	display: none;
+	@include mq(smartphone) {
+		text-transform: uppercase;
+		color: red;
+		//font-size: 12px;
+		display: block;
+		color:#FF5C00;
+	}
 }
 
 dd.Item .Breakdown li {
 	float: left;
 	width: 50%;
+	@include mq(smartphone) {
+		float:none;
+		width:auto;
+		padding-left:1em;
+		display:inline-block;	
+	}
 }
+
+.ItemsWithCommission dd.Item .Breakdown li {
+	width: 33.333333%;
+}
+
+/* dd.Item .Breakdown li.Commission + li.Total {
+	margin-left:0;
+	} */
 
 //Work around for maintaining spacing even if Quantity is missing (as it is with donation items)
 
 dd.Item .Breakdown li.Total {
 	margin-left:50%;
+	@include mq(smartphone) {
+		margin-left:0;	
+	}
 }
 
 dd.Item .Breakdown li.Quantity + li.Total {
 	margin-left:0;
 }
 
+.ItemsWithCommission dd.Item .Breakdown li.Total {
+	margin-left:66.666666%;
+}
+
+.ItemsWithCommission dd.Item .Breakdown li.Quantity + li.Total {
+	margin-left:33.333333%;
+}
+
+.ItemsWithCommission dd.Item .Breakdown li.Commission + li.Total {
+	margin-left:0;
+}
+
 
 dd.Item .Buttons {
+	float: left;
+	width: 25%;
 	text-align: right;
+	@include mq(smartphone) {
+		clear:both;
+		float:none;
+		width: auto;
+	}
 }
 
 dd.Item .Buttons input {
 	display: inline-block;
+	@include mq(smartphone) {
+		height: auto;
+		line-height: 1.7;
+		margin-right: 10px;
+		padding: 4px 11px 0px;
+	}
+}
+
+dd.Item .Buttons input:last-child {
+	margin-right: 0;
 }
 
 dt.Footer {
@@ -130,6 +214,10 @@ dt.Footer {
 	width: 62.5%;
 	padding: $vertical-spacing 0;
 	font-weight: bold;
+}
+
+.ItemsWithCommission dt.Footer {
+	width:auto;
 }
 
 dd.Footer {
@@ -141,20 +229,59 @@ dd.Footer .Breakdown {
 	padding: 0;
 	list-style: none;
 	font-weight: bold;
+	@include mq(smartphone) {
+		text-align: right;	
+	}
 }
+
+.ItemsWithCommission dd.Footer .Breakdown {
+	width:30%;
+	float:right;
+	margin-right:25%;
+	@include mq(smartphone) {
+		margin-right:0;		
+	}
+}
+
+.ItemsWithCommission dd.Footer .Breakdown li {
+	width:33.333333%;
+	float:right;
+	@include mq(smartphone) {
+		width:auto;
+	}
+}
+
+.ItemsWithCommission dd.Footer .Breakdown li.Commission {
+	@include mq(smartphone) {
+		display: none;	
+	}
+}
+
 
 dd.Footer .Breakdown .Label {
 	display: none;
 }
 
+
+// Promo Code
+
 .Savings {
 	@include well;
 	width:50%;
 	float:left;
+	margin-bottom:$vertical-spacing;
+	@include mq(smartphone) {
+		float:none;
+		width:100%;	
+	}
 }
 
 .Savings > h2 {
 	margin-top: 0;
+}
+
+.Savings > *:last-child {
+	margin-bottom: 0;
 }
 
 .Savings label {
@@ -165,6 +292,12 @@ dd.Footer .Breakdown .Label {
 a.CheckoutLink {
 	@include large-button;
 	float: right;
+}
+
+.PromoCode input[type="text"] {
+	@include mq(smartphone) {
+		width:112px;		
+	}
 }
 
 .PromoCode label {
@@ -187,14 +320,17 @@ dd.Item.Merchandise .Quantity .ValidationError {
 }
 
 
-// Promo area
+// Promo area (You may also like…)
 
 .Promo {
 	@include well;
 	margin-bottom: $vertical-spacing * 2;
+	@include mq(smartphone) {
+		margin-bottom: $vertical-spacing;
+	}
 }
 
-.Promo h3 {
+.Promo > *:first-child {
 	margin-top:0;
 }
 
@@ -205,12 +341,17 @@ dd.Item.Merchandise .Quantity .ValidationError {
 }
 
 .PromoItems li {
-	padding:10px 0;
+	padding-bottom:$vertical-spacing;
 	overflow:hidden;
 }
 
 .PromoItems li > span:first-child {
 	margin-top:11px;
+	display:inline-block;
+	@include mq(smartphone) {
+		margin-bottom:$vertical-spacing;
+		margin-top:0;
+	}
 }
 
 .PromoItems li .AddButton {

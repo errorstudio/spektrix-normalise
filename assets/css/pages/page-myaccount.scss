@@ -79,22 +79,13 @@ h1 .Buttons {
 
 // Tidy up DOB inputs
 .SpektrixPage.MyAccount .Container.DateOfBirth input {
-	width: 90px !important;
+	width: 78px !important;
 	position: relative;
 	top: 2px;
 }
 
-.SpektrixPage.MyAccount .Container.DateOfBirth input,
 .SpektrixPage.MyAccount .Container.DateOfBirth select {
 	margin-right:10px;
-}
-
-.SpektrixPage.MyAccount .Buttons {
-	margin-left:$form-label-width;
-}
-
-.SpektrixPage.MyAccount .Preferences + .Buttons {
-	margin-left:0;
 }
 
 .SpektrixPage.MyAccount .MyDetailsHeading, 

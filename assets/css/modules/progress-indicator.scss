@@ -1,18 +1,25 @@
 
 /* Progress indicator */
 
-// Default styling for progress indicator MIGHT BE TOO MUCH FOR DUST OFF
+// Default styling for progress indicator MIGHT BE TOO MUCH FOR NORMALISE
 .Progress ol {
 	list-style:none;
 	padding:0;
 	border: 1px solid #DFDFDF;
 	display: inline-block;
 	margin: 0 0 $vertical-spacing 0;
+	@include mq(smartphone) {
+		display:block;
+	}
 }
 
 .Progress ol li {
 	display: inline-block;
 	padding: 15px;
+	@include mq(smartphone) {
+		padding: 10px;
+		display:block;
+	}
 }
 
 .Progress ol li span.Current b {
@@ -36,6 +43,9 @@
 	border:3px solid #333;
 	margin-top:-3px;
 	margin-bottom: -9px;
+	@include mq(smartphone) {
+		margin-left:-3px;	
+	}
 }
 
 .Progress ol li span.NotDone:before {

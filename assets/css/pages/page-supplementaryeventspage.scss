@@ -24,6 +24,9 @@
 	margin-bottom:$vertical-spacing;
 }
 
+.SpektrixPage.SupplementaryEventsPage .SupplementaryEventDiv {
+	margin-bottom:$vertical-spacing;
+}
 
 .SpektrixPage.SupplementaryEventsPage .SupplementaryEventDivTextContent {
 	float:left;
@@ -50,9 +53,6 @@
 // The submit button on this page doesn't have a .Buttons container, the JS adds one
 .SpektrixPage.SupplementaryEventsPage .Buttons .Button {
 	@include large-button;
-	margin-top:$vertical-spacing;
-	float:right;
-	margin-right:0;
 }
 
 

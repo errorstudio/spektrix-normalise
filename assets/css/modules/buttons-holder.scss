@@ -1,0 +1,43 @@
+
+/* Buttons holder */
+
+.Buttons {
+	text-align:right;
+}
+
+.Buttons > input,
+.Buttons > a,
+.Buttons .Button {
+	margin-right:10px;
+	display:inline-block;
+}
+
+// Remove the right margin on the last button in .Buttons, so when they're floated right they meet the edge of the page nicely.
+.Buttons > *:last-child {
+	margin-right:0;
+}
+
+// On small form pages, inset the buttons so the align with the fields
+.SpektrixPage.ChangePassword #Buttons, // A lone ID 
+.SpektrixPage.NewAccount .Buttons,
+.SpektrixPage.EditAddress .Buttons,
+.SpektrixPage.ForgotPassword .Buttons,
+.SpektrixPage.LoginLogout .Buttons,
+.SpektrixPage.MyAccount .Buttons {
+	margin-left:$form-label-width;
+	@include mq(smartphone) {
+		margin-left:0;
+	}
+}
+
+// …on forms with only checkboxes bring them back to the left
+.SpektrixPage.NewAccount .GeneralPreferences + .Buttons,
+.SpektrixPage.MyAccount .Preferences + .Buttons {
+	margin-left:0;
+}
+
+
+.SpektrixPage.ChooseSeats .Buttons {
+	text-align:right;
+}
+

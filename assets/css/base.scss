@@ -77,6 +77,9 @@ textarea {
 .SpektrixPage {
     padding: 40px;
     @include clearfix;
+    @include mq(smartphone) {
+        padding:15px;   
+    }
 }
 
 .SpektrixFooter {
@@ -105,6 +108,10 @@ h1 {
     margin-top:0;
     padding-bottom: 14px;
     border-bottom: 1px dashed $divider-color;
+    @include mq(smartphone) {
+        font-size: 1.6em; // CHECK
+        margin: 0.7em 0; // CHECK
+    }
 }
 
 
@@ -177,12 +184,19 @@ div.ErrorMessage span {
     width:$form-label-width;
     display: inline-block;
     //float: left;
+    @include mq(smartphone) {
+        display: block;
+        margin-bottom: 4px;
+    }
 }
 
 .Container label.right {
     width:auto;
     float: none;
     font-size:.8em;
+    @include mq(smartphone) {
+        display: inline-block;
+    }
 }
 
 .Container {
@@ -196,6 +210,9 @@ div.ErrorMessage span {
     margin: 13px 0 0 0;
     display:block;
     margin-left:$form-label-width;
+    @include mq(smartphone) {
+        margin-left:0;
+    }
 }
 
 .Container .ValidationError br {
@@ -209,6 +226,15 @@ div.ErrorMessage span {
     margin: 13px 0 0 204px;
     width: 200px;
     opacity: 0.7;
+    @include mq(smartphone) {
+        margin-left:0;
+    }
+}
+
+
+.Input_Checkbox {
+    padding-left: 25px;
+    display: block;
 }
 
 .Input_Checkbox label {
@@ -217,8 +243,10 @@ div.ErrorMessage span {
 }
 
 .Input_Checkbox input {
-    margin-right: 10px;
+    float:left;
+    margin-left:-25px;
 }
+
 
 
 

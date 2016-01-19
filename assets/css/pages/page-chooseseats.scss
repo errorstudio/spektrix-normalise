@@ -70,11 +70,6 @@
   @include quiet-button;
 }
 
-.SpektrixPage.ChooseSeats .Buttons {
-	float: right;
-	margin-right:0;
-}
-
 .SpektrixPage.ChooseSeats .UpdateButton {
 	@include large-button;
 }

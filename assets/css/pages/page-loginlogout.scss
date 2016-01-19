@@ -5,12 +5,11 @@
 	display: none;
 }
 
-.SpektrixPage.LoginLogout .Buttons {
-	margin-left:$form-label-width;
-}
-
 .SpektrixPage.LoginLogout .Account_Link {
 	margin-left:$form-label-width;
+	@include mq(smartphone) {
+		margin-left:0;
+	}
 }
 
 .SpektrixPage.LoginLogout .Button.Login {

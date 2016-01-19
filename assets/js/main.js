@@ -198,12 +198,21 @@
 			// Let's take it out and give it it's own space.
 			// The title reads 'You may also be interested in the following:', let's make it snappier.
 			if ($('dt.Promo').exists()) {
-				console.log('there it is');
 				//var titleText = $('dt.Promo').text();
 				var promoContent = $('dd.Promo').html();
-				$('.Items').after('<div class="Promo"><h3>You may like to add…</h3>' + promoContent + '</div>' );
+				$('.Items').after('<div class="Promo"><h2>You may like to add…</h2>' + promoContent + '</div>' );
 				$('dd.Promo, dt.Promo').remove();
 			}
+
+			// Does the basket need to show the commission column?
+			if ($('.Breakdown .Commission').exists()) {
+				$('.Items').addClass('ItemsWithCommission');
+			}
+
+			$('.Breakdown .Total .Label').text('Total');
+			$('.Breakdown .Quantity .Label').text('Quantity');
+			$('.Breakdown .Commission .Label').text('CMSN');
+
 		}
 
 
@@ -337,7 +346,11 @@
 		if ($('.SpektrixPage.Checkout').exists()) {
 
 			// Fix capitalisation on 'Edit basket' button
-			$('.SummaryView > .Buttons .Button').attr('value', 'Edit basket');	
+			$('.SummaryView > .Buttons .Button').attr('value', 'Edit basket');
+
+			// Put the Ts & Cs checkbox before the label, for consistency
+			$('.TermsAndConditions input').insertBefore('.TermsAndConditions label');
+			console.log("ok");
 
 		}
 

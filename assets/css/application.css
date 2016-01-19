@@ -267,6 +267,9 @@ textarea {
     content: " "; }
   .SpektrixPage:after {
     clear: both; }
+  @media (max-width: 767px) {
+    .SpektrixPage {
+      padding: 15px; } }
 
 .SpektrixFooter {
   display: none; }
@@ -287,6 +290,10 @@ h1 {
   margin-top: 0;
   padding-bottom: 14px;
   border-bottom: 1px dashed #eee; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 1.6em;
+      margin: 0.7em 0; } }
 
 .booking-for {
   float: right;
@@ -300,7 +307,6 @@ input[type="reset"],
 input[type="submit"] {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -342,7 +348,7 @@ div.ErrorMessage {
   border-radius: 0;
   padding: 10px 14px;
   background: #ffdede;
-  margin: 20px 0;
+  margin: 1.25em 0;
   color: #DB0303; }
 
 p.ErrorMessage span,
@@ -352,14 +358,21 @@ div.ErrorMessage span {
 .Container label {
   width: 200px;
   display: inline-block; }
+  @media (max-width: 767px) {
+    .Container label {
+      display: block;
+      margin-bottom: 4px; } }
 
 .Container label.right {
   width: auto;
   float: none;
   font-size: .8em; }
+  @media (max-width: 767px) {
+    .Container label.right {
+      display: inline-block; } }
 
 .Container {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 .Container .ValidationError {
   font-size: .8em;
@@ -367,6 +380,9 @@ div.ErrorMessage span {
   margin: 13px 0 0 0;
   display: block;
   margin-left: 200px; }
+  @media (max-width: 767px) {
+    .Container .ValidationError {
+      margin-left: 0; } }
 
 .Container .ValidationError br {
   display: none; }
@@ -377,13 +393,21 @@ div.ErrorMessage span {
   margin: 13px 0 0 204px;
   width: 200px;
   opacity: 0.7; }
+  @media (max-width: 767px) {
+    .Container .Comment {
+      margin-left: 0; } }
+
+.Input_Checkbox {
+  padding-left: 25px;
+  display: block; }
 
 .Input_Checkbox label {
   width: auto;
   float: none; }
 
 .Input_Checkbox input {
-  margin-right: 10px; }
+  float: left;
+  margin-left: -25px; }
 
 /* ==========================================================================
    Media Queries
@@ -506,11 +530,18 @@ div.ErrorMessage span {
   padding: 0;
   border: 1px solid #DFDFDF;
   display: inline-block;
-  margin: 0 0 20px 0; }
+  margin: 0 0 1.25em 0; }
+  @media (max-width: 767px) {
+    .Progress ol {
+      display: block; } }
 
 .Progress ol li {
   display: inline-block;
   padding: 15px; }
+  @media (max-width: 767px) {
+    .Progress ol li {
+      padding: 10px;
+      display: block; } }
 
 .Progress ol li span.Current b {
   font-weight: normal; }
@@ -531,6 +562,9 @@ div.ErrorMessage span {
   border: 3px solid #333;
   margin-top: -3px;
   margin-bottom: -9px; }
+  @media (max-width: 767px) {
+    .Progress ol li span.Current:before {
+      margin-left: -3px; } }
 
 .Progress ol li span.NotDone:before {
   content: "\0020"; }
@@ -544,13 +578,49 @@ div.ErrorMessage span {
   .Progress ol li span span:first-letter {
     text-transform: uppercase; }
 
+/* Buttons holder */
+.Buttons {
+  text-align: right; }
+
+.Buttons > input,
+.Buttons > a,
+.Buttons .Button {
+  margin-right: 10px;
+  display: inline-block; }
+
+.Buttons > *:last-child {
+  margin-right: 0; }
+
+.SpektrixPage.ChangePassword #Buttons,
+.SpektrixPage.NewAccount .Buttons,
+.SpektrixPage.EditAddress .Buttons,
+.SpektrixPage.ForgotPassword .Buttons,
+.SpektrixPage.LoginLogout .Buttons,
+.SpektrixPage.MyAccount .Buttons {
+  margin-left: 200px; }
+  @media (max-width: 767px) {
+    .SpektrixPage.ChangePassword #Buttons,
+    .SpektrixPage.NewAccount .Buttons,
+    .SpektrixPage.EditAddress .Buttons,
+    .SpektrixPage.ForgotPassword .Buttons,
+    .SpektrixPage.LoginLogout .Buttons,
+    .SpektrixPage.MyAccount .Buttons {
+      margin-left: 0; } }
+
+.SpektrixPage.NewAccount .GeneralPreferences + .Buttons,
+.SpektrixPage.MyAccount .Preferences + .Buttons {
+  margin-left: 0; }
+
+.SpektrixPage.ChooseSeats .Buttons {
+  text-align: right; }
+
 /* Page - EventsList */
 .SpektrixPage.EventsList .Events .Event {
   border-bottom: 1px solid #eee; }
 
 .SpektrixPage.EventsList .Event_Text {
   overflow: hidden;
-  padding: 20px 0; }
+  padding: 1.25em 0; }
 
 .SpektrixPage.EventsList .Event_Text > * {
   float: left;
@@ -603,7 +673,6 @@ div.ErrorMessage span {
   margin-right: 0;
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -623,7 +692,7 @@ div.ErrorMessage span {
 
 .SpektrixPage.ChooseSeats .SeatingSelector {
   clear: both;
-  margin-bottom: 40px;
+  margin-bottom: 2.5em;
   border: 1px solid #ccc; }
 
 .SpektrixPage.ChooseSeats .SeatingArea .PlanControls {
@@ -635,7 +704,6 @@ div.ErrorMessage span {
 .SpektrixPage.ChooseSeats .RefreshButton {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -656,14 +724,9 @@ div.ErrorMessage span {
     background: #ef192d;
     color: #ffe000; }
 
-.SpektrixPage.ChooseSeats .Buttons {
-  float: right;
-  margin-right: 0; }
-
 .SpektrixPage.ChooseSeats .UpdateButton {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -705,12 +768,11 @@ div.ErrorMessage span {
   background-position: 0 -1px; }
 
 .SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
-  margin-top: 20px; }
+  margin-top: 1.25em; }
 
 .SpektrixPage.ChooseSeats .SelectSeatsLink a {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -744,7 +806,7 @@ div.ErrorMessage span {
 
 .SpektrixPage.ChooseSeats .BestSeatsTable tr.BestSeatsRow.BestSeatsBands td.TableDataContent {
   border-bottom: 1px solid #eee;
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 .SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailableSeatingAreaTable,
 .SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailablePriceBandTable {
@@ -783,16 +845,15 @@ div.ErrorMessage span {
 .SpektrixPage.LoginLogout .OptionalMessage {
   display: none; }
 
-.SpektrixPage.LoginLogout .Buttons {
-  margin-left: 200px; }
-
 .SpektrixPage.LoginLogout .Account_Link {
   margin-left: 200px; }
+  @media (max-width: 767px) {
+    .SpektrixPage.LoginLogout .Account_Link {
+      margin-left: 0; } }
 
 .SpektrixPage.LoginLogout .Button.Login {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -816,7 +877,10 @@ dd {
   margin: 0; }
 
 .Items {
-  margin: 40px 0; }
+  margin: 2.5em 0; }
+  @media (max-width: 767px) {
+    .Items {
+      margin: 1.25em 0; } }
 
 dd.Item,
 dd.Footer {
@@ -824,18 +888,24 @@ dd.Footer {
 
 dt.Header {
   float: left;
-  width: 50%;
-  padding-bottom: 20px;
+  width: 45%;
+  padding-bottom: 1.25em;
   font-weight: bold; }
+  @media (max-width: 767px) {
+    dt.Header {
+      display: none; } }
 
 dd.Header {
   overflow: hidden;
-  padding-bottom: 20px;
+  padding-bottom: 1.25em;
   font-weight: bold; }
+  @media (max-width: 767px) {
+    dd.Header {
+      display: none; } }
 
 dd.Header .Breakdown {
   float: left;
-  width: 50%;
+  width: 55%;
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -845,28 +915,27 @@ dd.Header .Breakdown li {
   width: 50%;
   margin: 0; }
 
+.ItemsWithCommission dd.Header .Breakdown li {
+  width: 33.333333%; }
+
 dt.Item {
   float: left; }
 
 dd.Item {
   overflow: hidden;
   margin: 0;
-  padding: 20px 0; }
+  padding: 1.25em 0; }
 
 dd.Item .ViewDetails {
   display: none; }
 
 dd.Item .Details {
   float: left;
-  width: 50%; }
-
-dd.Item .Breakdown {
-  float: left;
-  width: 25%; }
-
-dd.Item .Buttons {
-  float: left;
-  width: 25%; }
+  width: 45%; }
+  @media (max-width: 767px) {
+    dd.Item .Details {
+      width: auto;
+      margin-bottom: 10px; } }
 
 dd.Item p {
   margin: 0; }
@@ -880,35 +949,102 @@ dd.Item .Details > br {
 dd.Item .Details .ItemName {
   font-weight: bold; }
 
+@media (max-width: 767px) {
+  dd.Item .Details .InstanceDate,
+  dd.Item .Details .InstanceTicketsSummary {
+    font-size: 12px;
+    display: inline; } }
+
+@media (max-width: 767px) {
+  dd.Item .Details .InstanceTicketsSummary {
+    opacity: 0.6; } }
+
 dd.Item .Breakdown {
+  float: left;
+  width: 30%;
   margin: 0;
   padding: 0;
   list-style: none; }
+  @media (max-width: 767px) {
+    dd.Item .Breakdown {
+      width: auto;
+      float: right;
+      text-align: right;
+      margin: 0 0 10px; } }
 
 dd.Item .Breakdown .Label {
   display: none; }
+  @media (max-width: 767px) {
+    dd.Item .Breakdown .Label {
+      text-transform: uppercase;
+      color: red;
+      display: block;
+      color: #FF5C00; } }
 
 dd.Item .Breakdown li {
   float: left;
   width: 50%; }
+  @media (max-width: 767px) {
+    dd.Item .Breakdown li {
+      float: none;
+      width: auto;
+      padding-left: 1em;
+      display: inline-block; } }
 
+.ItemsWithCommission dd.Item .Breakdown li {
+  width: 33.333333%; }
+
+/* dd.Item .Breakdown li.Commission + li.Total {
+	margin-left:0;
+	} */
 dd.Item .Breakdown li.Total {
   margin-left: 50%; }
+  @media (max-width: 767px) {
+    dd.Item .Breakdown li.Total {
+      margin-left: 0; } }
 
 dd.Item .Breakdown li.Quantity + li.Total {
   margin-left: 0; }
 
+.ItemsWithCommission dd.Item .Breakdown li.Total {
+  margin-left: 66.666666%; }
+
+.ItemsWithCommission dd.Item .Breakdown li.Quantity + li.Total {
+  margin-left: 33.333333%; }
+
+.ItemsWithCommission dd.Item .Breakdown li.Commission + li.Total {
+  margin-left: 0; }
+
 dd.Item .Buttons {
+  float: left;
+  width: 25%;
   text-align: right; }
+  @media (max-width: 767px) {
+    dd.Item .Buttons {
+      clear: both;
+      float: none;
+      width: auto; } }
 
 dd.Item .Buttons input {
   display: inline-block; }
+  @media (max-width: 767px) {
+    dd.Item .Buttons input {
+      height: auto;
+      line-height: 1.7;
+      margin-right: 10px;
+      padding: 4px 11px 0px; } }
+
+dd.Item .Buttons input:last-child {
+  margin-right: 0; }
 
 dt.Footer {
   float: left;
   width: 62.5%;
-  padding: 20px 0;
+  padding: 1.25em 0;
   font-weight: bold; }
+
+.ItemsWithCommission dt.Footer {
+  width: auto; }
 
 dd.Footer {
   padding: 20px 0; }
@@ -918,6 +1054,28 @@ dd.Footer .Breakdown {
   padding: 0;
   list-style: none;
   font-weight: bold; }
+  @media (max-width: 767px) {
+    dd.Footer .Breakdown {
+      text-align: right; } }
+
+.ItemsWithCommission dd.Footer .Breakdown {
+  width: 30%;
+  float: right;
+  margin-right: 25%; }
+  @media (max-width: 767px) {
+    .ItemsWithCommission dd.Footer .Breakdown {
+      margin-right: 0; } }
+
+.ItemsWithCommission dd.Footer .Breakdown li {
+  width: 33.333333%;
+  float: right; }
+  @media (max-width: 767px) {
+    .ItemsWithCommission dd.Footer .Breakdown li {
+      width: auto; } }
+
+@media (max-width: 767px) {
+  .ItemsWithCommission dd.Footer .Breakdown li.Commission {
+    display: none; } }
 
 dd.Footer .Breakdown .Label {
   display: none; }
@@ -927,10 +1085,18 @@ dd.Footer .Breakdown .Label {
   background: #C2F6FF;
   border-radius: 0;
   width: 50%;
-  float: left; }
+  float: left;
+  margin-bottom: 1.25em; }
+  @media (max-width: 767px) {
+    .Savings {
+      float: none;
+      width: 100%; } }
 
 .Savings > h2 {
   margin-top: 0; }
+
+.Savings > *:last-child {
+  margin-bottom: 0; }
 
 .Savings label {
   display: block;
@@ -939,7 +1105,6 @@ dd.Footer .Breakdown .Label {
 a.CheckoutLink {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -959,10 +1124,14 @@ a.CheckoutLink {
     background: #ef192d;
     color: #ffe000; }
 
+@media (max-width: 767px) {
+  .PromoCode input[type="text"] {
+    width: 112px; } }
+
 .PromoCode label {
   display: block;
   width: auto;
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 dd.Item.Merchandise .Quantity input {
   width: 70px; }
@@ -976,9 +1145,12 @@ dd.Item.Merchandise .Quantity .ValidationError {
   padding: 20px;
   background: #C2F6FF;
   border-radius: 0;
-  margin-bottom: 40px; }
+  margin-bottom: 2.5em; }
+  @media (max-width: 767px) {
+    .Promo {
+      margin-bottom: 1.25em; } }
 
-.Promo h3 {
+.Promo > *:first-child {
   margin-top: 0; }
 
 .PromoItems {
@@ -987,54 +1159,21 @@ dd.Item.Merchandise .Quantity .ValidationError {
   margin: 0; }
 
 .PromoItems li {
-  padding: 10px 0;
+  padding-bottom: 1.25em;
   overflow: hidden; }
 
 .PromoItems li > span:first-child {
-  margin-top: 11px; }
+  margin-top: 11px;
+  display: inline-block; }
+  @media (max-width: 767px) {
+    .PromoItems li > span:first-child {
+      margin-bottom: 1.25em;
+      margin-top: 0; } }
 
 .PromoItems li .AddButton {
   float: right; }
 
 /* Page - NewAccount */
-.SpektrixPage.NewAccount .Progress ol {
-  overflow: hidden;
-  list-style: none;
-  padding: 0;
-  border: 1px solid #DFDFDF;
-  display: inline-block;
-  margin: 0 0 20px 0; }
-
-.SpektrixPage.NewAccount .Progress ol li {
-  float: left;
-  padding: 15px; }
-
-.SpektrixPage.NewAccount .Progress ol li span.Current b {
-  font-weight: normal; }
-
-.SpektrixPage.NewAccount .Progress ol li span:before {
-  background: #eee;
-  border-radius: 100px;
-  display: inline-block;
-  padding: 3px;
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  margin-right: 10px;
-  margin-bottom: -6px; }
-
-.SpektrixPage.NewAccount .Progress ol li span.Current:before {
-  content: "\0020";
-  border: 3px solid #333;
-  margin-top: -3px;
-  margin-bottom: -9px; }
-
-.SpektrixPage.NewAccount .Progress ol li span.NotDone:before {
-  content: "\0020"; }
-
-.SpektrixPage.NewAccount .Progress ol li span.Done:before {
-  content: "\2714\0020"; }
-
 .SpektrixPage.NewAccount .Progress ol li span span {
   display: inline-block;
   text-transform: lowercase; }
@@ -1046,9 +1185,12 @@ dd.Item.Merchandise .Quantity .ValidationError {
   color: #DB0303 !important;
   margin-left: 200px;
   display: block; }
+  @media (max-width: 767px) {
+    .SpektrixPage.NewAccount .View .Container.Email .ValidationError + span {
+      margin-left: 0; } }
 
 .SpektrixPage.NewAccount .View .AddressOption {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 .SpektrixPage.NewAccount .View .AddressOption label {
   width: auto;
@@ -1058,7 +1200,7 @@ dd.Item.Merchandise .Quantity .ValidationError {
   margin-right: 10px; }
 
 .SpektrixPage.NewAccount .View .Container.DateOfBirth input {
-  width: 90px !important;
+  width: 78px !important;
   position: relative;
   top: 2px; }
 
@@ -1073,18 +1215,16 @@ dd.Item.Merchandise .Quantity .ValidationError {
 .SpektrixPage.NewAccount .View h3.AccountPreferencesHeading {
   display: none; }
 
-.SpektrixPage.NewAccount .Buttons {
-  margin-left: 200px; }
+.Container.Country select {
+  max-width: 100%; }
 
-.SpektrixPage.NewAccount .GeneralPreferences + .Buttons {
-  margin-left: 0; }
+@media (max-width: 767px) {
+  .Container.Postcode input {
+    width: 130px; } }
 
 /* Page - ChangePassword */
 .SpektrixPage.ChangePassword .Container.Password .ValidationError br {
   display: none; }
-
-.SpektrixPage.ChangePassword #Buttons {
-  margin-left: 200px; }
 
 /* Page - MyAccount */
 h1 .Buttons {
@@ -1117,7 +1257,6 @@ h1 .Buttons {
 .SpektrixPage.MyAccount a.ChangePassword {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1135,7 +1274,7 @@ h1 .Buttons {
   color: #ef192d;
   background: #fff6b3;
   margin-left: 200px;
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
   .SpektrixPage.MyAccount a.ChangePassword:hover {
     background: #ef192d;
     color: #ffe000; }
@@ -1143,7 +1282,6 @@ h1 .Buttons {
 .SpektrixPage.MyAccount a.NewAddress {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1165,7 +1303,6 @@ h1 .Buttons {
 .SpektrixPage.MyAccount .Addresses .Container.Address a {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1205,19 +1342,12 @@ h1 .Buttons {
   margin-bottom: 20px; }
 
 .SpektrixPage.MyAccount .Container.DateOfBirth input {
-  width: 90px !important;
+  width: 78px !important;
   position: relative;
   top: 2px; }
 
-.SpektrixPage.MyAccount .Container.DateOfBirth input,
 .SpektrixPage.MyAccount .Container.DateOfBirth select {
   margin-right: 10px; }
-
-.SpektrixPage.MyAccount .Buttons {
-  margin-left: 200px; }
-
-.SpektrixPage.MyAccount .Preferences + .Buttons {
-  margin-left: 0; }
 
 .SpektrixPage.MyAccount .MyDetailsHeading,
 .SpektrixPage.MyAccount .MyAddressesHeading,
@@ -1231,32 +1361,9 @@ h1 .Buttons {
     text-transform: uppercase; }
 
 /* Page - Donations */
-.SpektrixPage.Donations input.ContinueButton {
-  height: 44px;
-  line-height: 2.2;
-  margin-right: 10px;
-  padding: 5px 20px 4px;
-  color: #ef192d;
-  background: #ffe000;
-  border: 0;
-  text-decoration: none;
-  display: inline-block;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  height: 64px;
-  line-height: 1.1;
-  padding: 20px 27px 16px;
-  font-size: 28px;
-  float: right; }
-  .SpektrixPage.Donations input.ContinueButton:hover {
-    background: #ef192d;
-    color: #ffe000; }
-
 .SpektrixPage.Donations .FundContainer {
   margin: 0;
-  padding: 20px 0;
+  padding: 1.25em 0;
   border-bottom: 1px solid #eee;
   overflow: hidden; }
 
@@ -1273,6 +1380,27 @@ h1 .Buttons {
   background: #C2F6FF;
   border-radius: 0; }
 
+.SpektrixPage.Donations .Buttons .ContinueButton {
+  height: 44px;
+  line-height: 2.2;
+  padding: 5px 20px 4px;
+  color: #ef192d;
+  background: #ffe000;
+  border: 0;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  height: 64px;
+  line-height: 1.1;
+  padding: 20px 27px 16px;
+  font-size: 28px; }
+  .SpektrixPage.Donations .Buttons .ContinueButton:hover {
+    background: #ef192d;
+    color: #ffe000; }
+
 /* Page - Cookies */
 .Cookies > div {
   max-width: 750px; }
@@ -1280,7 +1408,7 @@ h1 .Buttons {
 /* Pages - SupplementaryEventsPage */
 .SpektrixPage.SupplementaryEventsPage .Event_Text {
   margin: 0;
-  padding: 20px 0;
+  padding: 1.25em 0;
   border-top: 1px solid #eee;
   overflow: hidden;
   clear: both; }
@@ -1295,7 +1423,10 @@ h1 .Buttons {
   border-radius: 0; }
 
 .SpektrixPage.SupplementaryEventsPage > div > div[id*="WikiText"] {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
+
+.SpektrixPage.SupplementaryEventsPage .SupplementaryEventDiv {
+  margin-bottom: 1.25em; }
 
 .SpektrixPage.SupplementaryEventsPage .SupplementaryEventDivTextContent {
   float: left;
@@ -1317,7 +1448,6 @@ h1 .Buttons {
 .SpektrixPage.SupplementaryEventsPage .Buttons .Button {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1331,10 +1461,7 @@ h1 .Buttons {
   height: 64px;
   line-height: 1.1;
   padding: 20px 27px 16px;
-  font-size: 28px;
-  margin-top: 20px;
-  float: right;
-  margin-right: 0; }
+  font-size: 28px; }
   .SpektrixPage.SupplementaryEventsPage .Buttons .Button:hover {
     background: #ef192d;
     color: #ffe000; }
@@ -1346,7 +1473,7 @@ h1 .Buttons {
   padding: 10px 14px;
   display: block;
   background: #99ffd5;
-  margin: 20px 0; }
+  margin: 1.25em 0; }
 
 /* Page - EditTickets */
 .SpektrixPage.EditTickets p.Message {
@@ -1355,7 +1482,6 @@ h1 .Buttons {
 .SpektrixPage.EditTickets .ChangeMySeatsLink {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1391,7 +1517,6 @@ h1 .Buttons {
 .SpektrixPage.EditTickets .Buttons input[type="submit"] {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1405,20 +1530,15 @@ h1 .Buttons {
   height: 64px;
   line-height: 1.1;
   padding: 20px 27px 16px;
-  font-size: 28px;
-  float: right; }
+  font-size: 28px; }
   .SpektrixPage.EditTickets .Buttons input[type="submit"]:hover {
     background: #ef192d;
     color: #ffe000; }
 
 /* Page - ForgotPassword */
-.SpektrixPage.ForgotPassword .Buttons {
-  margin-left: 200px; }
-
 .SpektrixPage.ForgotPassword .ResetPasswordButton {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1438,22 +1558,19 @@ h1 .Buttons {
     color: #ffe000; }
 
 /* Page - EditAddress */
-.SpektrixPage.EditAddress .Buttons {
-  margin-left: 200px; }
+.SpektrixPage.EditAddress .AddressOptions .Option {
+  margin-left: 200px;
+  margin-bottom: 1.25em; }
 
 .SpektrixPage.EditAddress .AddressOptions .Option {
   margin-left: 200px;
-  margin-bottom: 20px; }
-
-.SpektrixPage.EditAddress .AddressOptions .Option {
-  margin-left: 200px;
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 .SpektrixPage.EditAddress .AddressOptions .Option input {
   margin-right: 10px; }
 
 .SpektrixPage.EditAddress .Addresses .AddressOption {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25em; }
 
 .SpektrixPage.EditAddress .Addresses .AddressOption label {
   width: auto; }
@@ -1467,7 +1584,7 @@ h1 .Buttons {
 
 .SpektrixPage.Memberships .Membership {
   margin: 0;
-  padding: 20px 0;
+  padding: 1.25em 0;
   border-bottom: 1px solid #eee;
   overflow: hidden; }
 
@@ -1517,11 +1634,8 @@ h1 .Buttons {
     text-transform: uppercase; }
 
 .SpektrixPage.Checkout .Buttons .ContinueButton {
-  float: right;
-  margin-right: 0;
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1544,7 +1658,7 @@ h1 .Buttons {
   width: 33%;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
   padding-left: 25px; }
 
 .SpektrixPage.Checkout .DeliveryOptions .DeliveryOption input {
@@ -1562,7 +1676,7 @@ h1 .Buttons {
   width: 33%;
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
   padding-left: 25px; }
 
 .AddressList li.label {
@@ -1575,7 +1689,6 @@ h1 .Buttons {
 .AddressList li input[type="submit"] {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1605,7 +1718,6 @@ h1 .Buttons {
 .SummaryView .Button {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1626,11 +1738,12 @@ h1 .Buttons {
 
 .SummarySection {
   position: relative;
-  padding: 20px 0;
+  padding: 1.25em 0;
   border-top: 1px solid #eee; }
 
 .SummarySection:last-child {
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1.25em; }
 
 .SummarySection.Merchandise,
 .SummarySection.Memberships,
@@ -1699,13 +1812,29 @@ h1 .Buttons {
   .SummarySection.TicketDelivery .Delivery_Method:first-letter {
     text-transform: uppercase; }
 
+.TermsAndConditions {
+  padding: 20px;
+  padding-left: 46px;
+  background: #ABF2F9;
+  margin-top: 1.25em; }
+
+.TermsAndConditions {
+  padding: 20px;
+  padding-left: 46px;
+  background: #ABF2F9; }
+
+.TermsAndConditions input {
+  float: left;
+  margin-left: -25px;
+  margin-top: 3px; }
+
 /* Page - GiftAidDeclarationForm */
 .SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormHeading {
   text-transform: none; }
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormField {
   padding-left: 25px;
-  margin: 20px 0 !important; }
+  margin: 1.25em 0 !important; }
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormField input {
   margin-left: -25px;
@@ -1714,7 +1843,6 @@ h1 .Buttons {
 .SpektrixPage.GiftAidDeclarationForm .SaveDeclaration {
   height: 44px;
   line-height: 2.2;
-  margin-right: 10px;
   padding: 5px 20px 4px;
   color: #ef192d;
   background: #ffe000;
@@ -1728,16 +1856,14 @@ h1 .Buttons {
   height: 64px;
   line-height: 1.1;
   padding: 20px 27px 16px;
-  font-size: 28px;
-  float: right;
-  margin-right: 0; }
+  font-size: 28px; }
   .SpektrixPage.GiftAidDeclarationForm .SaveDeclaration:hover {
     background: #ef192d;
     color: #ffe000; }
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidTerms {
   clear: both;
-  padding-top: 20px; }
+  padding-top: 1.25em; }
 
 .GiftAidDeclarationFormField {
   opacity: 0.5; }
@@ -1765,6 +1891,9 @@ textarea {
 body {
   font-family: 'Radikal';
   font-size: 16.1px; }
+  @media (max-width: 767px) {
+    body {
+      font-size: 14.1px; } }
 
 a {
   color: red; }
@@ -1778,15 +1907,26 @@ div#mfPreviewBarShow {
 
 .SpektrixPage {
   padding: 38px 40px 8px; }
+  @media (max-width: 767px) {
+    .SpektrixPage {
+      padding: 15px; } }
 
 h1 {
   font-size: 2.5em;
   font-weight: normal;
   border: 0;
   padding: 0; }
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 1.6em;
+      margin: 0.7em 0; } }
 
 h2 {
   font-weight: normal; }
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 1.4em;
+      margin: 0.5em 0; } }
 
 .booking-for {
   font-size: 0.45em; }
