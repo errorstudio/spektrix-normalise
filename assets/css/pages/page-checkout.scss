@@ -156,6 +156,16 @@
 	padding:0 10px 0 0;
 }
 
-.Grand_Total {
+.SummarySection.Summary table td.Summary {
+	width:$form-label-width;
+	@include sentence-case;
+}
+
+.SummarySection.Summary table tr:last-child td {
+	padding-top:10px;
 	font-weight:bold;
+}
+
+.SummarySection.TicketDelivery .Delivery_Method {
+	@include sentence-case;
 }

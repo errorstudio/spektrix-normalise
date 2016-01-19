@@ -184,9 +184,12 @@
 			}
 
 			// Put the promo code box after the basket
-			if ($('.SpektrixPage.Basket2 .Savings').exists()) {
-				$('.SpektrixPage.Basket2 .Savings').insertAfter($('.SpektrixPage.Basket2 .Savings').next());
+			if ($('.Savings').exists()) {
+				$('.Savings').insertAfter($('.Savings').next());
 			}
+
+			// Fix capitalisation on 'Apply code' button
+			$('.PromoCode .Button').attr('value', 'Apply code');	
 
 			// Hide an all caps optional message
 			$('.SpektrixPage.Basket2 .OptionalMessage').remove();
@@ -271,6 +274,10 @@
 			// 'Donations' sounds very inward-facing, let's replace it with 'Would you like to make a donation?' 
 			$('.DonationsBlurb h1').replaceWith('<h1>Would you like to make a donation?</h1>');
 
+			// Fix capitalisation on 'Add to basket' button
+			$('.SpektrixPage.Donations input.ContinueButton').attr('value', 'Add to basket');	
+			
+
 		}
 
 
@@ -294,24 +301,45 @@
 			// Neither inputs, nor labels, nor field containers have class names - and the nearest parent with a class name is the page, let's fix that.
 			$('.SpektrixPage.GiftAidDeclarationForm input[type="radio"]').parent().addClass('GiftAidDeclarationFormField');
 
-			// Add missing class to Merchandise > Quantity error field 
-			if ($('dd.Item.Merchandise .Quantity input').exists()) {
-				$('dd.Item.Merchandise .Quantity input + span').addClass('ValidationError');
-			}
-
 			// The error message on GiftAidDeclarationForm is rendered outside the normal .SpectrixPage container, let's swap it back
 			// It is also formatted differently to other errors, so we'll fix that too
 			var errorText = $('.ErrorMessage li').text();
 			$('.ErrorMessage').html('<span>' + errorText + '</span>');
 			$('.ErrorMessage').insertAfter('.GiftAidDeclarationFormHeading');
 
+			// Insert andy form
+			$('.GiftAidDeclarationFormDescription').after('<div class="GiftAidFormSimple"><input type="checkbox" name="GiftAidFormSimpleCheckbox" id="GiftAidFormSimpleCheckbox"><label for="GiftAidFormSimpleCheckbox">Yes! I would like Sheffield Theatres to claim Gift Aid on my donation.</label><p class="GiftAidNote">I want all donations I\'ve made to Sheffield Theatres in the past four years and all donations in future to be treated as Gift Aid donations until I notify you otherwise.</p></div>');
+			
+			// Hide original form
+			$('.GiftAidDeclarationFormField').addClass('visuallyhidden');
+
+			// Auto-check DON't giftaid it
+			$('#ctl00_ContentPlaceHolder_NoneBox').prop('checked', true);
+
+			$(".GiftAidFormSimple input").change(function() {
+				if ($(this).prop('checked')) {
+					$('#ctl00_ContentPlaceHolder_SinceDateBox').prop('checked', true);
+				} else if (!$(this).prop('checked')) {
+					$('#ctl00_ContentPlaceHolder_NoneBox').prop('checked', true);
+				}
+			});
+
+			$('.GiftAidDeclarationFormDescription').after('<p class="GiftAidDeclarationFormDescriptionSimple">Boost your donations by an extra 25p on every £1 with Gift Aid, at no extra cost to you. Sound good?</p>');
+			//$('.GiftAidFormSimple').after('');
+			//$('.GiftAidFormSimple').after('<p class="GiftAidDeclarationFormPledgeSimple">I am a UK taxpayer and understand that if I pay less Income Tax and/or Capital Gains Tax than the amount of Gift Aid claimed on all my donations in that tax year it is my responsibility to pay any difference.</p><p>Please notify the charity if you: want to cancel this declaration, change your name or home address, or no longer pay sufficient tax on your income and/or capital gains. If you pay Income Tax at the higher or additional rate and want to receive the additional tax relief due to you, you must include all your Gift Aid donations on your Self-Assessment tax return or ask HM Revenue and Customs to adjust your tax code.</p>');
+
+			$('.GiftAidDeclarationFormDescription').remove();
 		}
 
 
+		// Checkout
+		
+		if ($('.SpektrixPage.Checkout').exists()) {
 
+			// Fix capitalisation on 'Edit basket' button
+			$('.SummaryView > .Buttons .Button').attr('value', 'Edit basket');	
 
-
-
+		}
 
 
 		// Change password
@@ -344,6 +372,10 @@
 				$(this).append(amountBox);
 			});
 
+			// Fix capitalisation in button text
+			$('.SpektrixPage.SupplementaryEventsPage input[value="Continue To Basket"].Button').attr('value', 'Continue to basket').wrap('<div class="Buttons"></div>');
+			$('.SpektrixPage.SupplementaryEventsPage #SimpleSeatingDiv .Button').attr('value', 'Add to basket')
+			
 		}
 
 

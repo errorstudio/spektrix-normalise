@@ -1,39 +1,11 @@
 
-@import "normalize.min";
-@import "variables";
-@import "mixins";
-//@import "theme/theme-mixins";
-@import "base";
+@import "styles-foundation";
 
+@import "theme/theme-mixins";
 
-// Modules
+@import "styles-main";
 
-@import "modules/monthlist";
-@import "modules/progress-indicator";
-
-
-// Pages
-
-@import "pages/page-eventslist";
-@import "pages/page-chooseseats";
-@import "pages/page-loginlogout";
-@import "pages/page-basket2";
-@import "pages/page-newaccount";
-@import "pages/page-changepassword";
-@import "pages/page-myaccount";
-@import "pages/page-donations";
-@import "pages/page-cookies";
-@import "pages/page-supplementaryeventspage";
-@import "pages/page-edittickets";
-@import "pages/page-forgotpassword";
-@import "pages/page-editaddress";
-@import "pages/page-memberships";
-@import "pages/page-checkout";
-@import "pages/page-giftaiddeclarationform";
-
-// Theme
-
-//@import "theme/theme-tweaks";
+@import "theme/theme-tweaks";
 
 .Progress ol li span.Current {
 

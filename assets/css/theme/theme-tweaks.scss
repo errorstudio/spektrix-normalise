@@ -1,0 +1,222 @@
+
+/* Theme */
+
+
+/* 
+font-family: 'Radikal Light';
+font-family: 'Radikal Medium';
+font-family: 'Radikal Bold';
+font-family: 'Radikal';
+*/
+
+/*
+font-family: 'Clarendon Light';
+font-family: 'Clarendon';
+font-family: 'Clarendon Bold';
+*/
+
+
+$red:#ef192d;
+
+$yellow:#ffe000;
+
+$mint:#45ea9f;
+$indigo:#3300FF;//#4B00FF;//#1d00ff;
+$turquoise:#00E6FF;
+
+$mid-purple:#3B1F60;//#49194E;
+$dusty-purple:#040016;//#38323D;
+$purple-for-text:#4729A5;
+$logo-purple:#822D8A;
+
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: 'Radikal';
+	font-size:16.1px;
+}
+
+body {
+	font-family: 'Radikal';
+	font-size:16.1px;
+}
+
+a {
+	color:red;
+}
+
+a:hover {
+	color:$indigo;
+}
+
+#mfPreviewBar,
+div#mfPreviewBarShow {
+	display:none;
+}
+
+.SpektrixPage {
+	padding: 38px 40px 8px;
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight:normal;
+	border:0;
+	padding:0;
+}
+
+h2 {
+	font-weight:normal;
+}
+
+.booking-for {
+	font-size: 0.45em;
+}
+
+.booking-for b {
+	font-family: "Clarendon";
+	font-weight:normal;
+	font-size: 1.1em;
+	color: #822d8a;
+}
+
+
+/* Basket2 */
+
+dt.Header,
+dd.Header {
+	@include red-caps;
+}
+
+dd.Item .Details {
+	line-height:1.7;
+}
+
+
+/* ChooseSeats */
+
+//Hide the event name and time
+.SpektrixPage.ChooseSeats .ChooseSeatsHeading + .Event {
+	display: none;
+}
+
+.SpektrixPage.ChooseSeats .UpdateButton {
+	font-family: 'Radikal';
+	border-radius:0;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
+	padding-left:0;
+}
+
+.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer .Asterix {
+	display:none;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading span,
+.SpektrixPage.ChooseSeats .SeatingAreaHeading select {
+	color:$purple-for-text;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeadingLabel {
+	color:#222;
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading {
+	color:$purple-for-text;
+}
+
+
+/* NewAccount */
+
+.SpektrixPage.NewAccount .Progress ol {
+	background:#C2F6FF;
+	border:0;
+}
+
+.SpektrixPage.NewAccount .Progress ol {
+	background:#C2F6FF;
+	border:0;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span:before {
+	background: #fff;
+}
+
+.SpektrixPage.NewAccount .Progress ol li span.Current:before {
+	border:3px solid $mid-purple;
+	background:$yellow;
+}
+
+
+/* SupplementaryEventsPage */
+
+.SpektrixPage.EditTickets .Details table th {
+	@include red-caps;
+}
+
+
+/* MyAccount */
+
+.SpektrixPage.MyAccount .Options li a {
+	background:#C2F6FF;
+	text-decoration:none;
+	color:#333;
+	@include transition(background .2s);
+}
+
+.SpektrixPage.MyAccount .Options li a:hover {
+	background:darken(#C2F6FF, 10%);
+}
+
+.SpektrixPage.MyAccount .Options li a.Selected {
+	background:$mid-purple;
+} 
+
+
+/* Memberships */
+
+.SpektrixPage.Memberships .Membership .Details ul li .Label {
+	@include red-caps;
+}
+
+
+/* GiftAidDeclarationForm */
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormDescriptionSimple {
+	font-size:24px;
+}
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidFormSimple {
+	padding: 20px;
+	padding-left: 46px;
+	background: #ABF2F9;
+}
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidFormSimple input {
+	float: left;
+	margin-left: -25px;
+	margin-top: 7px;
+}
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidFormSimple label {
+	font-size: 24px;
+}
+
+.SpektrixPage.GiftAidDeclarationForm .GiftAidNote {
+	font-size: 14px;
+	margin-bottom:0;
+}
+
+
+
+.SpektrixPage.GiftAidDeclarationForm h1.GiftAidDeclarationFormHeading {
+	@include kellum;
+	width:200px;
+	height:70px;
+	background:url(http://33a1c0f4.ngrok.com/assets/img/logo-gift-aid.png) left top no-repeat;
+} 
+

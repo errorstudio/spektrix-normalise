@@ -1,6 +1,10 @@
 
 /* Page - GiftAidDeclarationForm */
 
+.SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormHeading {
+	text-transform:none;
+}
+
 .SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormField {
 	padding-left:25px;
 	margin: $vertical-spacing 0 !important; //!important to override inline styles
@@ -22,3 +26,6 @@
 	padding-top:$vertical-spacing;
 }
 
+.GiftAidDeclarationFormField {
+	opacity:0.5;
+}

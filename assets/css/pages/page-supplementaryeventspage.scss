@@ -47,15 +47,16 @@
 	font-weight:bold;
 }
 
-// The submit button on this page doesn't have a #Buttons container
-.SpektrixPage.SupplementaryEventsPage > div > input[type="submit"] {
+// The submit button on this page doesn't have a .Buttons container, the JS adds one
+.SpektrixPage.SupplementaryEventsPage .Buttons .Button {
 	@include large-button;
 	margin-top:$vertical-spacing;
 	float:right;
+	margin-right:0;
 }
 
 
-// Curious little success message
+// Unique little success message
 .SpektrixPage.SupplementaryEventsPage span.InfoMessage {
 	@include well;
 	padding: 10px 14px;

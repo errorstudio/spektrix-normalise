@@ -8,6 +8,7 @@
 
 .SpektrixPage.EditTickets .ChangeMySeatsLink {
 	@include normal-button;
+	@include sentence-case;
 }
 
 .SpektrixPage.EditTickets .Details table {

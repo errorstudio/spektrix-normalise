@@ -1,0 +1,69 @@
+
+/* Theme - Mixins */
+
+
+// Modified
+
+@mixin well {
+  padding: 20px;
+	background:#C2F6FF;
+	border-radius:0;
+}
+
+@mixin normal-button {
+	height: 44px;
+	line-height: 2.2;
+	margin-right: 10px;
+	padding: 5px 20px 4px;
+	color: #ef192d;
+	background: #ffe000;
+	border: 0;
+	//border-radius: 3px;
+	text-decoration: none;
+	display: inline-block;
+	@include transition (all .2s);
+	&:hover {
+		background:  #ef192d;	
+		color: #ffe000;
+	}
+}
+
+@mixin large-button {
+	@include normal-button;
+	height: 64px;
+	line-height: 1.1;
+	padding: 20px 27px 16px;
+	font-size: 28px;
+}
+
+@mixin small-button {
+	@include normal-button;
+	height: auto;
+	line-height: 1.4;
+	padding: 5px 11px 4px;
+	font-size: 14px;
+}
+
+@mixin mini-button {
+	@include normal-button;
+	height: auto;
+	line-height: 1.2;
+	padding: 5px 11px 4px;
+	font-size: 12px;
+}
+
+@mixin quiet-button {
+	color:#ef192d;
+	background:lighten(#ffe000, 35%);
+}
+
+
+// New
+
+@mixin red-caps {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #ef192d;
+	font-size: 16px;
+	font-weight: normal;
+}
