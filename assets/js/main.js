@@ -85,7 +85,7 @@
 			$('.SpektrixPage.ChooseSeats .BestAvailableLink').insertBefore($('.SeatingSelector'));
 
 			// Improve the instruction wording, was 'Please select your seats (maximum 10 for this event per order)'
-			$('.SpektrixPage.ChooseSeats .SeatingAreaInstructions').text('You can pick up to 10 seats per order, for this event.');
+			//$('.SpektrixPage.ChooseSeats .SeatingAreaInstructions').text('You can pick up to 10 seats per order, for this event.');
 
 			// The error message on Best Available is uniquely called .ErrorPanel instead of .ErrorMessage, let's swap it back
 			// It is also formatted differently to other errors, so we'll fix that too
