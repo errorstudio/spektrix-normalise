@@ -10,7 +10,10 @@
 	border-radius:0;
 }
 
-@mixin normal-button {
+	//color: #ef192d;
+	//background: #ffe000;
+
+/* @mixin normal-button {
 	height: 44px;
 	line-height: 2.2;
 	padding: 5px 20px 4px;
@@ -26,7 +29,7 @@
 		color: #ffe000;
 	}
 	@include mq(smartphone) {
-		height: 40px;
+		height: 64px;
 	}
 }
 
@@ -52,7 +55,7 @@
 	line-height: 1.2;
 	padding: 5px 11px 4px;
 	font-size: 12px;
-}
+} */
 
 @mixin quiet-button {
 	color:#ef192d;

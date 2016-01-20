@@ -1,0 +1,157 @@
+/* Card details iframe */
+/* Variables */
+/* Mixins */
+.clearfix:after {
+  display: table;
+  clear: both;
+  content: ""; }
+
+.FoxIFrameControl iframe {
+  height: 666px; }
+
+.PaymentOptions {
+  font-family: Arial, Helvetica, sans-serif; }
+  .PaymentOptions button, .PaymentOptions input, .PaymentOptions select, .PaymentOptions textarea {
+    font-size: 16.1px; }
+  .PaymentOptions button,
+  .PaymentOptions input[type="button"],
+  .PaymentOptions input[type="reset"],
+  .PaymentOptions input[type="submit"] {
+    font-size: 16.1px;
+    padding: 0.7775em 1.25em 0.59em;
+    color: #ef192d;
+    border: 0;
+    border-radius: 0;
+    background-color: #ffe000;
+    text-decoration: none;
+    display: inline-block; }
+    .PaymentOptions button:hover,
+    .PaymentOptions input[type="button"]:hover,
+    .PaymentOptions input[type="reset"]:hover,
+    .PaymentOptions input[type="submit"]:hover {
+      background: #ef192d;
+      color: #ffe000; }
+    @media (max-width: 767px) {
+      .PaymentOptions button,
+      .PaymentOptions input[type="button"],
+      .PaymentOptions input[type="reset"],
+      .PaymentOptions input[type="submit"] {
+        font-size: 12.8px; } }
+  .PaymentOptions input[type="text"],
+  .PaymentOptions input[type="email"],
+  .PaymentOptions input[type="password"],
+  .PaymentOptions select {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 44px;
+    padding: 4px 12px 0;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-transition: border-color ease-in-out 0.15s;
+    -moz-transition: border-color ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s;
+    margin-right: 10px; }
+    @media (max-width: 767px) {
+      .PaymentOptions input[type="text"],
+      .PaymentOptions input[type="email"],
+      .PaymentOptions input[type="password"],
+      .PaymentOptions select {
+        height: 34px; } }
+  .PaymentOptions p.ErrorMessage,
+  .PaymentOptions div.ErrorMessage {
+    padding: 10px 14px;
+    background: #ffdede;
+    margin: 1.25em 0;
+    color: #DB0303; }
+  .PaymentOptions p.ErrorMessage span,
+  .PaymentOptions div.ErrorMessage span {
+    color: #DB0303 !important; }
+  .PaymentOptions .Container label {
+    width: 200px;
+    display: inline-block; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container label {
+        display: block;
+        margin-bottom: 4px; } }
+  .PaymentOptions .Container label.right {
+    width: auto;
+    float: none;
+    font-size: .8em; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container label.right {
+        display: inline-block; } }
+  .PaymentOptions .Container {
+    margin-bottom: 1.25em; }
+  .PaymentOptions .Container .ValidationError {
+    font-size: .8em;
+    color: #DB0303 !important;
+    margin: 13px 0 0 0;
+    display: block;
+    margin-left: 200px; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container .ValidationError {
+        margin-left: 0; } }
+  .PaymentOptions .Container .ValidationError br {
+    display: none; }
+  .PaymentOptions .Container .Comment {
+    display: block;
+    font-size: .8em;
+    margin: 13px 0 0 204px;
+    width: 200px;
+    opacity: 0.7; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container .Comment {
+        margin-left: 0; } }
+  .PaymentOptions p.ErrorMessage,
+  .PaymentOptions div.ErrorMessage {
+    padding: 20px;
+    border-radius: 6px;
+    background: #eee;
+    padding: 10px 14px;
+    background: #ffdede;
+    margin: 1.25em 0;
+    color: #DB0303; }
+  .PaymentOptions p.ErrorMessage span,
+  .PaymentOptions div.ErrorMessage span {
+    color: #DB0303 !important; }
+  .PaymentOptions .Container label {
+    width: 200px;
+    display: inline-block; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container label {
+        display: block;
+        margin-bottom: 4px; } }
+  .PaymentOptions .Container label.right {
+    width: auto;
+    float: none;
+    font-size: .8em; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container label.right {
+        display: inline-block; } }
+  .PaymentOptions .Container {
+    margin-bottom: 1.25em; }
+  .PaymentOptions .Container .ValidationError {
+    font-size: .8em;
+    color: #DB0303 !important;
+    margin: 13px 0 0 0;
+    display: block;
+    margin-left: 200px; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container .ValidationError {
+        margin-left: 0; } }
+  .PaymentOptions .Container .ValidationError br {
+    display: none; }
+  .PaymentOptions .Container .Comment {
+    display: block;
+    font-size: .8em;
+    margin: 13px 0 0 204px;
+    width: 200px;
+    opacity: 0.7; }
+    @media (max-width: 767px) {
+      .PaymentOptions .Container .Comment {
+        margin-left: 0; } }
+  .PaymentOptions .ConfirmButton {
+    padding-bottom: 15px; }

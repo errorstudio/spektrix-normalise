@@ -30,6 +30,7 @@
 	}
 }
 
-.SpektrixPage.Donations .Buttons .ContinueButton {
+.SpektrixPage.Donations .Buttons .ContinueButton,
+.SpektrixPage.Donations .Buttons .DeclineButton {
 	@include large-button;
 }

@@ -5,7 +5,6 @@
 // Colors
 
 $divider-color: #eee;//#aaa;
-$button-color: #0c6db0;
 $error-color: #DB0303;
 $success-color: #00FF96;
 
@@ -13,7 +12,17 @@ $success-color: #00FF96;
 // Spacing
 
 $vertical-spacing: 1.25em;
-//$vertical-spacing: 10px;
-
-
 $form-label-width: 200px;
+
+
+//Buttons
+
+//Defaults
+$button-text: white;
+$button-background: #0c6db0;
+$button-radius: 3px;
+
+//Theme
+$button-text: #ef192d;
+$button-background: #ffe000;
+$button-radius: 0;

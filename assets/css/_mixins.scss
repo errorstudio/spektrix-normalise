@@ -33,50 +33,55 @@
   background: #eee;
 }
 
+$button-base-size:16;
+
 @mixin normal-button {
-  height: 44px;
-  line-height: 2.2;
-  padding: 5px 20px 4px;
-  color: white;
+  font-size:($button-base-size * 1px) + 0.1px; // Font looks nasty at exactly 16px ?!
+  //padding: 13em/$button-base-size 20em/$button-base-size 10em/$button-base-size;// Could use this if it wasn't for the extra 0.1px
+  padding: 12.44em/$button-base-size 20em/$button-base-size 9.44em/$button-base-size; //Fiddly because normal buttons need to be 44px high to match fields
+  color: $button-text;
   border: 0;
-  border-radius: 3px;
-  background-color: $button-color;
+  border-radius: $button-radius;
+  background-color: $button-background;
   text-decoration: none;
   display: inline-block;
+    //&:hover {
+    //background-color: lighten($button-color,10%);
+  //}
   &:hover {
-    background-color: lighten($button-color,10%);
+    background: $button-text; 
+    color: $button-background;
   }
   @include mq(smartphone) {
-    height: 40px;
+    font-size: $button-base-size*0.8px;
   }
 }
 
-
-
-
-
 @mixin large-button {
   @include normal-button;
-  height: 60px;
-  line-height: 1.1;
-  padding: 14px 25px 16px;
+  //padding: 18em/$button-base-size 25em/$button-base-size 15em/$button-base-size; // Padding ajustment not needed
   font-size: 28px;
+  @include mq(smartphone) {
+    font-size: 24px;
+  }
 }
 
 @mixin small-button {
   @include normal-button;
-  height: auto;
-  line-height: 1.4;
-  padding: 5px 11px 4px;
+  padding: 8em/$button-base-size 15em/$button-base-size 8em/$button-base-size;
   font-size: 14px;
+  @include mq(smartphone) {
+    font-size: 13px;
+  }
 }
 
 @mixin mini-button {
   @include normal-button;
-  height: auto;
-  line-height: 1.2;
-  padding: 5px 11px 4px;
+  padding: 6em/$button-base-size 9em/$button-base-size 5em/$button-base-size;
   font-size: 12px;
+  @include mq(smartphone) {
+    font-size: 11px;
+  }
 }
 
 @mixin quiet-button {

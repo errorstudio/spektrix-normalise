@@ -18,6 +18,9 @@
 	vertical-align: top;
 	margin-bottom: $vertical-spacing;
 	padding-left:25px;
+	@include mq(smartphone) {
+		width:100%;
+	}
 }
 
 .SpektrixPage.Checkout .DeliveryOptions .DeliveryOption input {
@@ -25,36 +28,43 @@
 	margin-left:-25px;
 }
 
+.SpektrixPage.Checkout .DeliveryOptions .DeliveryOption input[disabled="disabled"] ~ * {
+	opacity:.5;
+}
+
 // Billing address
 
-.AddressPicker {
+.SpektrixPage.Checkout .AddressPicker {
 	margin:0 !important;
 }
 
-.AddressList {
+.SpektrixPage.Checkout .AddressList {
 	padding:0;
 	list-style: none;
 }
 
-.AddressList li {
+.SpektrixPage.Checkout .AddressList li {
 	width: 33%;
 	display: inline-block;
 	vertical-align: top;
 	margin-bottom: $vertical-spacing;
 	padding-left:25px;
+	@include mq(smartphone) {
+		width:100%;
+	}
 }
 
-.AddressList li.label {
+.SpektrixPage.Checkout .AddressList li.label {
 	margin-bottom:10px;
 }
 
-.AddressList li input[type="radio"] {
+.SpektrixPage.Checkout .AddressList li input[type="radio"] {
 	float:left;
 	margin-left:-25px;
 }
 
 
-.AddressList li input[type="submit"] {
+.SpektrixPage.Checkout .AddressList li input[type="submit"] {
 	@include mini-button;
 }
 
@@ -185,4 +195,13 @@
 	float: left;
 	margin-left: -25px;
 	margin-top: 3px;
+}
+
+
+.SpektrixPage.Checkout .CheckoutWikiText {
+	display:none;
+}
+
+.SpektrixPage.Checkout .RedeemVoucher {
+	@include well
 }
