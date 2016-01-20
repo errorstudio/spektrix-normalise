@@ -5,7 +5,7 @@
 // Modified
 
 @mixin well {
-  padding: 20px;
+	padding: 20px;
 	background:#C2F6FF;
 	border-radius:0;
 }
@@ -24,6 +24,9 @@
 	&:hover {
 		background:  #ef192d;	
 		color: #ffe000;
+	}
+	@include mq(smartphone) {
+		height: 40px;
 	}
 }
 

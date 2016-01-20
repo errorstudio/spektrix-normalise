@@ -133,6 +133,13 @@
 	padding-left:0;
 }
 
+.SpektrixPage.ChooseSeats .BestSeatsQuantity .ErrorMessage {
+    font-size: .8em;
+    color: $error-color;
+    margin: 13px 0 0 0;
+    display:block;
+}
+
 .SpektrixPage.ChooseSeats .BestSeatsTable tr.BestSeatsRow.BestSeatsBands td.TableDataContent {
 	border-bottom: 1px solid $divider-color;
 	margin-bottom: $vertical-spacing;
@@ -148,6 +155,9 @@
 	display:inline-block;
 	vertical-align: top;
 	width: 33%;
+	@include mq(smartphone) {
+		width: 100%;	
+	}
 }
 
 .SpektrixPage.ChooseSeats .BestSeatsTable .BestAvailableSeatingAreaTable td,

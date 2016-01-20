@@ -90,7 +90,7 @@
 			// The error message on Best Available is uniquely called .ErrorPanel instead of .ErrorMessage, let's swap it back
 			// It is also formatted differently to other errors, so we'll fix that too
 			var errorText = $('.ErrorPanel li').text();
-			$('.ErrorPanel').html('<span>' + errorText + '</span>');
+			$('.ErrorPanel').html('<span>There was an error. ' + errorText + '</span>');
 			$('.ErrorPanel').addClass('ErrorMessage').removeClass('ErrorPanel');
 
 		}
