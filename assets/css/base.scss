@@ -110,7 +110,7 @@ h1 {
     border-bottom: 1px dashed $divider-color;
     @include mq(smartphone) {
         font-size: 1.6em; // CHECK
-        margin: 0.7em 0; // CHECK
+        margin: 0 0 0.7em 0; // CHECK
     }
 }
 
@@ -122,6 +122,9 @@ h1 {
     font-size: 14px;
     text-transform: none;
     font-weight: normal;
+    @include mq(smartphone) {
+        display:none;   
+    }
 }
 
 

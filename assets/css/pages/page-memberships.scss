@@ -25,6 +25,11 @@
 .SpektrixPage.Memberships .Membership .WikiText {
 	float:left;
 	width:50%;
+	@include mq(smartphone) {
+		float:none;
+		width:100%;
+		margin-bottom:$vertical-spacing;
+	}
 }
 
 .SpektrixPage.Memberships .Membership .WikiText img {
@@ -35,6 +40,10 @@
 	float:right;
 	@include well;
 	text-align:center;
+	@include mq(smartphone) {
+		float:none;
+		width:100%;
+	}
 }
 
 .SpektrixPage.Memberships .Membership .Details ul {
@@ -57,5 +66,9 @@
 
 .SpektrixPage.Memberships .Membership .Details .AutoRenew input {
 	margin-right:10px;
+}
+
+.SpektrixPage.Memberships .Membership .Details .Buttons {
+	text-align:center;
 }
 

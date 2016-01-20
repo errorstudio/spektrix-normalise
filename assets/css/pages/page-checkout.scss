@@ -68,6 +68,9 @@
 	position:absolute;
 	top: 74px; //A bit of a flimsy way of achieving this
 	right:0;
+	@include mq(smartphone) {
+		top: 58px;	
+	}
 }
 
 .SummaryView .Button {

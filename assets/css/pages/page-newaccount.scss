@@ -32,13 +32,13 @@
 	margin-right: 10px;
 }
 
+// Tidy up DOB inputs
 .SpektrixPage.NewAccount .View .Container.DateOfBirth input {
-	width: 78px !important;
+	width: 72px !important;
 	position: relative;
 	top: 2px;
 }
 
-.SpektrixPage.NewAccount .View .Container.DateOfBirth input,
 .SpektrixPage.NewAccount .View .Container.DateOfBirth select {
 	margin-right:10px;
 }

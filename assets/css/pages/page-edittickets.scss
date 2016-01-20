@@ -21,6 +21,9 @@
 
 .SpektrixPage.EditTickets .Details table th {
 	text-align: left;
+	@include mq(smartphone) {
+		font-size: 12.1px;		
+	}
 }
 
 .SpektrixPage.EditTickets .Details table td.SeatName {
@@ -31,6 +34,20 @@
 	text-align: center;
 }
 
+.SpektrixPage.EditTickets .Details table .Type.Column select {
+	@include mq(smartphone) {
+		font-size: 14.1px;
+	}
+}
+
+.SpektrixPage.EditTickets .Details table .Delete.Column {
+	@include mq(smartphone) {
+		display:none; // Need to make some space, users can go back to delete
+	}
+}
+
 .SpektrixPage.EditTickets .Buttons input[type="submit"] {
 	@include large-button;
 }
+
+

@@ -74,15 +74,15 @@ h1 {
 	padding:0;
 	@include mq(smartphone) {
 		font-size: 1.6em;
-		margin: 0.7em 0;	
+		margin: 0 0 0.7em 0; 
 	}
 }
 
 h2 {
 	font-weight:normal;
 	@include mq(smartphone) {
-    font-size: 1.4em;
-    margin: 0.5em 0;
+		font-size: 1.4em;
+		margin: 0.5em 0;
 	}
 }
 
@@ -166,10 +166,13 @@ dd.Item .Details {
 }
 
 
-/* SupplementaryEventsPage */
+/* EditTickets */
 
 .SpektrixPage.EditTickets .Details table th {
 	@include red-caps;
+	@include mq(smartphone) {
+		font-size: 12.1px;		
+	}
 }
 
 
@@ -202,6 +205,9 @@ dd.Item .Details {
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidDeclarationFormDescriptionSimple {
 	font-size:24px;
+	@include mq(smartphone) {
+		font-size:18px;
+	}
 }
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidFormSimple {
@@ -218,6 +224,9 @@ dd.Item .Details {
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidFormSimple label {
 	font-size: 24px;
+	@include mq(smartphone) {
+		font-size:18px;
+	}
 }
 
 .SpektrixPage.GiftAidDeclarationForm .GiftAidNote {

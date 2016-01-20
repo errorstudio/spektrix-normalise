@@ -14,11 +14,21 @@
 	border-bottom: 1px solid $divider-color;
 }
 
-
 .SpektrixPage.SupplementaryEventsPage #SimpleSeatingDiv {
 	float:right;
 	@include well;
 }
+
+.SpektrixPage.SupplementaryEventsPage #SimpleSeatingDiv span { 
+	display:block;
+} 
+
+.SpektrixPage.SupplementaryEventsPage #SimpleSeatingDiv input[type="text"] {
+	width: 92px;
+	margin-top: $vertical-spacing;
+}
+
+
 
 .SpektrixPage.SupplementaryEventsPage > div > div[id*="WikiText"] {
 	margin-bottom:$vertical-spacing;
@@ -31,6 +41,11 @@
 .SpektrixPage.SupplementaryEventsPage .SupplementaryEventDivTextContent {
 	float:left;
 	width:50%;
+	margin-bottom:$vertical-spacing;
+	@include mq(smartphone) {
+		float:none;
+		width:100%;
+	}
 }
 
 .SpektrixPage.SupplementaryEventsPage .Event_Text > *:first-child {

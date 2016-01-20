@@ -7,6 +7,10 @@ h1 .Buttons {
 	float:right;
 }
 
+h1 .Buttons .Logout {
+	@include small-button;
+}
+
 //Subnav
 
 .SpektrixPage.MyAccount .Options ul {
@@ -44,6 +48,9 @@ h1 .Buttons {
 	@include quiet-button;
 	margin-left:$form-label-width;
 	margin-bottom:$vertical-spacing;
+	@include mq(smartphone) {
+		margin-left:0;
+	}
 }
 
 .SpektrixPage.MyAccount a.NewAddress {
@@ -63,6 +70,11 @@ h1 .Buttons {
 	display: inline-block;
 	padding: 2px 6px;
 	float: right;
+	@include mq(smartphone) {
+		padding: 2px 6px 0px;
+		float:left;
+		margin-bottom:10px;
+	}
 }
 
 .SpektrixPage.MyAccount .Addresses .Account_Detail.Address {
@@ -79,7 +91,7 @@ h1 .Buttons {
 
 // Tidy up DOB inputs
 .SpektrixPage.MyAccount .Container.DateOfBirth input {
-	width: 78px !important;
+	width: 72px !important;
 	position: relative;
 	top: 2px;
 }

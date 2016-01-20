@@ -68,15 +68,23 @@
   //display: none;
   @include large-button;
   @include quiet-button;
+  @include mq(smartphone) {
+  	font-size:22px;
+  }
 }
 
 .SpektrixPage.ChooseSeats .UpdateButton {
 	@include large-button;
+	margin-right:0;//There's a hidden something so the usual :last-child selector isn't working
+	@include mq(smartphone) {
+		font-size:22px;
+	}
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer {
 	float: left;
 	@include well;
+	padding-right:0;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer h3 {

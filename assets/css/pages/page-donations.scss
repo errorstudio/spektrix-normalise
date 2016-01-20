@@ -11,6 +11,10 @@
 .SpektrixPage.Donations .FundContainer .FundContainerTextContent {
 	float:left;
 	width:50%;
+	@include mq(smartphone) {
+		float:none;
+		width:100%;	
+	}
 }
 
 .SpektrixPage.Donations .FundContainer h3 {
@@ -20,6 +24,10 @@
 .SpektrixPage.Donations .DonationAmount {
 	float:right;
 	@include well;
+	@include mq(smartphone) {
+		float:none;
+		width:100%;	
+	}
 }
 
 .SpektrixPage.Donations .Buttons .ContinueButton {

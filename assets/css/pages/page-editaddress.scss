@@ -4,20 +4,21 @@
 .SpektrixPage.EditAddress .AddressOptions .Option {
 	margin-left:$form-label-width;
 	margin-bottom:$vertical-spacing;
-}
-
-.SpektrixPage.EditAddress .AddressOptions .Option {
-	margin-left:$form-label-width;
-	margin-bottom:$vertical-spacing;
+	padding-left:25px;
+	@include mq(smartphone) {
+		margin-left:0;
+	}
 }
 
 .SpektrixPage.EditAddress .AddressOptions .Option input {
-	margin-right:10px;
+	float: left;
+	margin-left:-25px;
 }
 
 // Address options don't use .Containers, so let's specify a bottom margin for them
 .SpektrixPage.EditAddress .Addresses .AddressOption {
 	margin-bottom:$vertical-spacing;
+	padding-left:25px;
 }
 
 .SpektrixPage.EditAddress .Addresses .AddressOption label {
@@ -25,5 +26,7 @@
 }
 
 .SpektrixPage.EditAddress .Addresses .AddressOption input {
-	margin-right: 10px;
+	float: left;
+	margin-left:-25px;
+	margin-top: 1px;
 }
