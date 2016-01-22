@@ -2,11 +2,23 @@
 /* Monthlist */
 
 .MonthList {
-	padding: 0;
+	padding: 0 0 0 4px;
 	list-style: none;
 }
 
 .MonthList li {
+	font-size:0; // Hide pesky &nbsp;s
 	display: inline-block;
-	margin-right: 20px;
+}
+
+.MonthList li a {
+	margin-left: -4px;
+	font-size:16.1px;
+	display: inline-block;
+	padding: 10px 16px;
+	background:#eee;
+}
+
+.MonthList li:nth-child(odd) a {
+	background:darken(#eee, 10%);
 }

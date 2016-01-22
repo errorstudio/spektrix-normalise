@@ -59,6 +59,9 @@
 			// The heading is in a <h2>, let's make it into a <h1> to be consistent with other pages
 			$('h2.DatesAndTimesHeading').replaceWith('<h1 class="DatesAndTimesHeading">Dates and times</h1>');
 
+			// The description is above the main header, let's put it under
+			$('.DetailsContainer').insertAfter('.DatesAndTimesHeading');
+
 		}
 
 
@@ -76,6 +79,7 @@
 			});
 
 			// Add an explanatory label to the seating area dropdown
+			// NEED TO MAKE THIS ONLY HAPPEN IF THAT PART IS NEEDED
 			$('.SpektrixPage.ChooseSeats .SeatingAreaHeading').prepend('<span class="SeatingAreaHeadingLabel">Showing seating for: </span>');
 
 			// Move the seating area selector to next to the seating area display
@@ -85,6 +89,7 @@
 			$('.SpektrixPage.ChooseSeats .BestAvailableLink').insertBefore($('.SeatingSelector'));
 
 			// Improve the instruction wording, was 'Please select your seats (maximum 10 for this event per order)'
+			// CAN'T DO THIS BECAUSE THAT NUMBER IS DYNAMIC
 			//$('.SpektrixPage.ChooseSeats .SeatingAreaInstructions').text('You can pick up to 10 seats per order, for this event.');
 
 			// The error message on Best Available is uniquely called .ErrorPanel instead of .ErrorMessage, let's swap it back
@@ -231,9 +236,8 @@
 		if ($('.SpektrixPage.NewAccount').exists()) {
 
 			// A curious div.errormessage containing inappropriate errors appears outside the normal page structure if you hit next without selecting an address
-			// I'm going to hide this once instance with JS for now
+			// I'm going to hide this one instance with JS for now
 			$('div.ErrorMessage').remove();
-
 
 			// Make whitespace consistent between form field elements
 			$('.SpektrixPage.NewAccount .Container').cleanWhitespace();

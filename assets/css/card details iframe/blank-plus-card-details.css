@@ -24,7 +24,11 @@
     border-radius: 0;
     background-color: #ffe000;
     text-decoration: none;
-    display: inline-block; }
+    display: inline-block;
+    -webkit-transition: color 0.2s, background 0.2s;
+    -moz-transition: color 0.2s, background 0.2s;
+    -o-transition: color 0.2s, background 0.2s;
+    transition: color 0.2s, background 0.2s; }
     .PaymentOptions button:hover,
     .PaymentOptions input[type="button"]:hover,
     .PaymentOptions input[type="reset"]:hover,

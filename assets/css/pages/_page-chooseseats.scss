@@ -34,6 +34,9 @@
   //float:left;
 }
 
+
+/* Best Available link */
+
 .SpektrixPage.ChooseSeats .BestAvailableLink {
 	float: right;
 	margin: 0;
@@ -44,6 +47,9 @@
 	@include normal-button;
 }
 
+
+/* Seating selector */
+
 // Remove more all caps optional text
 .SpektrixPage.ChooseSeats .SeatingAreaOptionalInstructions {
 	display: none;
@@ -52,7 +58,22 @@
 .SpektrixPage.ChooseSeats .SeatingSelector {
 	clear: both;
 	margin-bottom: 2 * $vertical-spacing;
+}
+
+.SpektrixPage.ChooseSeats .SeatingSelector .SeatingArea {
 	border: 1px solid #ccc;
+}
+
+// In unreserved mode, just a list of fields
+.SpektrixPage.ChooseSeats .SeatingSelector .SeatingArea.Unreserved {
+	border:0;
+	border-bottom: 1px solid $divider-color;
+	border-top: 1px solid $divider-color;
+	padding-top:1.25em;
+}
+
+.SpektrixPage.ChooseSeats .SeatingSelector .SeatingArea.Unreserved .Ticket_Types_Selection {
+
 }
 
 // Make PlanControls sit in a box, instead of the bar which often overlapped the seating and made it unclickable
@@ -75,7 +96,7 @@
 
 .SpektrixPage.ChooseSeats .UpdateButton {
 	@include large-button;
-	margin-right:0;//There's a hidden something so the usual :last-child selector isn't working
+	margin-right:0;// There's a hidden something so the usual :last-child selector isn't working
 	@include mq(smartphone) {
 		font-size:22px;
 	}
@@ -134,10 +155,10 @@
 }
 
 .SpektrixPage.ChooseSeats .BestSeatsQuantity .ErrorMessage {
-    font-size: .8em;
-    color: $error-color;
-    margin: 13px 0 0 0;
-    display:block;
+	font-size: .8em;
+	color: $error-color;
+	margin: 13px 0 0 0;
+	display:block;
 }
 
 .SpektrixPage.ChooseSeats .BestSeatsTable tr.BestSeatsRow.BestSeatsBands td.TableDataContent {

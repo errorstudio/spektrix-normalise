@@ -1,0 +1,13 @@
+
+/* Page - Event details */
+
+.SpektrixPage.EventDetails .DetailsContainer {
+	font-size:24px;
+	@include mq(smartphone) {
+		font-size:18px;
+	}
+}
+
+.SpektrixPage.EventDetails .SoldOutText {
+	display: none;
+}

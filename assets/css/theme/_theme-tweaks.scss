@@ -236,3 +236,26 @@ dd.Item .Details {
 	background:url(http://33a1c0f4.ngrok.com/assets/img/logo-gift-aid.png) left top no-repeat;
 } 
 
+
+// Monthlist
+
+.MonthList li a {
+	background:#C2F6FF;
+	text-decoration:none;
+	@include transition(all .2s);
+}
+
+.MonthList li a:hover {
+	background:$mid-purple;
+	color:white;
+	text-decoration:none;
+}
+
+.MonthList li:nth-child(odd) a {
+	background:darken(#C2F6FF, 10%);
+}
+
+.MonthList li:nth-child(odd) a:hover {
+	background:$mid-purple;
+	color:white;
+}
