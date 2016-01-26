@@ -174,10 +174,6 @@
 	font-weight:bold;
 }
 
-.SummarySection.TicketDelivery .Delivery_Method {
-	@include sentence-case;
-}
-
 .TermsAndConditions {
 	padding: 20px;
 	padding-left: 46px;

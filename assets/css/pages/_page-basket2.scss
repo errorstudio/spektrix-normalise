@@ -9,7 +9,7 @@ dd {
   // This is the main basket table
   margin: $vertical-spacing * 2 0;
   @include mq(smartphone) {
-  	margin: $vertical-spacing 0;	
+  	margin: $vertical-spacing 0 $vertical-spacing * 2;	
   }
 }
 
@@ -51,7 +51,8 @@ dd.Header .Breakdown li {
 	margin: 0;
 }
 
-.ItemsWithCommission dd.Header .Breakdown li {
+.ItemsWithCommission dd.Header .Breakdown li,
+.ItemsWithSaving dd.Header .Breakdown li {
 	width: 33.333333%;
 }
 
@@ -150,8 +151,12 @@ dd.Item .Breakdown li {
 	}
 }
 
-.ItemsWithCommission dd.Item .Breakdown li {
+.ItemsWithCommission dd.Item .Breakdown li,
+.ItemsWithSaving dd.Item .Breakdown li {
 	width: 33.333333%;
+	@include mq(smartphone) {
+		width:auto;
+	}
 }
 
 /* dd.Item .Breakdown li.Commission + li.Total {
@@ -171,15 +176,18 @@ dd.Item .Breakdown li.Quantity + li.Total {
 	margin-left:0;
 }
 
-.ItemsWithCommission dd.Item .Breakdown li.Total {
+.ItemsWithCommission dd.Item .Breakdown li.Total,
+.ItemsWithSaving dd.Item .Breakdown li.Total  {
 	margin-left:66.666666%;
 }
 
-.ItemsWithCommission dd.Item .Breakdown li.Quantity + li.Total {
+.ItemsWithCommission dd.Item .Breakdown li.Quantity + li.Total,
+.ItemsWithSaving dd.Item .Breakdown li.Quantity + li.Total {
 	margin-left:33.333333%;
 }
 
-.ItemsWithCommission dd.Item .Breakdown li.Commission + li.Total {
+.ItemsWithCommission dd.Item .Breakdown li.Commission + li.Total,
+.ItemsWithSaving dd.Item .Breakdown li.Saving + li.Total {
 	margin-left:0;
 }
 
@@ -216,7 +224,8 @@ dt.Footer {
 	font-weight: bold;
 }
 
-.ItemsWithCommission dt.Footer {
+.ItemsWithCommission dt.Footer,
+.ItemsWithSaving dt.Footer {
 	width:auto;
 }
 
@@ -234,7 +243,8 @@ dd.Footer .Breakdown {
 	}
 }
 
-.ItemsWithCommission dd.Footer .Breakdown {
+.ItemsWithCommission dd.Footer .Breakdown,
+.ItemsWithSaving dd.Footer .Breakdown {
 	width:30%;
 	float:right;
 	margin-right:25%;
@@ -243,15 +253,18 @@ dd.Footer .Breakdown {
 	}
 }
 
-.ItemsWithCommission dd.Footer .Breakdown li {
+.ItemsWithCommission dd.Footer .Breakdown li,
+.ItemsWithSaving dd.Footer .Breakdown li {
 	width:33.333333%;
 	float:right;
 	@include mq(smartphone) {
 		width:auto;
+		padding-left:1em;
 	}
 }
 
-.ItemsWithCommission dd.Footer .Breakdown li.Commission {
+.ItemsWithCommission dd.Footer .Breakdown li.Commission,
+.ItemsWithSaving dd.Footer .Breakdown li.Commission {
 	@include mq(smartphone) {
 		display: none;	
 	}
@@ -262,6 +275,14 @@ dd.Footer .Breakdown .Label {
 	display: none;
 }
 
+.ItemsWithCommission dd.Footer .Breakdown .Label,
+.ItemsWithSaving dd.Footer .Breakdown .Label {
+	@include mq(smartphone) {
+		display: block;
+		text-transform: uppercase;
+		color: #FF5C00;	
+	}
+}
 
 // Promo Code
 
@@ -294,9 +315,32 @@ a.CheckoutLink {
 	float: right;
 }
 
+// Continue shopping button added in by JS (prob should be part of theme)
+
+.ContinueShopping {
+	float: right;
+	clear: right;
+	text-align: center;
+}
+
+.ContinueShopping span {
+	display: block;
+	padding: 10px 0;
+}
+
+.ContinueShopping a {
+	float: right;
+	min-width:194px;
+	@include normal-button;
+	@include quiet-button;
+	@include mq(smartphone) {
+		min-width:166px;
+	}
+}
+
 .PromoCode input[type="text"] {
 	@include mq(smartphone) {
-		width:112px;		
+		width:112px;
 	}
 }
 

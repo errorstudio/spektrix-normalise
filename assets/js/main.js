@@ -188,7 +188,14 @@
 				$('dd.Item.Donation > p:first-child').addClass('Details').prepend('<span class="ItemName">Donation</span>');
 			}
 
-			// Put the promo code box after the basket
+			// Check if savings actually contains anything
+			if ($('.Savings').exists()) {
+				if (!$('.Savings p').exists()) {
+					$('.Savings').remove(); // If there's no <p> tags in savings then remove it (!!!)
+				}
+			}
+
+			// Put the savings box after the basket
 			if ($('.Savings').exists()) {
 				$('.Savings').insertAfter($('.Savings').next());
 			}
@@ -214,9 +221,19 @@
 				$('.Items').addClass('ItemsWithCommission');
 			}
 
+			// Get rid of some colons
 			$('.Breakdown .Total .Label').text('Total');
 			$('.Breakdown .Quantity .Label').text('Quantity');
 			$('.Breakdown .Commission .Label').text('CMSN');
+			$('.Breakdown .Saving .Label').text('Saving');
+
+			// Does the basket need to show the savings column?
+			if ($('.Breakdown .Saving').exists()) {
+				$('.Items').addClass('ItemsWithSaving');
+			}
+
+			// Add in 'Continue shopping' link
+			$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href="http://www.sheffieldtheatres.co.uk/whats-on">Continue shopping</a></div>');
 
 		}
 
