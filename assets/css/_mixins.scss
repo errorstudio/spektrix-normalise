@@ -19,7 +19,7 @@
     }
   }
   @else if $point==smartphone {
-    @media (max-width: 767px) {
+    @media (max-width: 676px) { // This matches the iframes on the site
       @content;
     }
   }
