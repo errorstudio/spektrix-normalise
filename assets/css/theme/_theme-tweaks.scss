@@ -1,23 +1,7 @@
 
 /* Theme */
 
-
-/* 
-font-family: 'Radikal Light';
-font-family: 'Radikal Medium';
-font-family: 'Radikal Bold';
-font-family: 'Radikal';
-*/
-
-/*
-font-family: 'Clarendon Light';
-font-family: 'Clarendon';
-font-family: 'Clarendon Bold';
-*/
-
-
 $red:#ef192d;
-
 $yellow:#ffe000;
 
 $mint:#45ea9f;
@@ -38,18 +22,17 @@ $logo-purple:#822D8A;
     }
 }
 
-
 body,
 button,
 input,
 select,
 textarea {
-	font-family: 'Radikal';
+	font-family:'Radikal W01';
 	font-size:16.1px;
 }
 
 body {
-	font-family: 'Radikal';
+	font-family:'Radikal W01';
 	font-size:16.1px;
 	@include mq(smartphone) {
 		font-size:14.1px;
@@ -97,7 +80,7 @@ h2 {
 }
 
 .booking-for b {
-	font-family: "Clarendon";
+	font-family:'BT Clarendon W01';
 	font-weight:normal;
 	font-size: 1.1em;
 	color: #822d8a;
@@ -124,11 +107,16 @@ dd.Item .Details {
 	display: none;
 }
 
-.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer {
+.SpektrixPage.ChooseSeats .AdditionalsContainer {
+	clear:both;
+	margin-top:$vertical-spacing;
+}
+
+.SpektrixPage.ChooseSeats .AdditionalChargesContainer {
 	padding-left:0;
 }
 
-.SpektrixPage.ChooseSeats .PricesContainer .AdditionalChargesContainer .Asterix {
+.SpektrixPage.ChooseSeats .AdditionalChargesContainer .Asterix {
 	display:none;
 }
 

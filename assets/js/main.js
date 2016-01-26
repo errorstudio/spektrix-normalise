@@ -98,6 +98,11 @@
 			$('.ErrorPanel').html('<span>There was an error. ' + errorText + '</span>');
 			$('.ErrorPanel').addClass('ErrorMessage').removeClass('ErrorPanel');
 
+			// Savings is haunted by an empty <ul>, let's take out the whitespace and hide it with :empty in CSS
+			if ($('.Savings > ul').exists()) {
+				$('.Savings > ul').cleanWhitespace();
+			}
+			
 		}
 
 
@@ -186,6 +191,11 @@
 			// Put the correct class name on the name so it's consistent with other non-donation items
 			if ($('dd.Item.Donation').exists()) {
 				$('dd.Item.Donation > p:first-child').addClass('Details').prepend('<span class="ItemName">Donation</span>');
+			}
+
+			// Savings is haunted by an empty <ul>, let's take out the whitespace and hide it with :empty in CSS
+			if ($('.Savings > ul').exists()) {
+				$('.Savings > ul').cleanWhitespace();
 			}
 
 			// Check if savings actually contains anything

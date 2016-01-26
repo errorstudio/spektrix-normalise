@@ -297,6 +297,10 @@ dd.Footer .Breakdown .Label {
 	}
 }
 
+.Savings ul:empty {
+	display:none;
+}
+
 .Savings > h2 {
 	margin-top: 0;
 }
