@@ -108,7 +108,7 @@
 			// The heading doesn't describe the page and is inconsistent, let's replace it
 			var eventName = $('.EventName').html();
 			$('h1.EditTicketsHeading').replaceWith('<h1 class="EditTicketsHeading">Choose ticket type</h1>');
-			$('h1.EditTicketsHeading').append('<span class="booking-for">Booking tickets for: <b>' + eventName + '</b></span>');
+			$('h1.EditTicketsHeading').before('<span class="booking-for">Booking tickets for: <b>' + eventName + '</b></span>');
 
 			// Targeting - Link is not reliably targetable, let's give it a classname
 			$('a[href*="ChooseSeats"]').addClass('ChangeMySeatsLink');

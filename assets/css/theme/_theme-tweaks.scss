@@ -87,7 +87,9 @@ h2 {
 }
 
 .booking-for {
-	font-size: 0.45em;
+	font-size: 1em;
+	max-width: 40%;
+	text-align: right;
 }
 
 .booking-for b {
@@ -95,6 +97,7 @@ h2 {
 	font-weight:normal;
 	font-size: 1.1em;
 	color: #822d8a;
+	white-space: nowrap;
 }
 
 
