@@ -30,6 +30,15 @@ $purple-for-text:#4729A5;
 $logo-purple:#822D8A;
 
 
+.SpektrixPage {
+    padding: 0;
+    @include clearfix;
+    @include mq(smartphone) {
+        padding:0;   
+    }
+}
+
+
 body,
 button,
 input,
@@ -60,12 +69,7 @@ div#mfPreviewBarShow {
 	display:none;
 }
 
-.SpektrixPage {
-	padding: 38px 40px 8px;
-	@include mq(smartphone) {
-		padding:15px;   
-	}
-}
+
 
 h1 {
 	font-size: 2.5em;
