@@ -418,7 +418,7 @@
 		// Stick an event name in the header if we can find one
 		if ($('.EventName').exists()) {
 			var eventName = $('.EventName').html();
-			$('h1').append('<span class="booking-for">Booking tickets for <b>' + eventName + '</b></span>');
+			$('h1').before('<span class="booking-for">Booking tickets for <b>' + eventName + '</b></span>');
 		}
 
 
