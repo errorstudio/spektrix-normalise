@@ -30,6 +30,15 @@ $purple-for-text:#4729A5;
 $logo-purple:#822D8A;
 
 
+.SpektrixPage {
+    padding: 0;
+    @include clearfix;
+    @include mq(smartphone) {
+        padding:0;   
+    }
+}
+
+
 body,
 button,
 input,
