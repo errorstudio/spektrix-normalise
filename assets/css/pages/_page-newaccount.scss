@@ -37,10 +37,20 @@
 	width: 72px !important;
 	position: relative;
 	top: 2px;
+	@include mq(smartphone) {
+		width: 53px !important;
+		top: 3px;
+	}
 }
 
 .SpektrixPage.NewAccount .View .Container.DateOfBirth select {
 	margin-right:10px;
+}
+
+.SpektrixPage.NewAccount .View .Container.DateOfBirth select[id*='Month'] {
+	@include mq(smartphone) {
+		width: 100px;
+	}
 }
 
 // Hide inconsistent, lightly confusing, instructive text
@@ -60,9 +70,20 @@
 .Container.Country select {
 	max-width:100%;
 }
+
 .Container.Postcode input {
 	@include mq(smartphone) {
 		width: 130px;
 	}
 }
 
+.Container.Postcode input[type="submit"] {
+	position: relative;
+	top: -3px;
+	margin-right:10px;
+	width: 130px;
+	@include mq(smartphone) {
+		top: -4px;
+		width: 104px;
+	}
+}

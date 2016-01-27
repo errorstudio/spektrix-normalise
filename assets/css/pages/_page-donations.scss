@@ -34,7 +34,15 @@
 	}
 }
 
-.SpektrixPage.Donations .Buttons .ContinueButton,
-.SpektrixPage.Donations .Buttons .DeclineButton {
+.SpektrixPage.Donations .Buttons .ContinueButton {
 	@include large-button;
+	@include mq(smartphone) {
+			// Button text is long so they're forced into two rows
+			margin-bottom:10px;
+			margin-right:0;
+	}
+}
+
+.SpektrixPage.Donations .Buttons .DeclineButton {
+	@include normal-button;
 }

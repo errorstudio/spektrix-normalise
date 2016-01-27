@@ -15,11 +15,11 @@ $logo-purple:#822D8A;
 
 
 .SpektrixPage {
-    padding: 0;
-    @include clearfix;
-    @include mq(smartphone) {
-        padding:0;   
-    }
+	padding: 0;
+	@include clearfix;
+	@include mq(smartphone) {
+		padding:0;   
+	}
 }
 
 body,
@@ -253,4 +253,23 @@ dd.Item .Details {
 .MonthList li:nth-child(odd) a:hover {
 	background:$mid-purple;
 	color:white;
+}
+
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading {
+	@include mq(smartphone) {
+		font-size: 16px;
+	}
+}
+
+.SpektrixPage.ChooseSeats .SeatingAreaHeading .SeatingAreaHeadingLabel {
+	color: $purple-for-text;
+	@include mq(smartphone) {
+		font-size: 16px;
+		display: inline-block;
+		padding-bottom: 6px;
+	}
+	@include mq(small-smartphone) {
+		display: block;
+	}
 }

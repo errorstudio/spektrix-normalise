@@ -126,6 +126,9 @@
 	position:absolute;
 	top:20px;
 	right:0;
+	@include mq(smartphone) {
+		top:13px;	
+	}
 }
 
 .Event_Summary {

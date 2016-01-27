@@ -38,7 +38,7 @@ $button-base-size:16;
 @mixin normal-button {
   font-size:($button-base-size * 1px) + 0.1px; // Font looks nasty at exactly 16px ?!
   //padding: 13em/$button-base-size 20em/$button-base-size 10em/$button-base-size;// Could use this if it wasn't for the extra 0.1px
-  padding: 12.44em/$button-base-size 20em/$button-base-size 9.44em/$button-base-size; //Fiddly because normal buttons need to be 44px high to match fields
+  padding: 10.44em/$button-base-size 20em/$button-base-size 11.44em/$button-base-size; //Fiddly because normal buttons need to be 44px high to match fields
   color: $button-text;
   border: 0;
   border-radius: $button-radius;

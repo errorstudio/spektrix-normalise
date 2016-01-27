@@ -156,6 +156,7 @@ select {
     @include transition(border-color ease-in-out .15s);
     margin-right:10px;
     @include mq(smartphone) {
+        padding: 1px 6px 0;
         height:34px;   
     }
 }

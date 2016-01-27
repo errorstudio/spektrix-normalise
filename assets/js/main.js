@@ -78,9 +78,12 @@
 				$(this).text(str.replace(/\*/g, ''));
 			});
 
-			// Add an explanatory label to the seating area dropdown
-			// NEED TO MAKE THIS ONLY HAPPEN IF THAT PART IS NEEDED
-			$('.SpektrixPage.ChooseSeats .SeatingAreaHeading').prepend('<span class="SeatingAreaHeadingLabel">Showing seating for: </span>');
+			// Add an explanatory label to the seating area dropdown - if there's anything in it ie. if it's needed
+			if ($('.SeatingAreaHeading').exists()) {
+				if ($('.SeatingAreaHeading').children().length > 0) { 
+					$('.SpektrixPage.ChooseSeats .SeatingAreaHeading').prepend('<span class="SeatingAreaHeadingLabel">Showing seating for: </span>');
+				}
+			}
 
 			// Move the seating area selector to next to the seating area display
 			$('.SpektrixPage.ChooseSeats .SeatingAreaHeading').insertBefore($('.SeatingSelector'));
@@ -242,9 +245,10 @@
 				$('.Items').addClass('ItemsWithSaving');
 			}
 
-			// Add in 'Continue shopping' link
-			$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href="http://www.sheffieldtheatres.co.uk/whats-on">Continue shopping</a></div>');
-
+			// Add in 'Continue shopping' link, if the checkout button is there.
+			if ($('.CheckoutLink').exists()) {
+				$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href="http://www.sheffieldtheatres.co.uk/whats-on">Continue shopping</a></div>');
+			}
 		}
 
 
