@@ -2,7 +2,8 @@
 /* Page - LoginLogout */
 
 .SpektrixPage.LoginLogout .OptionalMessage {
-	display: none;
+	//display: none;
+	margin-bottom: $vertical-spacing;
 }
 
 .SpektrixPage.LoginLogout .Account_Link {
