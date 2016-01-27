@@ -95,6 +95,14 @@
   }
 }
 
+// Buttons don't quite fit on an iPhone, let's make the padding a little tigher (THEME)
+.SpektrixPage.ChooseSeats > .Buttons .Button {
+	@include mq(smartphone) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}
+
 .SpektrixPage.ChooseSeats .UpdateButton {
 	@include large-button;
 	margin-right:0;// There's a hidden something so the usual :last-child selector isn't working
