@@ -105,6 +105,13 @@
 			if ($('.Savings > ul').exists()) {
 				$('.Savings > ul').cleanWhitespace();
 			}
+
+			// Let's give the pricing tabel some data-labels so it can reformat for responsive
+			if ($('.PriceListTable').exists()) {
+				$('.PriceListTable thead th').each(function (i) {
+					$('.PriceListTable tbody tr td:nth-child(' + (i+1) + ')').attr('data-label', $(this).find('span').text());
+				});
+			}
 			
 		}
 
