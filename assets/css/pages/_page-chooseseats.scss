@@ -13,6 +13,10 @@
 	padding: 6px;
 }
 
+.SpektrixPage.ChooseSeats .InstanceCalendar .DropDownCalendar {
+	display:none !important;
+}
+
 .SpektrixPage.ChooseSeats .SeatingAreaHeading {
 	float: left;
 	clear: both;
