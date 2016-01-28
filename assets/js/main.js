@@ -112,6 +112,15 @@
 					$('.PriceListTable tbody tr td:nth-child(' + (i+1) + ')').attr('data-label', $(this).find('span').text());
 				});
 			}
+
+			// Add a back button
+/*			$('.SpektrixPage.ChooseSeats .Buttons').prepend('<button class="BackButton">Back</button>');
+			$('.SpektrixPage.ChooseSeats .Buttons .BackButton').click(function() {
+				window.history.back();
+				//window.top.location.href = "http://www.example.com"; 
+				//document.location = document.referrer;
+			});
+*/
 			
 		}
 

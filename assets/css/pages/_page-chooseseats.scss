@@ -2,8 +2,15 @@
 /* Page - Choose Seats */
 
 // Hide the instance picker, we've already done that on the previous step.
+/*
 .SpektrixPage.ChooseSeats .InstanceCalendar {
 	display: none;
+}
+*/
+
+.SpektrixPage.ChooseSeats .InstanceCalendar {
+	min-width:0;
+	padding: 6px;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaHeading {
