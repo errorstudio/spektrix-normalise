@@ -94,7 +94,7 @@ h1 .Buttons .Logout {
 
 
 // Tidy up DOB inputs
-.SpektrixPage.MyAccount .View .Container.DateOfBirth input {
+.SpektrixPage.MyAccount .Container.DateOfBirth input {
 	width: 72px !important;
 	position: relative;
 	top: 2px;
@@ -104,11 +104,11 @@ h1 .Buttons .Logout {
 	}
 }
 
-.SpektrixPage.MyAccount .View .Container.DateOfBirth select {
+.SpektrixPage.MyAccount .Container.DateOfBirth select {
 	margin-right:10px;
 }
 
-.SpektrixPage.MyAccount .View .Container.DateOfBirth select[id*='Month'] {
+.SpektrixPage.MyAccount .Container.DateOfBirth select[id*='Month'] {
 	@include mq(smartphone) {
 		width: 100px;
 	}
