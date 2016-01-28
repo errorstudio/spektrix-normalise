@@ -69,8 +69,11 @@
 
 		if ($('.SpektrixPage.ChooseSeats').exists()) {
 
-			/*// Fix inconsistent capitalisation in heading
-			$('.ChooseSeatsHeading h1').replaceWith('<h1>Choose seats</h1>');*/
+			// Add 'Booking for…' to header
+			if ($('.EventName').exists()) {
+				var eventName = $('.EventName').html();
+				$('.ChooseSeatsHeading').append('<span class="booking-for"><em>Booking tickets for:</em> <b>' + eventName + '</b></span>');
+			}
 
 			// Remove asterisk blast on pricing table
 			$('.SpektrixPage.ChooseSeats .PricesContainer .Price').each(function(){
@@ -106,7 +109,7 @@
 				$('.Savings > ul').cleanWhitespace();
 			}
 
-			// Let's give the pricing tabel some data-labels so it can reformat for responsive
+			// Let's give the pricing table some data-labels so it can reformat for responsive
 			if ($('.PriceListTable').exists()) {
 				$('.PriceListTable thead th').each(function (i) {
 					$('.PriceListTable tbody tr td:nth-child(' + (i+1) + ')').attr('data-label', $(this).find('span').text());
@@ -114,15 +117,14 @@
 			}
 
 			// Add a back button
-/*			$('.SpektrixPage.ChooseSeats .Buttons').prepend('<button class="BackButton">Back</button>');
+			$('.SpektrixPage.ChooseSeats .Buttons').prepend('<button class="BackButton ButtonAlignLeft">Back</button>');
 			$('.SpektrixPage.ChooseSeats .Buttons .BackButton').click(function() {
 				window.history.back();
 				//window.top.location.href = "http://www.example.com"; 
 				//document.location = document.referrer;
 			});
-*/
-			
-		}
+
+}
 
 
 		// EditTickets
@@ -131,15 +133,15 @@
 			
 			// The heading doesn't describe the page and is inconsistent, let's replace it
 			var eventName = $('.EventName').html();
-			$('h1.EditTicketsHeading').replaceWith('<h1 class="EditTicketsHeading">Choose ticket type</h1>');
-			$('h1.EditTicketsHeading').before('<span class="booking-for">Booking tickets for: <b>' + eventName + '</b></span>');
+			$('h1.EditTicketsHeading').replaceWith('<div class="EditTicketsHeading"><h1>Choose ticket type</h1></div>');
+			$('.EditTicketsHeading').append('<span class="booking-for"><em>Booking tickets for:</em> <b>' + eventName + '</b></span>');
 
 			// Targeting - Link is not reliably targetable, let's give it a classname
 			$('a[href*="ChooseSeats"]').addClass('ChangeMySeatsLink');
 
 			// Rename 'Delete' to 'Remove'
 			$('th.Delete').text('Remove');
-			
+
 		}
 
 
@@ -265,6 +267,7 @@
 			if ($('.CheckoutLink').exists()) {
 				$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href="http://www.sheffieldtheatres.co.uk/whats-on">Continue shopping</a></div>');
 			}
+			
 		}
 
 
@@ -440,15 +443,6 @@
 			$('.SpektrixPage.SupplementaryEventsPage input[value="Continue To Basket"].Button').attr('value', 'Continue to basket').wrap('<div class="Buttons"></div>');
 			$('.SpektrixPage.SupplementaryEventsPage #SimpleSeatingDiv .Button').attr('value', 'Add to basket')
 			
-		}
-
-
-		// After
-
-		// Stick an event name in the header if we can find one
-		if ($('.EventName').exists()) {
-			var eventName = $('.EventName').html();
-			$('h1').before('<span class="booking-for">Booking tickets for <b>' + eventName + '</b></span>');
 		}
 
 

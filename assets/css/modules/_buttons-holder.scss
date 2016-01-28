@@ -11,6 +11,7 @@
 .Buttons .Button {
 	margin-right:10px;
 	display:inline-block;
+	vertical-align:top;
 }
 
 // Remove the right margin on the last button in .Buttons, so when they're floated right they meet the edge of the page nicely.
@@ -18,7 +19,7 @@
 	margin-right:0;
 }
 
-// On small form pages, inset the buttons so the align with the fields
+// On small form pages, inset the buttons so they align with the fields
 .SpektrixPage.ChangePassword #Buttons, // A lone ID 
 .SpektrixPage.NewAccount .Buttons,
 .SpektrixPage.EditAddress .Buttons,
@@ -38,8 +39,11 @@
 	margin-left:0;
 }
 
-
-.SpektrixPage.ChooseSeats .Buttons {
-	text-align:right;
+.ButtonAlignLeft {
+	float:left;
 }
+
+/* .SpektrixPage.ChooseSeats .Buttons {
+	text-align:right;
+} */
 

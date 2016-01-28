@@ -23,12 +23,18 @@ $logo-purple:#822D8A;
 }
 
 body,
+input,
+select,
+textarea {
+	font-size:16.1px;
+}
+
+body,
 button,
 input,
 select,
 textarea {
 	font-family:'Radikal W01';
-	font-size:16.1px;
 }
 
 body {
@@ -75,8 +81,6 @@ h2 {
 
 .booking-for {
 	font-size: 1em;
-	max-width: 40%;
-	text-align: right;
 }
 
 .booking-for b {
@@ -85,6 +89,9 @@ h2 {
 	font-size: 1.1em;
 	color: #822d8a;
 	white-space: nowrap;
+	@include mq(smartphone) {
+		white-space:normal;
+	}
 }
 
 
@@ -228,7 +235,7 @@ dd.Item .Details {
 	@include kellum;
 	width:200px;
 	height:70px;
-	background:url(http://33a1c0f4.ngrok.com/assets/img/logo-gift-aid.png) left top no-repeat;
+	background:url(http://spektrix-styles.sheffieldtheatres.co.uk/assets/img/logo-gift-aid.png) left top no-repeat;
 } 
 
 

@@ -345,6 +345,7 @@ a.CheckoutLink {
 }
 
 .PromoCode input[type="text"] {
+	max-width: 153px;
 	@include mq(smartphone) {
 		width:112px;
 	}
@@ -407,5 +408,3 @@ dd.Item.Merchandise .Quantity .ValidationError {
 .PromoItems li .AddButton {
 	float:right;
 }
-
-

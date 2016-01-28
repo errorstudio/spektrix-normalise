@@ -1,6 +1,18 @@
 
 /* Page - EditTickets */
 
+.SpektrixPage.EditTickets .EditTicketsHeading {
+	overflow: hidden;
+}
+
+.SpektrixPage.EditTickets .EditTicketsHeading h1 {
+	float:left;
+	@include mq(small-smartphone) {
+		float:none;
+		margin-bottom:4px;
+	}
+}
+
 // Superfluous text - Hide 'Please select the type of tickets you would like.' message
 .SpektrixPage.EditTickets p.Message {
 	display:none;

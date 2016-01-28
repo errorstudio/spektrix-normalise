@@ -1,6 +1,19 @@
 
 /* Page - Choose Seats */
 
+
+.SpektrixPage.ChooseSeats .ChooseSeatsHeading {
+	overflow: hidden;
+}
+
+.SpektrixPage.ChooseSeats .ChooseSeatsHeading h1 {
+	float:left;
+	@include mq(small-smartphone) {
+		float:none;
+		margin-bottom:4px;
+	}
+}
+
 // Hide the instance picker, we've already done that on the previous step.
 /*
 .SpektrixPage.ChooseSeats .InstanceCalendar {
@@ -10,11 +23,45 @@
 
 .SpektrixPage.ChooseSeats .InstanceCalendar {
 	min-width:0;
-	padding: 6px;
+	padding: 0;
+	float:right;
+	background:#fff6b3;
+	border:0;
+	margin-left:20px;
+	@include mq(smartphone) {
+		width: 100%;
+		text-align: center;
+		margin-left:0;
+		margin-bottom: $vertical-spacing;
+		float:none;	
+	}
 }
 
 .SpektrixPage.ChooseSeats .InstanceCalendar .DropDownCalendar {
 	display:none !important;
+}
+
+.SpektrixPage.ChooseSeats .InstanceCalendar .PreviousShowingButton,
+.SpektrixPage.ChooseSeats .InstanceCalendar .NextShowingButton {
+	width: 40px;
+	height: 40px;
+	padding: 6px;
+}
+
+.SpektrixPage.ChooseSeats .InstanceCalendar .PreviousShowingButton {
+	background:transparent url(https://spektrix-styles.sheffieldtheatres.co.uk/assets/img/instance-picker-previous.svg) center center no-repeat;
+	margin-right: 15px;
+	@include mq(smartphone) {
+		margin-right: 10px;
+	}
+}
+
+.SpektrixPage.ChooseSeats .InstanceCalendar .NextShowingButton {
+	background:transparent url(https://spektrix-styles.sheffieldtheatres.co.uk/assets/img/instance-picker-next.svg) center center no-repeat;
+	margin-left: 15px;
+	@include mq(smartphone) {
+		margin-left: 10px;
+	}
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaHeading {
@@ -39,11 +86,12 @@
 	padding: 5px 40px 6px 7px;
 	font-size: inherit;
 	-webkit-appearance: none;
-	background:transparent url('data:image/svg+xml;utf8,<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="27.71" height="7.69" viewBox="0 0 27.71 7.69"><defs><style>.cls-1{fill:#ccc;}</style></defs><title>Untitled-2</title><path class="cls-1" d="M0.07,0.76L4.5,7.44a0.5,0.5,0,0,0,.87,0L9.8,0.76A0.5,0.5,0,0,0,9.36,0H0.51A0.5,0.5,0,0,0,.07.76Z"/></svg>') center right no-repeat;
+	background:transparent url(https://spektrix-styles.sheffieldtheatres.co.uk/assets/img/dropdown.svg) center right no-repeat;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaInstructions {
   //float:left;
+  margin-top:0;
 }
 
 
@@ -69,7 +117,7 @@
 
 .SpektrixPage.ChooseSeats .SeatingSelector {
 	clear: both;
-	margin-bottom: 2 * $vertical-spacing;
+	margin-bottom: $vertical-spacing;
 }
 
 .SpektrixPage.ChooseSeats .SeatingSelector .SeatingArea {
@@ -98,12 +146,8 @@
 
 // Refresh button feels superfluous
 .SpektrixPage.ChooseSeats .RefreshButton {
-  //display: none;
-  @include large-button;
+  // display:none;
   @include quiet-button;
-  @include mq(smartphone) {
-  	font-size:22px;
-  }
 }
 
 // Buttons don't quite fit on an iPhone, let's make the padding a little tigher (THEME)
@@ -120,6 +164,13 @@
 	@include mq(smartphone) {
 		font-size:22px;
 	}
+	@include mq(small-smartphone) {
+		font-size:12.8px;
+	}
+}
+
+.SpektrixPage.ChooseSeats .BackButton {
+	@include quiet-button;
 }
 
 .SpektrixPage.ChooseSeats .PricesContainer {

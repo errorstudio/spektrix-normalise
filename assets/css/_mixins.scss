@@ -23,6 +23,11 @@
       @content;
     }
   }
+  @else if $point==small-smartphone {
+    @media (max-width: 479px) {
+      @content;
+    }
+  }
 }
 
 //----------
