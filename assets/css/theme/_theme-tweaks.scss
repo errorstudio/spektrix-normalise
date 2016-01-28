@@ -280,3 +280,19 @@ dd.Item .Details {
 		display: block;
 	}
 }
+
+// JS adds LoginForDiscouts text to basket page
+
+.LoginForDiscounts {
+	color:$purple-for-text;
+	margin-left:60%;
+	margin-top: -43px;
+	margin-bottom: 25px;
+	clear:both;
+	@include mq(smartphone) {
+		margin-left: 30%;
+	}
+	@include mq(small-smartphone) {
+		margin-left:0;
+	}
+}

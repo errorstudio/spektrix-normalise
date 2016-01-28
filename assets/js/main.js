@@ -267,6 +267,20 @@
 			if ($('.CheckoutLink').exists()) {
 				$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href="http://www.sheffieldtheatres.co.uk/whats-on">Continue shopping</a></div>');
 			}
+
+			// THEME
+			// If this exists then we're logged out
+			if ($('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').exists()) {
+				// Insert our own neat little message
+				$('.Items').after('<div class="LoginForDiscounts"><p>Centre Stage Membership discounts and offers are applied when you <b>log in</b> or <b>checkout</></p></div>' );
+				// Remove the old one and the Savings title
+				$('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').parent().prev().remove();
+				$('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').parent().remove(); 
+				// Relabel the promo code box
+				if($('#ctl00_ContentPlaceHolder_PromoCodeBox_PromoCodeDiv label').text().indexOf('Enter a promotion code here if you have one') != -1) {
+					$('#ctl00_ContentPlaceHolder_PromoCodeBox_PromoCodeDiv label').text('Promo code')
+				}
+			}
 			
 		}
 
