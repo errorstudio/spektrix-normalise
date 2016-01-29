@@ -124,7 +124,26 @@
 				//document.location = document.referrer;
 			});
 
-}
+
+			// THEME
+			// If this exists then we're logged out
+			if ($('#ctl00_ContentPlaceHolder_RelatedOffersControl1_LoginForDiscounts').exists()) {
+				// Insert our own neat little message
+				console.log("ok");
+				$('.Savings').after('<div class="LoginForDiscounts"><p>Special Offers and Centre Stage Membership discounts are applied in the basket once you have logged in.</div>' );
+				// Remove the old one
+				$('#ctl00_ContentPlaceHolder_RelatedOffersControl1_LoginForDiscounts').remove();
+
+				if ($('.Savings > ul').text().trim().length < 1 && $('.Savings > ul').children().length < 1) {
+					$('.Savings > ul').remove();
+				}
+
+				$('.Savings').cleanWhitespace();
+				$('.Savings').insertAfter('.Buttons');
+				$('.LoginForDiscounts').insertAfter('.Buttons');
+			}
+
+		}
 
 
 		// EditTickets
@@ -135,6 +154,13 @@
 			var eventName = $('.EventName').html();
 			$('h1.EditTicketsHeading').replaceWith('<div class="EditTicketsHeading"><h1>Choose ticket type</h1></div>');
 			$('.EditTicketsHeading').append('<span class="booking-for"><em>Booking tickets for:</em> <b>' + eventName + '</b></span>');
+
+			// Add membership login message
+			$('.EditTicketsHeading').after('<div class="LoginForDiscounts"><p>Special Offers and Centre Stage Membership discounts are applied in the basket once you have logged in.</div>' );
+
+
+			
+
 
 			// Targeting - Link is not reliably targetable, let's give it a classname
 			$('a[href*="ChooseSeats"]').addClass('ChangeMySeatsLink');
@@ -272,7 +298,7 @@
 			// If this exists then we're logged out
 			if ($('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').exists()) {
 				// Insert our own neat little message
-				$('.Items').after('<div class="LoginForDiscounts"><p>Centre Stage Membership discounts and offers are applied when you <b>log in</b> or <b>checkout</></p></div>' );
+				$('.Items').after('<div class="LoginForDiscounts"><p>Special Offers and Centre Stage Membership discounts are applied in the basket once you have logged in.</div>' );
 				// Remove the old one and the Savings title
 				$('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').parent().prev().remove();
 				$('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').parent().remove(); 

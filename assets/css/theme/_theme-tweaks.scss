@@ -285,6 +285,9 @@ dd.Item .Details {
 
 .LoginForDiscounts {
 	color:$purple-for-text;
+}
+
+.Basket2  .LoginForDiscounts {
 	margin-left:60%;
 	margin-top: -43px;
 	margin-bottom: 25px;
@@ -296,3 +299,29 @@ dd.Item .Details {
 		margin-left:0;
 	}
 }
+
+.ChooseSeats .LoginForDiscounts {
+	max-width:50%;
+	@include mq(smartphone) {
+		max-width:none;	
+	}
+}
+
+.ChooseSeats .Savings:empty {
+	display:none;
+	border:10px solid green;
+}
+
+.ChooseSeats .Savings {
+	border:10px solid red;
+}
+
+.EditTickets .LoginForDiscounts {
+	float:right;
+	max-width:338px;
+	@include mq(smartphone) {
+		float:none;
+		max-width:none;
+	}
+}
+
