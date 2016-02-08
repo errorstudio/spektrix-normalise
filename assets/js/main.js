@@ -119,7 +119,12 @@
 			// Add a back button
 			$('.SpektrixPage.ChooseSeats .Buttons').prepend('<button class="BackButton ButtonAlignLeft">Back</button>');
 			$('.SpektrixPage.ChooseSeats .Buttons .BackButton').click(function() {
-				window.history.back();
+				
+				if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+					window.top.history.go(-1);
+				} else {
+					window.history.back();
+				}
 				//window.top.location.href = "http://www.example.com"; 
 				//document.location = document.referrer;
 			});
