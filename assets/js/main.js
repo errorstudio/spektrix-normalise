@@ -158,14 +158,11 @@
 			// The heading doesn't describe the page and is inconsistent, let's replace it
 			var eventName = $('.EventName').html();
 			$('h1.EditTicketsHeading').replaceWith('<div class="EditTicketsHeading"><h1>Choose ticket type</h1></div>');
+			$('h2.EditTicketsHeading').remove(); // This H2 appeared at some point. The identical class name threw things off.
 			$('.EditTicketsHeading').append('<span class="booking-for"><em>Booking tickets for:</em> <b>' + eventName + '</b></span>');
 
 			// Add membership login message
 			$('.EditTicketsHeading').after('<div class="LoginForDiscounts"><p>Special Offers and Centre Stage Membership discounts are applied in the basket once you have logged in.</div>' );
-
-
-			
-
 
 			// Targeting - Link is not reliably targetable, let's give it a classname
 			$('a[href*="ChooseSeats"]').addClass('ChangeMySeatsLink');
