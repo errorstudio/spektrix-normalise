@@ -249,8 +249,8 @@
 
 			// Check if savings actually contains anything
 			if ($('.Savings').exists()) {
-				if (!$('.Savings p').exists()) {
-					$('.Savings').remove(); // If there's no <p> tags in savings then remove it (!!!)
+				if (!$('.Savings p, .Savings label, .Savings input').exists()) {
+					$('.Savings').remove(); // If there's no STUFF in savings then remove it (!!!)
 				}
 			}
 
