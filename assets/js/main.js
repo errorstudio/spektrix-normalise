@@ -259,6 +259,11 @@
 				$('.Savings').insertAfter($('.Savings').next());
 			}
 
+			// Relabel the promo code box
+			if($('#ctl00_ContentPlaceHolder_PromoCodeBox_PromoCodeDiv label').text().indexOf('Enter a promotion code here if you have one') != -1) {
+				$('#ctl00_ContentPlaceHolder_PromoCodeBox_PromoCodeDiv label').text('Promo code')
+			}
+
 			// Fix capitalisation on 'Apply code' button
 			$('.PromoCode .Button').attr('value', 'Apply code');	
 
@@ -304,10 +309,6 @@
 				// Remove the old one and the Savings title
 				$('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').parent().prev().remove();
 				$('#ctl00_ContentPlaceHolder_RelatedOffersControl_LoginForDiscounts').parent().remove(); 
-				// Relabel the promo code box
-				if($('#ctl00_ContentPlaceHolder_PromoCodeBox_PromoCodeDiv label').text().indexOf('Enter a promotion code here if you have one') != -1) {
-					$('#ctl00_ContentPlaceHolder_PromoCodeBox_PromoCodeDiv label').text('Promo code')
-				}
 			}
 			
 		}
