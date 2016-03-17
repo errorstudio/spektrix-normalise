@@ -3,6 +3,10 @@
 
 .SpektrixPage.EventDetails .DetailsContainer {
 	margin-bottom:$vertical-spacing;
+	max-width:50%;
+	@include mq(smartphone) {
+		max-width:none;
+	}
 }
 
 .SpektrixPage.EventDetails .EventDates {
