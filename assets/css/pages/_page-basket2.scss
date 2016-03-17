@@ -303,6 +303,10 @@ dd.Footer .Breakdown .Label {
 	display:none;
 }
 
+.Savings ul:empty + p {
+	margin-top:0;
+}
+
 .Savings > h2 {
 	margin-top: 0;
 }
@@ -394,6 +398,14 @@ dd.Item.Merchandise .Quantity .ValidationError {
 .PromoItems li {
 	padding-bottom:$vertical-spacing;
 	overflow:hidden;
+	min-height:64px;
+	@include mq(smartphone) {
+		min-height:0;
+	}
+}
+
+.PromoItems li:last-child {
+	min-height:0;
 }
 
 .PromoItems li > span:first-child {

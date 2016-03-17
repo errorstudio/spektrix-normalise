@@ -62,6 +62,11 @@
 			// The description is above the main header, let's put it under
 			$('.DetailsContainer').insertAfter('.DatesAndTimesHeading');
 
+			// Savings is haunted by an empty <ul>, let's take out the whitespace and hide it with :empty in CSS
+			if ($('.Savings > ul').exists()) {
+				$('.Savings > ul').cleanWhitespace();
+			}
+						
 		}
 
 
@@ -275,8 +280,11 @@
 			// The title reads 'You may also be interested in the following:', let's make it snappier.
 			if ($('dt.Promo').exists()) {
 				//var titleText = $('dt.Promo').text();
-				var promoContent = $('dd.Promo').html();
-				$('.Items').after('<div class="Promo"><h2>You may like to add…</h2>' + promoContent + '</div>' );
+				$('.Items').after('<div class="Promo"><h2>You may like to add…</h2></div>' );
+				$('dd.Promo').each(function() { // There can be multiple promos (events and merch, possibly more?)
+					var promoContent = $(this).html();
+					$('div.Promo').append(promoContent);
+				});
 				$('dd.Promo, dt.Promo').remove();
 			}
 

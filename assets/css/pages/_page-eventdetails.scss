@@ -2,10 +2,11 @@
 /* Page - Event details */
 
 .SpektrixPage.EventDetails .DetailsContainer {
-	font-size:24px;
-	@include mq(smartphone) {
-		font-size:18px;
-	}
+	margin-bottom:$vertical-spacing;
+}
+
+.SpektrixPage.EventDetails .EventDates {
+	margin-bottom:$vertical-spacing;
 }
 
 .SpektrixPage.EventDetails .SoldOutText {
