@@ -222,6 +222,31 @@
 				});
 			}
 
+			// …and do the same with .GiftVoucher (structure is slightly different)
+			if ($('dt.Item.GiftVoucher').exists()) {
+				$('dt.Item.GiftVoucher').each(function(){
+					//$(this).find('span').addClass('ItemName');
+					//var itemName = $(this).html();
+					$(this).next('dd').prepend('<p class="Details"><span class="ItemName">Gift Voucher</span></p>');
+					$(this).remove();
+				});
+			}
+
+			// Wrap loose button in a <dd>
+			if ($('.AddAnotherGiftVoucher').exists()) {
+				$('.AddAnotherGiftVoucher').wrap('<dd class="AddGiftVoucherRow"></dd>');
+			}
+
+			// Move details to correct place, add quantity
+			if ($('dd.Item.GiftVoucher').exists()) {
+				$('dd.Item.GiftVoucher').each(function(){
+					var toHTML = $(this).find('.To').html();
+					$(this).find('.ItemName').after('<span>' + toHTML + '</span>');
+					$(this).find('.To').remove();
+					$(this).find('.Breakdown').prepend('<li class="Quantity">1</li>');
+				});
+			}
+
 			// Add missing class to Merchandise > Quantity error field 
 			if ($('dd.Item.Merchandise .Quantity input').exists()) {
 				$('dd.Item.Merchandise .Quantity input + span').addClass('ValidationError');

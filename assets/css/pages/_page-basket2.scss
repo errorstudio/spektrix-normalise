@@ -420,3 +420,20 @@ dd.Item.Merchandise .Quantity .ValidationError {
 .PromoItems li .AddButton {
 	float:right;
 }
+
+// Gift Voucher basket items
+
+.Basket2 .AddGiftVoucherRow {
+	margin-bottom:$vertical-spacing;
+	text-align:right;
+}
+
+.Basket2 .AddAnotherGiftVoucher {
+	display: inline-block;
+	@include small-button;
+	@include mq(smartphone) {
+		height: auto;
+		line-height: 1.7;
+		padding: 4px 11px 0px;
+	}
+}

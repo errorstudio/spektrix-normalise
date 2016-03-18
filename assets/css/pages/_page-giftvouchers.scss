@@ -46,7 +46,7 @@
 }
 
 
-.SpektrixPage.AddGiftVoucher .Container.From span {
+.SpektrixPage.AddGiftVoucher .Container.From > span:first-child {
 	width:$form-label-width;
 	display: inline-block;
 	@include mq(smartphone) {
@@ -54,6 +54,7 @@
 		margin-bottom: 4px;
 	}
 }
+
 
 .SpektrixPage.AddGiftVoucher .Container.Message span {
 	width:$form-label-width;
