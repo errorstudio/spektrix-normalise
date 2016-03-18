@@ -1,0 +1,77 @@
+
+/* Page - GiftVouchers */
+
+.SpektrixPage.AddGiftVoucher {
+
+}
+
+.SpektrixPage.AddGiftVoucher .Container.DateToSend input {
+	width: 72px !important;
+	position: relative;
+	top: 3px;
+	@include mq(smartphone) {
+		top: 1px;	
+	}
+}
+
+.SpektrixPage.AddGiftVoucher .Container.SendTo > span:first-child {
+	width:$form-label-width;
+	display: inline-block;
+	vertical-align:top;
+	@include mq(smartphone) {
+		display: block;
+		margin-bottom: 4px;
+	}
+}
+
+.SpektrixPage.AddGiftVoucher .Container.SendTo .wrap-group {
+	display: inline-block;
+	width:240px;
+}
+
+.SpektrixPage.AddGiftVoucher .Container.SendTo .wrap-group input[type="radio"] {
+	float:left;
+	clear:left;
+	margin-top:3px;
+	margin-right:10px;
+}
+
+.SpektrixPage.AddGiftVoucher .Container.SendTo .wrap-group label {
+	margin-bottom: 10px;
+	@include sentence-case;
+}
+
+.SpektrixPage.AddGiftVoucher .Container.SendTo .wrap-group .ValidationError {
+	margin-left:0;
+}
+
+
+.SpektrixPage.AddGiftVoucher .Container.From span {
+	width:$form-label-width;
+	display: inline-block;
+	@include mq(smartphone) {
+		display: block;
+		margin-bottom: 4px;
+	}
+}
+
+.SpektrixPage.AddGiftVoucher .Container.Message span {
+	width:$form-label-width;
+	display: inline-block;
+	@include mq(smartphone) {
+		display: block;
+		margin-bottom: 4px;
+	}
+}
+
+.SpektrixPage.AddGiftVoucher > span.Comment {
+	display: block;
+	font-size: .8em;
+	margin: 13px 0 0 204px;
+	width: 200px;
+	opacity: 0.7;
+	margin-bottom: 1.25em;
+	@include mq(smartphone) {
+		margin-left:0;
+	}
+}

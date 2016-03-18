@@ -176,6 +176,25 @@ select {
     }
 }
 
+textarea {
+    display: inline-block;
+    //width: 172px;
+    width: 195px;
+    height: 150px;
+    padding: 4px 12px 0;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    @include transition(border-color ease-in-out .15s);
+    margin-right:10px;
+    @include mq(smartphone) {
+        padding: 1px 6px 0;
+        height:100px;
+        width: 183px;
+    }
+}
+
 
 // Default table styles
 

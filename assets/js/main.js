@@ -66,7 +66,7 @@
 			if ($('.Savings > ul').exists()) {
 				$('.Savings > ul').cleanWhitespace();
 			}
-						
+
 		}
 
 
@@ -407,6 +407,23 @@
 			});
 
 		}
+
+
+		// GiftVouchers
+
+		if ($('.SpektrixPage.AddGiftVoucher').exists()) {
+
+			// Replace bad error message with a consistent one
+			$('.AddGiftVoucher > div.ValidationError').replaceWith('<p class="ErrorMessage"><span>Please correct the problems below before continuing.</span></p>');
+			// For reasons passing understanding the <h1> disappears if there is an error
+			if (!$('.AddGiftVoucherBlurb h1').exists()) {
+				$('.AddGiftVoucherBlurb').html('<h1>Gift Vouchers</h1>');
+			}
+
+			$('.SendTo *:gt(0)').wrapAll('<div class="wrap-group"></div>');
+
+		}
+
 
 		// GiftAidDeclarationForm
 
