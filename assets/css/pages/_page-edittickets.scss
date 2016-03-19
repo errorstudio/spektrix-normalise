@@ -62,26 +62,48 @@
 	@include large-button;
 }
 
-// Emergency fix for extra column
-.SpektrixPage.EditTickets td.Column {
+// Fix for extra column
+
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn tr {
+	// Hide the usual borders
 	@include mq(smartphone) {
-		padding-bottom:90px
+		border-bottom:0;		
 	}
 }
 
-.SpektrixPage.EditTickets th.Info.Column {
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn .InfoRow {
+	// Show the added row on smartphone
+	display:none;
+	@include mq(smartphone) {
+		display:table-row;
+		border-bottom:1px solid $divider-color;
+	}
+}
+
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn .InfoRow td {
+	@include mq(smartphone) {
+		padding-top:0;
+	}
+}
+
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn td.Type.Column {
+	@include mq(smartphone) {
+		padding-left:0;
+	}
+}
+
+
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn tr:first-child {
+	// …but put the header ones back on
+	@include mq(smartphone) {
+		border-bottom:1px solid $divider-color;
+	}
+}
+
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn th.Info.Column,
+.SpektrixPage.EditTickets .Details .TableWithInfoColumn td.Info.Column {
+	// Hide the whole column on smartphone
 	@include mq(smartphone) {
 		display:none;
-	}
-}
-
-.SpektrixPage.EditTickets td.Info.Column {
-	@include mq(smartphone) {
-		position: absolute;
-		width: 100%;
-		left: 0;
-		/* top: 40px; */
-		z-index: -1;
-		margin-top: 50px;
 	}
 }

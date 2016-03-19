@@ -175,6 +175,15 @@
 			// Rename 'Delete' to 'Remove'
 			$('th.Delete').text('Remove');
 
+			// Let's give the pricing table some data-labels so it can reformat for responsive
+			if ($('.Info.Column').exists()) {
+				$('.Details table').addClass('TableWithInfoColumn');
+				$('.Details table tr:gt(0)').each(function (i) {
+					$(this).after('<tr class="InfoRow"><td colspan="3">' + $(this).find('.Info.Column').html() + '</td></tr>')
+					//$('.PriceListTable tbody tr td:nth-child(' + (i+1) + ')').attr('data-label', $(this).find('span').text());
+				});
+			}
+
 		}
 
 
