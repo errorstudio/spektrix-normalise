@@ -62,4 +62,26 @@
 	@include large-button;
 }
 
+// Emergency fix for extra column
+.SpektrixPage.EditTickets td.Column {
+	@include mq(smartphone) {
+		padding-bottom:90px
+	}
+}
 
+.SpektrixPage.EditTickets th.Info.Column {
+	@include mq(smartphone) {
+		display:none;
+	}
+}
+
+.SpektrixPage.EditTickets td.Info.Column {
+	@include mq(smartphone) {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		/* top: 40px; */
+		z-index: -1;
+		margin-top: 50px;
+	}
+}
