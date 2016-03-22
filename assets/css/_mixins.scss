@@ -19,7 +19,7 @@
     }
   }
   @else if $point==smartphone {
-    @media (max-width: 659px) { // This matches the iframes on the site
+    @media (max-width: 639px) { // This matches the iframes on the site
       @content;
     }
   }
@@ -50,7 +50,7 @@ $button-base-size:16;
   background-color: $button-background;
   text-decoration: none;
   display: inline-block;
-  cursor:pointer;
+  cursor
   @include transition(color .2s, background .2s);
     //&:hover {
     //background-color: lighten($button-color,10%);
