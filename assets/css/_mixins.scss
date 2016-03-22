@@ -50,6 +50,7 @@ $button-base-size:16;
   background-color: $button-background;
   text-decoration: none;
   display: inline-block;
+  cursor:pointer;
   @include transition(color .2s, background .2s);
     //&:hover {
     //background-color: lighten($button-color,10%);

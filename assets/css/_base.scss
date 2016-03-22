@@ -148,7 +148,8 @@ h1 {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.link-button {
     @include normal-button;
 }
 

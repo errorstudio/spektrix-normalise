@@ -122,7 +122,7 @@
 			}
 
 			// Add a back button
-			$('.SpektrixPage.ChooseSeats .Buttons').prepend('<button class="BackButton ButtonAlignLeft">Back</button>');
+			$('.SpektrixPage.ChooseSeats .Buttons').prepend('<a class="link-button BackButton ButtonAlignLeft">Back</a>');
 			$('.SpektrixPage.ChooseSeats .Buttons .BackButton').click(function() {
 				
 				if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
