@@ -440,6 +440,13 @@
 				$(this).remove();
 			});
 
+			// add the label for the duration back in
+			$('.SpektrixPage.Memberships .Membership .Details .Period .Value').each(function() {
+				$(this).html($(this).html().replace("Membership Period: ",""));
+				var label = $('<span class="Label">Membership Period:</span>');
+				$(this).parent().prepend(label);
+			})
+
 		}
 
 
