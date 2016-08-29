@@ -1,0 +1,61 @@
+
+/* Pages - Multibuypage */
+
+.SpektrixPage.Multibuypage .OfferDescriptionAndLink {
+	margin-bottom:$vertical-spacing;
+}
+
+.SpektrixPage.Multibuypage .NumberRequireExtraEvents {
+  margin-bottom:$vertical-spacing; 
+}
+
+.SpektrixPage.Multibuypage .Events {
+}
+
+.SpektrixPage.Multibuypage .Events .Event {
+  margin-bottom:$vertical-spacing; 
+  @include clearfix;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Image {
+  display:none;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text > * {
+  float:left;
+  padding: 15px 20px 14px 0;
+  @include mq(smartphone) {
+    display: block;
+    width: auto !important;
+    padding: 0 0 5px 0;
+  }
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text > *:first-child {
+  font-weight: bold;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text > *:first-child {
+  font-weight: bold;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text .Event_Name {
+  width:25%;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text .Event_Description {
+  width:25%;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text .Event_Dates {
+  width:25%;
+}
+
+.SpektrixPage.Multibuypage .Events .Event .Event_Text .More_Info {
+  width:25%;
+}
+
+/* .SpektrixPage.Multibuypage * {
+  border:10px solid red;
+  } */
+

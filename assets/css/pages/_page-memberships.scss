@@ -25,9 +25,11 @@
 .SpektrixPage.Memberships .Membership .WikiText {
 	float:left;
 	width:50%;
+	padding-right:10px;
 	@include mq(smartphone) {
 		float:none;
 		width:100%;
+		padding-right:0;
 		margin-bottom:$vertical-spacing;
 	}
 }
@@ -38,9 +40,11 @@
 
 .SpektrixPage.Memberships .Membership .Details {
 	float:right;
+	width:50%;
 	@include well;
 	text-align:center;
 	@include mq(smartphone) {
+		max-width:none;
 		float:none;
 		width:100%;
 	}
@@ -70,5 +74,10 @@
 
 .SpektrixPage.Memberships .Membership .Details .Buttons {
 	text-align:center;
+	margin-bottom: 0;
 }
 
+.SpektrixPage.Memberships .Membership .Details .Buttons input {
+	display: block;
+	margin: 0 auto 10px;
+}
