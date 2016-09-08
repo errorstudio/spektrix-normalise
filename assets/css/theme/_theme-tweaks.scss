@@ -114,6 +114,11 @@ dd.Item .Details {
 	display: none;
 }
 
+//Hide the venue details (weird bits of address and commas)
+.SpektrixPage.ChooseSeats .ChooseSeatsHeading + .Event + .Event {
+	display: none;
+}
+
 .SpektrixPage.ChooseSeats .AdditionalsContainer {
 	clear:both;
 	margin-top:$vertical-spacing;
