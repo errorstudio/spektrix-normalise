@@ -132,6 +132,10 @@ dd.Item .Details {
 	display:none;
 }
 
+.SpektrixPage.ChooseSeats .AdditionalChargesContainer .CardCommissionNote {
+	display:none;
+}
+
 .SpektrixPage.ChooseSeats .SeatingAreaHeading span,
 .SpektrixPage.ChooseSeats .SeatingAreaHeading select {
 	color:$purple-for-text;
