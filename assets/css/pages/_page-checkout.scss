@@ -206,9 +206,14 @@
 }
 
 .SpektrixPage.Checkout .ContactPreferencesView {
-	 max-width:800px;
+	max-width:800px;
 }
 
-.SpektrixPage.Checkout .PartnerCompany {
+.SpektrixPage.Checkout .ContactPreferencesView .PartnerCompany {
 	margin:1em 0;
 }
+
+.SpektrixPage.Checkout .ContactPreferencesView input[type='checkbox'] {
+	margin-right: 10px;
+}
+
