@@ -139,7 +139,6 @@
 			// If this exists then we're logged out
 			if ($('#ctl00_ContentPlaceHolder_RelatedOffersControl1_LoginForDiscounts').exists()) {
 				// Insert our own neat little message
-				console.log("ok");
 				$('.Savings').after('<div class="LoginForDiscounts"><p>Special Offers and Centre Stage Membership discounts are applied in the basket once you have logged in.</div>' );
 				// Remove the old one
 				$('#ctl00_ContentPlaceHolder_RelatedOffersControl1_LoginForDiscounts').remove();
@@ -513,8 +512,9 @@
 
 			// Put the Ts & Cs checkbox before the label, for consistency
 			$('.TermsAndConditions input').insertBefore('.TermsAndConditions label');
-			console.log("ok");
 
+			// Add missing title to the Contact Preferences step of checkout
+			$('.ContactPreferencesView').prepend('<h2 class="ContactPreferencesHeading"><span>Ticket Delivery</span></h2>');
 		}
 
 
