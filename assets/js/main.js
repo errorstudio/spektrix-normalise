@@ -514,7 +514,7 @@
 			$('.TermsAndConditions input').insertBefore('.TermsAndConditions label');
 
 			// Add missing title to the Contact Preferences step of checkout
-			$('.ContactPreferencesView').prepend('<h2 class="ContactPreferencesHeading"><span>Ticket Delivery</span></h2>');
+			$('.ContactPreferencesView').prepend('<h2 class="ContactPreferencesHeading"><span>Contact Preferences</span></h2>');
 		}
 
 
