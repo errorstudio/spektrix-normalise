@@ -502,7 +502,6 @@
 			$('.GiftAidDeclarationFormDescription').remove();
 		}
 
-
 		// Checkout
 		
 		if ($('.SpektrixPage.Checkout').exists()) {

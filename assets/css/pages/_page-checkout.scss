@@ -204,3 +204,11 @@
 .SpektrixPage.Checkout .RedeemVoucher {
 	@include well
 }
+
+.SpektrixPage.Checkout .ContactPreferencesView {
+	 max-width:800px;
+}
+
+.SpektrixPage.Checkout .PartnerCompany {
+	margin:1em 0;
+}
