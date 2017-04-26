@@ -343,7 +343,7 @@
 				var continueShoppingURL;
 
 				if ($('#ctl00_ContentPlaceHolder_WhatsOnLink').exists()) {
-					continueShoppingURL = $('#ctl00_ContentPlaceHolder_WhatsOnLink').attr('target');
+					continueShoppingURL = $('#ctl00_ContentPlaceHolder_WhatsOnLink').attr('href');
 					$('#ctl00_ContentPlaceHolder_WhatsOnLink').remove();
 				} else {
 					continueShoppingURL = 'http://www.sheffieldtheatres.co.uk/whats-on';
