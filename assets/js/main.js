@@ -339,7 +339,17 @@
 
 			// Add in 'Continue shopping' link, if the checkout button is there.
 			if ($('.CheckoutLink').exists()) {
-				$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href="http://www.sheffieldtheatres.co.uk/whats-on">Continue shopping</a></div>');
+
+				var continueShoppingURL;
+
+				if ($('#ctl00_ContentPlaceHolder_WhatsOnLink').exists()) {
+					continueShoppingURL = $('#ctl00_ContentPlaceHolder_WhatsOnLink').attr('target');
+					$('#ctl00_ContentPlaceHolder_WhatsOnLink').remove();
+				} else {
+					continueShoppingURL = 'http://www.sheffieldtheatres.co.uk/whats-on';
+				}
+
+				$('.Basket2 > .Buttons').after('<div class="ContinueShopping"><span>or</span><a target="_parent" href=" ' + continueShoppingURL + '">Continue shopping</a></div>');
 			}
 
 			// THEME
