@@ -103,6 +103,11 @@
 			// CAN'T DO THIS BECAUSE THAT NUMBER IS DYNAMIC
 			//$('.SpektrixPage.ChooseSeats .SeatingAreaInstructions').text('You can pick up to 10 seats per order, for this event.');
 
+			// Change the seating area instructions text, if the event is at The Studio
+			if ($('.AreaAndVenueDetails.AreaName').text() == 'Studio') {
+				$('.SpektrixPage.ChooseSeats .SeatingAreaInstructions').text('Studio is unreserved seating – please select the area you would like to sit.');
+			}
+
 			// The error message on Best Available is uniquely called .ErrorPanel instead of .ErrorMessage, let's swap it back
 			// It is also formatted differently to other errors, so we'll fix that too
 			var errorText = $('.ErrorPanel li').text();
