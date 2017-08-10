@@ -459,6 +459,16 @@
 				$(this).html($(this).html().replace("Membership Period: ",""));
 				var label = $('<span class="Label">Membership Period:</span>');
 				$(this).parent().prepend(label);
+			});
+
+			//change the text on the buttons so they make sense
+      $('.SpektrixPage.Memberships .Membership .Details .Buttons input[type=submit]').each(function() {
+      	var value = $(this).attr('value');
+      	if (value == "Add to basket") {
+      		$(this).val('Buy a Membership');
+				} else if (value == "Gift Membership") {
+      		$(this).val('Buy a Gift Membership')
+				}
 			})
 
 		}
