@@ -8,14 +8,9 @@
 	overflow:hidden;
 }
 
-.SpektrixPage.Donations .FundContainer .FundHeading {
- 	display: none;
-}
-
 .SpektrixPage.Donations .FundContainer .FundContainerTextContent {
-	display: none;
 	float:left;
-	width:80%;
+	width:50%;
 	@include mq(smartphone) {
 		float:none;
 		width:100%;	
