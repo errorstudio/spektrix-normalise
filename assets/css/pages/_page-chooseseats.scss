@@ -49,7 +49,7 @@
 }
 
 .SpektrixPage.ChooseSeats .InstanceCalendar .PreviousShowingButton {
-	background:transparent url(https://spektrix-styles.sheffieldtheatres.co.uk/assets/img/instance-picker-previous.svg) center center no-repeat;
+	background:transparent url(//system.spektrix.com/sheffieldtheatres/resources/instance-picker-previous.svg) center center no-repeat;
 	margin-right: 15px;
 	@include mq(smartphone) {
 		margin-right: 10px;
@@ -57,7 +57,7 @@
 }
 
 .SpektrixPage.ChooseSeats .InstanceCalendar .NextShowingButton {
-	background:transparent url(https://spektrix-styles.sheffieldtheatres.co.uk/assets/img/instance-picker-next.svg) center center no-repeat;
+	background:transparent url(//system.spektrix.com/sheffieldtheatres/resources/instance-picker-next.svg) center center no-repeat;
 	margin-left: 15px;
 	@include mq(smartphone) {
 		margin-left: 10px;
@@ -86,7 +86,7 @@
 	padding: 5px 40px 6px 7px;
 	font-size: inherit;
 	-webkit-appearance: none;
-	background:transparent url(https://spektrix-styles.sheffieldtheatres.co.uk/assets/img/dropdown-arrow.svg) center right no-repeat;
+	background:transparent url(//system.spektrix.com/sheffieldtheatres/resources/dropdown-arrow.svg) center right no-repeat;
 }
 
 .SpektrixPage.ChooseSeats .SeatingAreaInstructions {

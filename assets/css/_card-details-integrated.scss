@@ -1,0 +1,174 @@
+/* Card details iframe */
+
+.FoxIFrameControl iframe {
+  height: 666px; // Just needs hardcoding to height of the content, don't forget validation errors
+}
+
+.PaymentOptions {
+
+  button, input, select, textarea {
+    font-size: 16.1px;
+  }
+
+  font-family: Arial, Helvetica, sans-serif;
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    @include normal-button;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 44px;
+    padding: 4px 12px 0;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    @include transition(border-color ease-in-out .15s);
+    margin-right: 10px;
+    @include mq(smartphone) {
+      height: 34px;
+    }
+  }
+
+  p.ErrorMessage,
+  div.ErrorMessage {
+    padding: 10px 14px;
+    //color: $error-color !important; // To override inline color:red
+    background: lighten($error-color, 50%);
+    margin: $vertical-spacing 0;
+    color: $error-color; // There isn't always a span so we need this here too
+  }
+
+  p.ErrorMessage span,
+  div.ErrorMessage span {
+    color: $error-color !important; // To override inline color:red
+  }
+
+  .Container label {
+    width: $form-label-width;
+    display: inline-block;
+    @include mq(smartphone) {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+
+  .Container label.right {
+    width: auto;
+    float: none;
+    font-size: .8em;
+    @include mq(smartphone) {
+      display: inline-block;
+    }
+  }
+
+  .Container {
+    // Need to be sure this is only ever a wrapper for form-groups
+    margin-bottom: $vertical-spacing;
+  }
+
+  .Container .ValidationError {
+    font-size: .8em;
+    color: $error-color !important; // To override inline color:red
+    margin: 13px 0 0 0;
+    display: block;
+    margin-left: $form-label-width;
+    @include mq(smartphone) {
+      margin-left: 0;
+    }
+  }
+
+  .Container .ValidationError br {
+    //Hide unnecessary <br>s
+    display: none;
+  }
+
+  .Container .Comment {
+    display: block;
+    font-size: .8em;
+    margin: 13px 0 0 204px;
+    width: 200px;
+    opacity: 0.7;
+    @include mq(smartphone) {
+      margin-left: 0;
+    }
+  }
+
+  p.ErrorMessage,
+  div.ErrorMessage {
+    @include well;
+    padding: 10px 14px;
+    //color: $error-color !important; // To override inline color:red
+    background: lighten($error-color, 50%);
+    margin: $vertical-spacing 0;
+    color: $error-color; // There isn't always a span so we need this here too
+  }
+
+  p.ErrorMessage span,
+  div.ErrorMessage span {
+    color: $error-color !important; // To override inline color:red
+  }
+
+  .Container label {
+    width: $form-label-width;
+    display: inline-block;
+    //float: left;
+    @include mq(smartphone) {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+
+  .Container label.right {
+    width: auto;
+    float: none;
+    font-size: .8em;
+    @include mq(smartphone) {
+      display: inline-block;
+    }
+  }
+
+  .Container {
+    // Need to be sure this is only ever a wrapper for form-groups
+    margin-bottom: $vertical-spacing;
+  }
+
+  .Container .ValidationError {
+    font-size: .8em;
+    color: $error-color !important; // To override inline color:red
+    margin: 13px 0 0 0;
+    display: block;
+    margin-left: $form-label-width;
+    @include mq(smartphone) {
+      margin-left: 0;
+    }
+  }
+
+  .Container .ValidationError br {
+    //Hide unnecessary <br>s
+    display: none;
+  }
+
+  .Container .Comment {
+    display: block;
+    font-size: .8em;
+    margin: 13px 0 0 204px;
+    width: 200px;
+    opacity: 0.7;
+    @include mq(smartphone) {
+      margin-left: 0;
+    }
+  }
+
+  .ConfirmButton {
+    padding-bottom: 15px;
+  }
+
+}
